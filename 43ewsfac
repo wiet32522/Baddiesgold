@@ -1,0 +1,206 @@
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local TeleportService = game:GetService("TeleportService")
+local HttpService = game:GetService("HttpService")
+local Camera = workspace.CurrentCamera
+
+local safeRoom = Vector3.new(564, 145, -82)
+local isFarming = false
+_G.AutoProximityPrompt = false
+_G.ProximityPromptCountdown = 1
+local cameraEnabled = true
+
+local function fireproximityprompt(Obj, Amount, Skip)
+    if Obj.ClassName == "ProximityPrompt" then
+        Amount = Amount or 1
+        local PromptTime = Obj.HoldDuration
+        if Skip then
+            Obj.HoldDuration = 0
+        end
+        for i = 1, Amount do
+            Obj:InputHoldBegin()
+            if not Skip then
+                wait(Obj.HoldDuration)
+            end
+            Obj:InputHoldEnd()
+        end
+        Obj.HoldDuration = PromptTime
+    end
+end
+
+local function ProximityPromptCountdown()
+    spawn(function()
+        while _G.AutoProximityPrompt do
+            wait(_G.ProximityPromptCountdown)
+            for _, v in pairs(workspace:GetDescendants()) do
+                if v:IsA("ProximityPrompt") then
+                    fireproximityprompt(v, 1, true)
+                end
+            end
+        end
+    end)
+end
+
+local function getHRP()
+    return player.Character and player.Character:FindFirstChild("HumanoidRootPart")
+end
+
+local function tp(pos)
+    local hrp = getHRP()
+    if hrp then
+        hrp.CFrame = CFrame.new(pos)
+        task.wait(0.25)
+    end
+end
+
+local function exec(prompt)
+    if prompt and prompt.Enabled then
+        prompt.HoldDuration = 0
+        fireproximityprompt(prompt)
+        task.wait(0.5)
+    end
+end
+
+local function execNPC(prompt)
+    if prompt and prompt.Enabled then
+        prompt.HoldDuration = 0
+        for _ = 1, 4 do
+            fireproximityprompt(prompt)
+            task.wait(0.05)
+        end
+    end
+end
+
+local function goToNPCs()
+    local drop2Pos = Vector3.new(660, 116, -243)
+    tp(drop2Pos)
+    task.wait(0.05)
+    tp(drop2Pos)
+
+    local npcFolder = workspace:FindFirstChild("NPCs")
+    if npcFolder then
+        for _, model in ipairs(npcFolder:GetChildren()) do
+            if model:FindFirstChild("Drop2NPC") then
+                local part = model.Drop2NPC:FindFirstChild("HumanoidRootPart")
+                if part then
+                    local prompt = part:FindFirstChildWhichIsA("ProximityPrompt")
+                    execNPC(prompt)
+                end
+            end
+        end
+    end
+
+    local drop1Pos = Vector3.new(606, 142, 377) -- updated position
+    tp(drop1Pos)
+    task.wait(0.05)
+    tp(drop1Pos)
+
+    if npcFolder then
+        for _, model in ipairs(npcFolder:GetChildren()) do
+            if model:FindFirstChild("Drop1NPC") then
+                local part = model.Drop1NPC:FindFirstChild("HumanoidRootPart")
+                if part then
+                    local prompt = part:FindFirstChildWhichIsA("ProximityPrompt")
+                    execNPC(prompt)
+                end
+            end
+        end
+    end
+end
+
+local function updateCamera()
+    local HRP = getHRP()
+    if cameraEnabled and HRP and Camera then
+        Camera.CFrame = CFrame.new(
+            HRP.Position + Vector3.new(0, 10, 0),
+            HRP.Position + Vector3.new(0, -10, 5)
+        )
+    end
+end
+
+task.spawn(function()
+    while true do
+        updateCamera()
+        task.wait(0.05)
+    end
+end)
+
+local function serverHop()
+    local placeId = game.PlaceId
+    local servers = "https://games.roblox.com/v1/games/"..placeId.."/servers/Public?sortOrder=Asc&limit=100"
+
+    local success, result = pcall(function()
+        return HttpService:JSONDecode(game:HttpGet(servers))
+    end)
+
+    if success and result and result.data then
+        for _, server in ipairs(result.data) do
+            if server.playing < server.maxPlayers then
+                TeleportService:TeleportToPlaceInstance(placeId, server.id, player)
+                return
+            end
+        end
+    end
+end
+
+task.wait(1)
+game:GetService("ReplicatedStorage").Events.GeneralEvent:FireServer("FinishIntro", "Dwellers")
+task.wait(3)
+_G.AutoProximityPrompt = true
+ProximityPromptCountdown()
+
+while true do
+    local bankCash = workspace:FindFirstChild("BankFolder") and workspace.BankFolder:FindFirstChild("BankCash")
+    local collectedAny = false
+
+    if bankCash then
+        local cashLeft = true
+        while cashLeft do
+            local batch = {}
+            for _, pile in ipairs(bankCash:GetChildren()) do
+                if pile:IsA("Model") and pile:FindFirstChild("PromptPart") then
+                    local prompt = pile.PromptPart:FindFirstChildWhichIsA("ProximityPrompt")
+                    if prompt and prompt.Enabled then
+                        table.insert(batch, {pos = pile.PromptPart.Position, prompt = prompt})
+                        if #batch >= 2 then
+                            break
+                        end
+                    end
+                end
+            end
+
+            if #batch > 0 then
+                for _, item in ipairs(batch) do
+                    tp(item.pos)
+                    exec(item.prompt)
+                end
+                goToNPCs()
+                collectedAny = true
+            else
+                cashLeft = false
+            end
+        end
+
+        if collectedAny then
+            goToNPCs()
+        end
+    end
+
+    if not collectedAny then
+        local computer = workspace:FindFirstChild("BankFolder") and workspace.BankFolder:FindFirstChild("Computer")
+        if computer and computer:FindFirstChild("PromptPart") then
+            local compPrompt = computer.PromptPart:FindFirstChildWhichIsA("ProximityPrompt")
+            if compPrompt and compPrompt.Enabled then
+                tp(computer.PromptPart.Position)
+                exec(compPrompt)
+                tp(safeRoom)
+            else
+                serverHop()
+            end
+        else
+            serverHop()
+        end
+    end
+
+    task.wait(1)
+end
