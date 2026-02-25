@@ -90,7 +90,7 @@ local function goToNPCs()
         end
     end
 
-    local drop1Pos = Vector3.new(606, 142, 377) -- updated position
+    local drop1Pos = Vector3.new(606, 142, 377) -- Old pos updated
     tp(drop1Pos)
     task.wait(0.05)
     tp(drop1Pos)
