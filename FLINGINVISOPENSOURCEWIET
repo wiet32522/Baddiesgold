@@ -619,9 +619,9 @@ local script = G2L["4"];
 	uiStroke.Thickness = 0.6
 	uiStroke.Color = Color3.fromRGB(255,255,255)
 	
-	if not ReplicatedStorage:FindFirstChild("juisdfj0i32i0eidsuf0iok") then
+	if not ReplicatedStorage:FindFirstChild("54rfg4tht45rh4trfhgerwgtrhgwefqerwf") then
 		local d = Instance.new("Decal")
-		d.Name = "juisdfj0i32i0eidsuf0iok"
+		d.Name = "54rfg4tht45rh4trfhgerwgtrhgwefqerwf"
 		d.Parent = ReplicatedStorage
 	end
 	
