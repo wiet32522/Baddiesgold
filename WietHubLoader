@@ -1,0 +1,10 @@
+local games = {
+	[88323040672117] = "https://raw.githubusercontent.com/wiet32522/Baddiesgold/refs/heads/main/DivazScript.lua",
+}
+
+local currentId = game.PlaceId
+local url = games[currentId]
+
+if url then
+	loadstring(game:HttpGet(url))()
+end
