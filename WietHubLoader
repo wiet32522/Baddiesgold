@@ -1,5 +1,6 @@
 local games = {
 	[88323040672117] = "https://raw.githubusercontent.com/wiet32522/Baddiesgold/refs/heads/main/DivazScript.lua",
+    [11158043705] = "https://raw.githubusercontent.com/wiet32522/Baddiesgold/refs/heads/main/WietHubBaddiesScript",
 }
 
 local currentId = game.PlaceId
