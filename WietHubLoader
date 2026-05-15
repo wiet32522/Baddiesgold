@@ -2,7 +2,6 @@ local games = {
 	[88323040672117] = "https://raw.githubusercontent.com/wiet32522/Baddiesgold/refs/heads/main/DivazScript.lua",
     [11158043705] = "https://raw.githubusercontent.com/wiet32522/Baddiesgold/refs/heads/main/WietHubBaddiesScript",
     [87868857007174] = "https://raw.githubusercontent.com/wiet32522/Baddiesgold/refs/heads/main/WietHubBaddiesScript",
-    [12355337193] = "https://raw.githubusercontent.com/wiet32522/Baddiesgold/refs/heads/main/MurderVsSherrif",
 }
 
 local currentId = game.PlaceId
