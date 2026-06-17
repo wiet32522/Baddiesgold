@@ -1345,27 +1345,32 @@ local script = G2L["3"];
 	local UserInputService = game:GetService("UserInputService")
 	local Players = game:GetService("Players")
 	local ReplicatedStorage = game:GetService("ReplicatedStorage")
+	local GuiService = game:GetService("GuiService")
 	
 	local screenGui = script.Parent
 	
-	if UserInputService.TouchEnabled and not UserInputService.KeyboardEnabled then
+	if UserInputService.TouchEnabled and not (UserInputService.KeyboardEnabled and UserInputService.GamepadEnabled and GuiService:IsTenFootInterface()) then
+		screenGui.Enabled = true
+	
 		local uiScale = Instance.new("UIScale")
-		uiScale.Scale = 0.5
+		uiScale.Scale = 0.75
 		uiScale.Parent = screenGui
-	end
 	
-	task.wait(3)
+		task.wait(3)
 	
-	local player = Players.LocalPlayer
+		local player = Players.LocalPlayer
 	
-	if player.Character then
-		local humanoid = player.Character:FindFirstChild("Humanoid")
+		if player.Character then
+			local humanoid = player.Character:FindFirstChild("Humanoid")
 	
-		if humanoid then
-			humanoid.Health = 0
-		else
-			player.Character:BreakJoints()
+			if humanoid then
+				humanoid.Health = 0
+			else
+				player.Character:BreakJoints()
+			end
 		end
+	else
+		screenGui.Enabled = false
 	end
 end;
 task.spawn(C_3);
