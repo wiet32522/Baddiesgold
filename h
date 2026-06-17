@@ -24,9 +24,7 @@ G2L["2"]["Name"] = [[GUI]];
 
 -- StarterGui.DivazScript.Reset
 G2L["3"] = Instance.new("LocalScript", G2L["1"]);
-G2L["3"]["Enabled"] = false;
 G2L["3"]["Name"] = [[Reset]];
-G2L["3"]["Disabled"] = true;
 
 
 -- StarterGui.DivazScript.MainFrame
@@ -1341,6 +1339,36 @@ local script = G2L["2"];
 	
 end;
 task.spawn(C_2);
+-- StarterGui.DivazScript.Reset
+local function C_3()
+local script = G2L["3"];
+	local UserInputService = game:GetService("UserInputService")
+	local screenGui = script.Parent
+	
+	if UserInputService.TouchEnabled and not UserInputService.KeyboardEnabled then
+		local uiScale = Instance.new("UIScale")
+		uiScale.Scale = 0.8
+		uiScale.Parent = screenGui
+	end
+	
+	local args = {
+		{
+			Event = "LoadedIntro"
+		}
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Event"):FireServer(unpack(args))
+	
+	wait(3)
+	
+	local player = game.Players.LocalPlayer
+	
+	if player.Character then
+		player.Character:BreakJoints()
+	end
+	
+	
+end;
+task.spawn(C_3);
 -- StarterGui.DivazScript.MainFrame.Frame.LocalScript
 local function C_1f()
 local script = G2L["1f"];
@@ -2494,6 +2522,7 @@ local script = G2L["5f"];
 	local MobileMoveVector = Vector3.zero
 	local MobileUp = false
 	local MobileDown = false
+	local MobileGui = nil
 	
 	local BLOCKED_STATES = {
 		Enum.HumanoidStateType.FallingDown,
@@ -2896,11 +2925,12 @@ local script = G2L["5f"];
 			local screenGui = Instance.new("ScreenGui")
 			screenGui.Name = "FlyMobileControls"
 			screenGui.Parent = playerGui
+			screenGui.Enabled = false
 	
 			local upButton = Instance.new("TextButton")
 			upButton.Name = "FlyUpButton"
 			upButton.Size = UDim2.new(0, 60, 0, 60)
-			upButton.Position = UDim2.new(1, -150, 0.5, -80)
+			upButton.Position = UDim2.new(0, 30, 0.5, -80)
 			upButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 			upButton.BackgroundTransparency = 0.3
 			upButton.Text = "↑"
@@ -2916,7 +2946,7 @@ local script = G2L["5f"];
 			local downButton = Instance.new("TextButton")
 			downButton.Name = "FlyDownButton"
 			downButton.Size = UDim2.new(0, 60, 0, 60)
-			downButton.Position = UDim2.new(1, -150, 0.5, 10)
+			downButton.Position = UDim2.new(0, 30, 0.5, 10)
 			downButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 			downButton.BackgroundTransparency = 0.3
 			downButton.Text = "↓"
@@ -2956,25 +2986,37 @@ local script = G2L["5f"];
 			return screenGui
 		end
 	
-		local mobileGui = nil
+		local function updateMobileGuiVisibility()
+			if MobileGui then
+				MobileGui.Enabled = Flying
+			end
+		end
 	
 		spawn(function()
 			wait(1)
 	
-			mobileGui = createMobileButtons()
+			MobileGui = createMobileButtons()
 		end)
 	
 		LocalPlayer.CharacterAdded:Connect(function()
-			if mobileGui then
-				mobileGui:Destroy()
+			if MobileGui then
+				MobileGui:Destroy()
 			end
 	
 			spawn(function()
 				wait(1)
 	
-				mobileGui = createMobileButtons()
+				MobileGui = createMobileButtons()
+				updateMobileGuiVisibility()
 			end)
 		end)
+	
+		local originalToggleFly = toggleFly
+	
+		toggleFly = function()
+			originalToggleFly()
+			updateMobileGuiVisibility()
+		end
 	end
 end;
 task.spawn(C_5f);
