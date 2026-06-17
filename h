@@ -1347,7 +1347,7 @@ local script = G2L["3"];
 	
 	if UserInputService.TouchEnabled and not UserInputService.KeyboardEnabled then
 		local uiScale = Instance.new("UIScale")
-		uiScale.Scale = 0.8
+		uiScale.Scale = 0.5
 		uiScale.Parent = screenGui
 	end
 	
@@ -2519,7 +2519,6 @@ local script = G2L["5f"];
 	local Humanoid
 	local HRP
 	
-	local MobileMoveVector = Vector3.zero
 	local MobileUp = false
 	local MobileDown = false
 	local MobileGui = nil
@@ -2600,30 +2599,30 @@ local script = G2L["5f"];
 	
 		local moveDir = Humanoid.MoveDirection
 	
-		if moveDir.Magnitude < 0.1 then
+		if moveDir.Magnitude < 0.01 then
 			return Vector3.zero
 		end
 	
-		local cam = Camera.CFrame
-		local camLook = cam.LookVector
-		local camRight = cam.RightVector
+		local camCF = Camera.CFrame
+		local camLook = camCF.LookVector
+		local camRight = camCF.RightVector
 	
 		local flatLook = Vector3.new(camLook.X, 0, camLook.Z)
 		local flatRight = Vector3.new(camRight.X, 0, camRight.Z)
 	
-		if flatLook.Magnitude > 0 then
+		if flatLook.Magnitude > 0.01 then
 			flatLook = flatLook.Unit
 		else
 			flatLook = Vector3.new(0, 0, -1)
 		end
 	
-		if flatRight.Magnitude > 0 then
+		if flatRight.Magnitude > 0.01 then
 			flatRight = flatRight.Unit
 		else
 			flatRight = Vector3.new(1, 0, 0)
 		end
 	
-		local result = (flatLook * -moveDir.Z) + (flatRight * moveDir.X)
+		local result = (flatLook * moveDir.Z) + (flatRight * moveDir.X)
 	
 		if MobileUp then
 			result = result + Vector3.new(0, 1, 0)
@@ -2633,7 +2632,7 @@ local script = G2L["5f"];
 			result = result - Vector3.new(0, 1, 0)
 		end
 	
-		if result.Magnitude > 0 then
+		if result.Magnitude > 0.01 then
 			return result.Unit
 		end
 	
@@ -2643,7 +2642,7 @@ local script = G2L["5f"];
 	local function getTotalMoveVector()
 		if UserInputService.TouchEnabled then
 			local mobileMove = getMobileMoveVector()
-			if mobileMove.Magnitude > 0 then
+			if mobileMove.Magnitude > 0.01 then
 				return mobileMove
 			end
 		end
@@ -2714,7 +2713,6 @@ local script = G2L["5f"];
 	
 		clearKeys()
 	
-		MobileMoveVector = Vector3.zero
 		MobileUp = false
 		MobileDown = false
 	
@@ -2765,7 +2763,7 @@ local script = G2L["5f"];
 	
 			local alpha = math.clamp(ACCEL * dt, 0, 1)
 	
-			if move.Magnitude > 0 then
+			if move.Magnitude > 0.01 then
 				HoldY = nil
 	
 				local targetVel = move * SPEED
@@ -2817,7 +2815,7 @@ local script = G2L["5f"];
 				return
 			end
 	
-			if getTotalMoveVector().Magnitude > 0 then
+			if getTotalMoveVector().Magnitude > 0.01 then
 				applyVelocity(CurrentVel)
 			elseif HoldY then
 				lockHeight(HoldY)
