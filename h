@@ -1343,6 +1343,9 @@ task.spawn(C_2);
 local function C_3()
 local script = G2L["3"];
 	local UserInputService = game:GetService("UserInputService")
+	local Players = game:GetService("Players")
+	local ReplicatedStorage = game:GetService("ReplicatedStorage")
+	
 	local screenGui = script.Parent
 	
 	if UserInputService.TouchEnabled and not UserInputService.KeyboardEnabled then
@@ -1351,22 +1354,19 @@ local script = G2L["3"];
 		uiScale.Parent = screenGui
 	end
 	
-	local args = {
-		{
-			Event = "LoadedIntro"
-		}
-	}
-	game:GetService("ReplicatedStorage"):WaitForChild("Event"):FireServer(unpack(args))
+	task.wait(3)
 	
-	wait(3)
-	
-	local player = game.Players.LocalPlayer
+	local player = Players.LocalPlayer
 	
 	if player.Character then
-		player.Character:BreakJoints()
+		local humanoid = player.Character:FindFirstChild("Humanoid")
+	
+		if humanoid then
+			humanoid.Health = 0
+		else
+			player.Character:BreakJoints()
+		end
 	end
-	
-	
 end;
 task.spawn(C_3);
 -- StarterGui.DivazScript.MainFrame.Frame.LocalScript
