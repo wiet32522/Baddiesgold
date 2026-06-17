@@ -7,7 +7,7 @@
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
 ]=]
 
--- Instances: 120 | Scripts: 12 | Modules: 0 | Tags: 0
+-- Instances: 121 | Scripts: 12 | Modules: 0 | Tags: 0
 local G2L = {};
 
 -- StarterGui.DivazScript
@@ -393,7 +393,6 @@ G2L["27"] = Instance.new("ScrollingFrame", G2L["4"]);
 G2L["27"]["Visible"] = false;
 G2L["27"]["Active"] = true;
 G2L["27"]["BorderSizePixel"] = 0;
-G2L["27"]["CanvasPosition"] = Vector2.new(0, 2.25933);
 G2L["27"]["TopImage"] = [[]];
 G2L["27"]["MidImage"] = [[]];
 G2L["27"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
@@ -1209,6 +1208,11 @@ G2L["78"]["Size"] = UDim2.new(0, 385, 0, 33);
 G2L["78"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["78"]["Text"] = [[Taser Person]];
 G2L["78"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
+
+
+-- StarterGui.DivazScript.UIScale
+G2L["79"] = Instance.new("UIScale", G2L["1"]);
+
 
 
 -- StarterGui.DivazScript.GUI
@@ -2473,7 +2477,9 @@ local script = G2L["5f"];
 		W = false,
 		A = false,
 		S = false,
-		D = false
+		D = false,
+		Space = false,
+		Control = false
 	}
 	
 	local FlyConnection
@@ -2486,6 +2492,8 @@ local script = G2L["5f"];
 	local HRP
 	
 	local MobileMoveVector = Vector3.zero
+	local MobileUp = false
+	local MobileDown = false
 	
 	local BLOCKED_STATES = {
 		Enum.HumanoidStateType.FallingDown,
@@ -2517,24 +2525,11 @@ local script = G2L["5f"];
 		Keys.A = false
 		Keys.S = false
 		Keys.D = false
-	end
-	
-	local function flatLook()
-		local look = Camera.CFrame.LookVector
-		local flat = Vector3.new(look.X, 0, look.Z)
-	
-		if flat.Magnitude < 0.01 then
-			return Vector3.new(0, 0, -1)
-		end
-	
-		return flat.Unit
+		Keys.Space = false
+		Keys.Control = false
 	end
 	
 	local function getMoveVector()
-		if MobileMoveVector.Magnitude > 0.1 then
-			return MobileMoveVector
-		end
-	
 		local cam = Camera.CFrame
 		local move = Vector3.zero
 	
@@ -2554,11 +2549,77 @@ local script = G2L["5f"];
 			move = move + cam.RightVector
 		end
 	
+		if Keys.Space then
+			move = move + Vector3.new(0, 1, 0)
+		end
+	
+		if Keys.Control then
+			move = move - Vector3.new(0, 1, 0)
+		end
+	
 		if move.Magnitude > 0 then
 			return move.Unit
 		end
 	
 		return Vector3.zero
+	end
+	
+	local function getMobileMoveVector()
+		if not Humanoid then
+			return Vector3.zero
+		end
+	
+		local moveDir = Humanoid.MoveDirection
+	
+		if moveDir.Magnitude < 0.1 then
+			return Vector3.zero
+		end
+	
+		local cam = Camera.CFrame
+		local camLook = cam.LookVector
+		local camRight = cam.RightVector
+	
+		local flatLook = Vector3.new(camLook.X, 0, camLook.Z)
+		local flatRight = Vector3.new(camRight.X, 0, camRight.Z)
+	
+		if flatLook.Magnitude > 0 then
+			flatLook = flatLook.Unit
+		else
+			flatLook = Vector3.new(0, 0, -1)
+		end
+	
+		if flatRight.Magnitude > 0 then
+			flatRight = flatRight.Unit
+		else
+			flatRight = Vector3.new(1, 0, 0)
+		end
+	
+		local result = (flatLook * -moveDir.Z) + (flatRight * moveDir.X)
+	
+		if MobileUp then
+			result = result + Vector3.new(0, 1, 0)
+		end
+	
+		if MobileDown then
+			result = result - Vector3.new(0, 1, 0)
+		end
+	
+		if result.Magnitude > 0 then
+			return result.Unit
+		end
+	
+		return Vector3.zero
+	end
+	
+	local function getTotalMoveVector()
+		if UserInputService.TouchEnabled then
+			local mobileMove = getMobileMoveVector()
+			if mobileMove.Magnitude > 0 then
+				return mobileMove
+			end
+		end
+	
+		return getMoveVector()
 	end
 	
 	local function getFlyPart()
@@ -2625,6 +2686,8 @@ local script = G2L["5f"];
 		clearKeys()
 	
 		MobileMoveVector = Vector3.zero
+		MobileUp = false
+		MobileDown = false
 	
 		CurrentVel = Vector3.zero
 		HoldY = nil
@@ -2669,7 +2732,7 @@ local script = G2L["5f"];
 				return
 			end
 	
-			local move = getMoveVector()
+			local move = getTotalMoveVector()
 	
 			local alpha = math.clamp(ACCEL * dt, 0, 1)
 	
@@ -2682,27 +2745,31 @@ local script = G2L["5f"];
 	
 				applyVelocity(CurrentVel)
 	
-				local look = flatLook()
+				local flatMove = Vector3.new(move.X, 0, move.Z)
 	
-				local targetYaw =
-					math.atan2(
-						-look.X,
-						-look.Z
-					)
+				if flatMove.Magnitude > 0.1 then
+					flatMove = flatMove.Unit
 	
-				local diff =
-					math.atan2(
-						math.sin(targetYaw - CurrentYaw),
-						math.cos(targetYaw - CurrentYaw)
-					)
+					local targetYaw =
+						math.atan2(
+							-flatMove.X,
+							-flatMove.Z
+						)
 	
-				CurrentYaw =
-					CurrentYaw +
-					(diff * math.clamp(TURN_SPEED * dt, 0, 1))
+					local diff =
+						math.atan2(
+							math.sin(targetYaw - CurrentYaw),
+							math.cos(targetYaw - CurrentYaw)
+						)
 	
-				HRP.CFrame =
-					CFrame.new(HRP.Position) *
-					CFrame.Angles(0, CurrentYaw, 0)
+					CurrentYaw =
+						CurrentYaw +
+						(diff * math.clamp(TURN_SPEED * dt, 0, 1))
+	
+					HRP.CFrame =
+						CFrame.new(HRP.Position) *
+						CFrame.Angles(0, CurrentYaw, 0)
+				end
 			else
 				if not HoldY then
 					HoldY = HRP.Position.Y
@@ -2721,7 +2788,7 @@ local script = G2L["5f"];
 				return
 			end
 	
-			if getMoveVector().Magnitude > 0 then
+			if getTotalMoveVector().Magnitude > 0 then
 				applyVelocity(CurrentVel)
 			elseif HoldY then
 				lockHeight(HoldY)
@@ -2774,6 +2841,10 @@ local script = G2L["5f"];
 			setKey("S", true)
 		elseif k == Enum.KeyCode.D then
 			setKey("D", true)
+		elseif k == Enum.KeyCode.Space then
+			setKey("Space", true)
+		elseif k == Enum.KeyCode.LeftControl then
+			setKey("Control", true)
 		end
 	end)
 	
@@ -2792,104 +2863,12 @@ local script = G2L["5f"];
 			setKey("S", false)
 		elseif k == Enum.KeyCode.D then
 			setKey("D", false)
+		elseif k == Enum.KeyCode.Space then
+			setKey("Space", false)
+		elseif k == Enum.KeyCode.LeftControl then
+			setKey("Control", false)
 		end
 	end)
-	
-	local function setupMobileControls()
-		local playerGui = LocalPlayer:WaitForChild("PlayerGui")
-		local touchGui = playerGui:FindFirstChild("TouchGui")
-	
-		if not touchGui then
-			return
-		end
-	
-		local touchControl = touchGui:FindFirstChild("TouchControlFrame")
-	
-		if not touchControl then
-			return
-		end
-	
-		local thumbstickFrame = touchControl:FindFirstChild("JumpButton") and touchControl:FindFirstChild("DynamicThumbstickFrame")
-	
-		if not thumbstickFrame then
-			for _, child in ipairs(touchControl:GetChildren()) do
-				if child.Name:find("Thumbstick") or child:IsA("Frame") then
-					local stick = child:FindFirstChildOfClass("ImageLabel") or child
-					if stick then
-						thumbstickFrame = child
-						break
-					end
-				end
-			end
-		end
-	
-		local playerModule = Players.LocalPlayer.PlayerScripts:FindFirstChild("PlayerModule")
-	
-		if playerModule then
-			local controlModule = playerModule:FindFirstChild("ControlModule")
-	
-			if controlModule then
-				spawn(function()
-					while wait(0.1) do
-						if Flying then
-							local moveDir = Vector3.zero
-	
-							local moveObject = UserInputService:GetDeviceAccelerometer()
-	
-							pcall(function()
-								local touchGui = LocalPlayer.PlayerGui:FindFirstChild("TouchGui")
-								if touchGui then
-									local touchControl = touchGui:FindFirstChild("TouchControlFrame")
-									if touchControl then
-										for _, child in ipairs(touchControl:GetChildren()) do
-											if child.Name:find("Thumbstick") then
-												local position = child:FindFirstChild("Position")
-												if position and type(position) == "userdata" then
-													moveDir = Vector3.new(position.X, 0, position.Y)
-												end
-											end
-										end
-									end
-								end
-							end)
-						end
-					end
-				end)
-			end
-		end
-	end
-	
-	local function getMobileMoveDirection()
-		if not Humanoid then
-			return Vector3.zero
-		end
-	
-		return Humanoid.MoveDirection
-	end
-	
-	local originalGetMoveVector = getMoveVector
-	getMoveVector = function()
-		if UserInputService.TouchEnabled then
-			local mobileMove = getMobileMoveDirection()
-			if mobileMove.Magnitude > 0.1 then
-				local cam = Camera.CFrame
-				local camLook = cam.LookVector
-				local camRight = cam.RightVector
-	
-				local flatLook = Vector3.new(camLook.X, 0, camLook.Z).Unit
-				local flatRight = Vector3.new(camRight.X, 0, camRight.Z).Unit
-	
-				local moveDir = (flatLook * -mobileMove.Z) + (flatRight * mobileMove.X)
-	
-				if moveDir.Magnitude > 0 then
-					return moveDir.Unit
-				end
-			end
-		end
-	
-		-- Fall back to keyboard
-		return originalGetMoveVector()
-	end
 	
 	flyButton.MouseButton1Click:Connect(function()
 		toggleFly()
@@ -2911,9 +2890,90 @@ local script = G2L["5f"];
 	LocalPlayer.CharacterAdded:Connect(onCharacter)
 	
 	if UserInputService.TouchEnabled then
+		local playerGui = LocalPlayer:WaitForChild("PlayerGui")
+	
+		local function createMobileButtons()
+			local screenGui = Instance.new("ScreenGui")
+			screenGui.Name = "FlyMobileControls"
+			screenGui.Parent = playerGui
+	
+			local upButton = Instance.new("TextButton")
+			upButton.Name = "FlyUpButton"
+			upButton.Size = UDim2.new(0, 60, 0, 60)
+			upButton.Position = UDim2.new(1, -150, 0.5, -80)
+			upButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+			upButton.BackgroundTransparency = 0.3
+			upButton.Text = "↑"
+			upButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+			upButton.TextSize = 28
+			upButton.Font = Enum.Font.GothamBold
+			upButton.Parent = screenGui
+	
+			local upCorner = Instance.new("UICorner")
+			upCorner.CornerRadius = UDim.new(0, 12)
+			upCorner.Parent = upButton
+	
+			local downButton = Instance.new("TextButton")
+			downButton.Name = "FlyDownButton"
+			downButton.Size = UDim2.new(0, 60, 0, 60)
+			downButton.Position = UDim2.new(1, -150, 0.5, 10)
+			downButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+			downButton.BackgroundTransparency = 0.3
+			downButton.Text = "↓"
+			downButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+			downButton.TextSize = 28
+			downButton.Font = Enum.Font.GothamBold
+			downButton.Parent = screenGui
+	
+			local downCorner = Instance.new("UICorner")
+			downCorner.CornerRadius = UDim.new(0, 12)
+			downCorner.Parent = downButton
+	
+			upButton.InputBegan:Connect(function(input)
+				if input.UserInputType == Enum.UserInputType.Touch then
+					MobileUp = true
+				end
+			end)
+	
+			upButton.InputEnded:Connect(function(input)
+				if input.UserInputType == Enum.UserInputType.Touch then
+					MobileUp = false
+				end
+			end)
+	
+			downButton.InputBegan:Connect(function(input)
+				if input.UserInputType == Enum.UserInputType.Touch then
+					MobileDown = true
+				end
+			end)
+	
+			downButton.InputEnded:Connect(function(input)
+				if input.UserInputType == Enum.UserInputType.Touch then
+					MobileDown = false
+				end
+			end)
+	
+			return screenGui
+		end
+	
+		local mobileGui = nil
+	
 		spawn(function()
 			wait(1)
-			setupMobileControls()
+	
+			mobileGui = createMobileButtons()
+		end)
+	
+		LocalPlayer.CharacterAdded:Connect(function()
+			if mobileGui then
+				mobileGui:Destroy()
+			end
+	
+			spawn(function()
+				wait(1)
+	
+				mobileGui = createMobileButtons()
+			end)
 		end)
 	end
 end;
@@ -2939,7 +2999,6 @@ local script = G2L["6a"];
 	
 	local Remote = ReplicatedStorage:WaitForChild("Event")
 	
-	-- Setup button strokes
 	local function setupStroke(button)
 		local oldStroke = button:FindFirstChild("UIStroke")
 		if oldStroke then
@@ -2982,7 +3041,6 @@ local script = G2L["6a"];
 	template.Name = "_Template"
 	template.Parent = PlayerFrame
 	
-	-- Notification function
 	local function notify(title, text, duration)
 		pcall(function()
 			StarterGui:SetCore("SendNotification", {
@@ -2993,7 +3051,6 @@ local script = G2L["6a"];
 		end)
 	end
 	
-	-- Utility functions
 	local function getCharacter()
 		return LocalPlayer.Character
 	end
@@ -3079,7 +3136,6 @@ local script = G2L["6a"];
 		end
 	end)
 	
-	-- Teleport function
 	local function tp(targetHRP, offset)
 		local localHRP = getHRP(getCharacter())
 		if not localHRP or not targetHRP then return end
@@ -3089,7 +3145,6 @@ local script = G2L["6a"];
 		localHRP.CFrame = targetHRP.CFrame * offset
 	end
 	
-	-- Remote functions
 	local function fireHit(targetChar)
 		Remote:FireServer({
 			Event = "Hit",
@@ -3204,7 +3259,6 @@ local script = G2L["6a"];
 		killStroke.Color = Color3.fromRGB(255, 255, 255)
 	end
 	
-	-- Spectate logic
 	local function startSpectate()
 		if spectateRunning then return end
 	
@@ -3232,7 +3286,6 @@ local script = G2L["6a"];
 		notify("Stopped", "No longer spectating", 2)
 	end
 	
-	-- Taser logic
 	local function startTaser()
 		if taserRunning then return end
 	
@@ -3307,7 +3360,6 @@ local script = G2L["6a"];
 		taserStroke.Color = Color3.fromRGB(255, 255, 255)
 	end
 	
-	-- Grab to Void logic (FIXED - TP inside, spam remote)
 	local function startGrabToVoid()
 		if grabRunning then return end
 	
@@ -3329,7 +3381,6 @@ local script = G2L["6a"];
 				return
 			end
 	
-			-- Save original position
 			local originalCFrame = localHRP.CFrame
 	
 			local targetChar = selectedPlayer.Character
@@ -3344,19 +3395,16 @@ local script = G2L["6a"];
 	
 			notify("Grab", "Starting grab on " .. selectedPlayer.Name, 2)
 	
-			-- TP inside target and spam grab remote for 1.5 seconds
 			local spamStartTime = tick()
 			while tick() - spamStartTime < 1.5 and grabRunning do
 				targetChar = selectedPlayer.Character
 				targetHRP = getHRP(targetChar)
 	
 				if targetHRP and localHRP then
-					-- TP inside the target
 					localHRP.AssemblyLinearVelocity = Vector3.zero
 					localHRP.AssemblyAngularVelocity = Vector3.zero
 					localHRP.CFrame = targetHRP.CFrame
 	
-					-- Spam the grab remote
 					fireGrab(targetChar)
 				end
 	
@@ -3365,7 +3413,6 @@ local script = G2L["6a"];
 	
 			task.wait(0.2)
 	
-			-- TP to void coordinates (47, -40, -450)
 			local voidPosition = CFrame.new(47, -40, -450)
 			localHRP.AssemblyLinearVelocity = Vector3.zero
 			localHRP.AssemblyAngularVelocity = Vector3.zero
@@ -3373,7 +3420,6 @@ local script = G2L["6a"];
 	
 			notify("Void", "Teleported to void", 2)
 	
-			-- Stay in void for 5 seconds (prevent falling)
 			local voidStartTime = tick()
 			while tick() - voidStartTime < 5 and grabRunning do
 				localHRP.AssemblyLinearVelocity = Vector3.zero
@@ -3382,12 +3428,10 @@ local script = G2L["6a"];
 				RunService.RenderStepped:Wait()
 			end
 	
-			-- TP back to original position with anti-fall
 			localHRP.AssemblyLinearVelocity = Vector3.zero
 			localHRP.AssemblyAngularVelocity = Vector3.zero
 			localHRP.CFrame = originalCFrame
 	
-			-- Keep anti-fall for 2 more seconds after returning
 			local returnStartTime = tick()
 			while tick() - returnStartTime < 2 do
 				localHRP.AssemblyLinearVelocity = Vector3.zero
@@ -3408,7 +3452,6 @@ local script = G2L["6a"];
 		grabStroke.Color = Color3.fromRGB(255, 255, 255)
 	end
 	
-	-- Button connections
 	KillUserButton.MouseButton1Click:Connect(function()
 		if killRunning then
 			stopKill()
@@ -3441,7 +3484,6 @@ local script = G2L["6a"];
 		end
 	end)
 	
-	-- Player events
 	Players.PlayerAdded:Connect(function()
 		if listOpen then
 			buildList()
