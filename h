@@ -7,14 +7,11 @@
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
 ]=]
 
--- Instances: 118 | Scripts: 23 | Modules: 0 | Tags: 0
+-- Instances: 125 | Scripts: 12 | Modules: 0 | Tags: 0
 local G2L = {};
 
 -- StarterGui.DivazScript
 G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
-G2L["1"]["IgnoreGuiInset"] = true;
-G2L["1"]["Enabled"] = false;
-G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.None;
 G2L["1"]["Name"] = [[DivazScript]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
 G2L["1"]["ResetOnSpawn"] = false;
@@ -25,1023 +22,1240 @@ G2L["2"] = Instance.new("LocalScript", G2L["1"]);
 G2L["2"]["Name"] = [[GUI]];
 
 
--- StarterGui.DivazScript.Webhook
-G2L["3"] = Instance.new("LocalScript", G2L["1"]);
-G2L["3"]["Name"] = [[Webhook]];
-
-
 -- StarterGui.DivazScript.Reset
-G2L["4"] = Instance.new("LocalScript", G2L["1"]);
-G2L["4"]["Name"] = [[Reset]];
+G2L["3"] = Instance.new("LocalScript", G2L["1"]);
+G2L["3"]["Name"] = [[Reset]];
 
 
 -- StarterGui.DivazScript.MainFrame
-G2L["5"] = Instance.new("Frame", G2L["1"]);
-G2L["5"]["BorderSizePixel"] = 0;
-G2L["5"]["BackgroundColor3"] = Color3.fromRGB(55, 55, 55);
-G2L["5"]["Size"] = UDim2.new(0, 564, 0, 385);
-G2L["5"]["Position"] = UDim2.new(0.28105, 0, 0.12026, 0);
-G2L["5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["5"]["Name"] = [[MainFrame]];
+G2L["4"] = Instance.new("Frame", G2L["1"]);
+G2L["4"]["BorderSizePixel"] = 0;
+G2L["4"]["BackgroundColor3"] = Color3.fromRGB(16, 18, 24);
+G2L["4"]["Size"] = UDim2.new(0, 607, 0, 575);
+G2L["4"]["Position"] = UDim2.new(0.27189, 0, 0.15763, 0);
+G2L["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4"]["Name"] = [[MainFrame]];
 
 
--- StarterGui.DivazScript.MainFrame.NavBar
-G2L["6"] = Instance.new("Frame", G2L["5"]);
-G2L["6"]["BorderSizePixel"] = 0;
-G2L["6"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["6"]["Size"] = UDim2.new(0, 199, 0, 385);
-G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["6"]["Name"] = [[NavBar]];
-G2L["6"]["BackgroundTransparency"] = 1;
+-- StarterGui.DivazScript.MainFrame.UICorner
+G2L["5"] = Instance.new("UICorner", G2L["4"]);
+G2L["5"]["CornerRadius"] = UDim.new(0, 15);
 
 
--- StarterGui.DivazScript.MainFrame.NavBar.MiscButton
-G2L["7"] = Instance.new("TextButton", G2L["6"]);
-G2L["7"]["BorderSizePixel"] = 0;
-G2L["7"]["TextColor3"] = Color3.fromRGB(178, 178, 178);
-G2L["7"]["TextSize"] = 35;
-G2L["7"]["BackgroundColor3"] = Color3.fromRGB(46, 46, 46);
-G2L["7"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["7"]["Size"] = UDim2.new(0, 143, 0, 43);
-G2L["7"]["Name"] = [[MiscButton]];
-G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["7"]["Text"] = [[Misc]];
-G2L["7"]["Position"] = UDim2.new(0.00619, 0, 0.64419, 0);
-
-
--- StarterGui.DivazScript.MainFrame.NavBar.FarmButton
-G2L["8"] = Instance.new("TextButton", G2L["6"]);
-G2L["8"]["BorderSizePixel"] = 0;
-G2L["8"]["TextColor3"] = Color3.fromRGB(178, 178, 178);
-G2L["8"]["TextSize"] = 35;
-G2L["8"]["BackgroundColor3"] = Color3.fromRGB(46, 46, 46);
-G2L["8"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["8"]["Size"] = UDim2.new(0, 144, 0, 42);
-G2L["8"]["Name"] = [[FarmButton]];
-G2L["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["8"]["Text"] = [[Farms]];
-G2L["8"]["Position"] = UDim2.new(-0.00038, 0, 0.17662, 0);
-
-
--- StarterGui.DivazScript.MainFrame.NavBar.EspButton
-G2L["9"] = Instance.new("TextButton", G2L["6"]);
-G2L["9"]["BorderSizePixel"] = 0;
-G2L["9"]["TextColor3"] = Color3.fromRGB(178, 178, 178);
-G2L["9"]["TextSize"] = 35;
-G2L["9"]["BackgroundColor3"] = Color3.fromRGB(46, 46, 46);
-G2L["9"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["9"]["Size"] = UDim2.new(0, 143, 0, 47);
-G2L["9"]["Name"] = [[EspButton]];
-G2L["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["9"]["Text"] = [[Visuals]];
-G2L["9"]["Position"] = UDim2.new(0.00957, 0, 0.41042, 0);
-
-
--- StarterGui.DivazScript.MainFrame.NavBar.CombatButton
-G2L["a"] = Instance.new("TextButton", G2L["6"]);
-G2L["a"]["BorderSizePixel"] = 0;
-G2L["a"]["TextColor3"] = Color3.fromRGB(178, 178, 178);
-G2L["a"]["TextSize"] = 35;
-G2L["a"]["BackgroundColor3"] = Color3.fromRGB(46, 46, 46);
-G2L["a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["a"]["Size"] = UDim2.new(0, 143, 0, 49);
-G2L["a"]["Name"] = [[CombatButton]];
-G2L["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["a"]["Text"] = [[Combat]];
-G2L["a"]["Position"] = UDim2.new(0.00957, 0, 0.28508, 0);
-
-
--- StarterGui.DivazScript.MainFrame.NavBar.BuyButton
-G2L["b"] = Instance.new("TextButton", G2L["6"]);
-G2L["b"]["BorderSizePixel"] = 0;
-G2L["b"]["TextColor3"] = Color3.fromRGB(178, 178, 178);
-G2L["b"]["TextSize"] = 35;
-G2L["b"]["BackgroundColor3"] = Color3.fromRGB(46, 46, 46);
-G2L["b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["b"]["Size"] = UDim2.new(0, 143, 0, 43);
-G2L["b"]["Name"] = [[BuyButton]];
-G2L["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["b"]["Text"] = [[Buy]];
-G2L["b"]["Position"] = UDim2.new(0.00619, 0, 0.5325, 0);
+-- StarterGui.DivazScript.MainFrame.UIStroke
+G2L["6"] = Instance.new("UIStroke", G2L["4"]);
+G2L["6"]["Transparency"] = 0.2;
+G2L["6"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["6"]["Thickness"] = 2;
+G2L["6"]["Color"] = Color3.fromRGB(45, 45, 45);
 
 
 -- StarterGui.DivazScript.MainFrame.Frame
-G2L["c"] = Instance.new("Frame", G2L["5"]);
+G2L["7"] = Instance.new("Frame", G2L["4"]);
+G2L["7"]["BorderSizePixel"] = 0;
+G2L["7"]["BackgroundColor3"] = Color3.fromRGB(107, 107, 107);
+G2L["7"]["Size"] = UDim2.new(0, 607, 0, 1);
+G2L["7"]["Position"] = UDim2.new(0, 0, 0.07652, 0);
+G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.DivazScript.MainFrame.Frame
+G2L["8"] = Instance.new("Frame", G2L["4"]);
+G2L["8"]["BorderSizePixel"] = 0;
+G2L["8"]["BackgroundColor3"] = Color3.fromRGB(18, 22, 30);
+G2L["8"]["Size"] = UDim2.new(0, 7, 0, -514);
+G2L["8"]["Position"] = UDim2.new(0.24382, 0, 0.98957, 0);
+G2L["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.DivazScript.MainFrame.NavBar
+G2L["9"] = Instance.new("Frame", G2L["4"]);
+G2L["9"]["BorderSizePixel"] = 0;
+G2L["9"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["9"]["Size"] = UDim2.new(0, 148, 0, 514);
+G2L["9"]["Position"] = UDim2.new(0, 0, 0.09565, 0);
+G2L["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9"]["Name"] = [[NavBar]];
+G2L["9"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.DivazScript.MainFrame.NavBar.CombatButton
+G2L["a"] = Instance.new("TextButton", G2L["9"]);
+G2L["a"]["BorderSizePixel"] = 0;
+G2L["a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["a"]["TextSize"] = 14;
+G2L["a"]["BackgroundColor3"] = Color3.fromRGB(32, 42, 56);
+G2L["a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["a"]["Size"] = UDim2.new(0, 133, 0, 35);
+G2L["a"]["BackgroundTransparency"] = 0.01;
+G2L["a"]["Name"] = [[CombatButton]];
+G2L["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a"]["Text"] = [[]];
+G2L["a"]["Position"] = UDim2.new(0, 0, 0.08378, 0);
+
+
+-- StarterGui.DivazScript.MainFrame.NavBar.CombatButton.UICorner
+G2L["b"] = Instance.new("UICorner", G2L["a"]);
+
+
+
+-- StarterGui.DivazScript.MainFrame.NavBar.CombatButton.Combat
+G2L["c"] = Instance.new("TextLabel", G2L["a"]);
 G2L["c"]["BorderSizePixel"] = 0;
-G2L["c"]["BackgroundColor3"] = Color3.fromRGB(36, 36, 36);
-G2L["c"]["Size"] = UDim2.new(0, 563, 0, 68);
-G2L["c"]["Position"] = UDim2.new(-0.00177, 0, 0.0026, 0);
+G2L["c"]["TextSize"] = 14;
+G2L["c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["c"]["BackgroundTransparency"] = 1;
+G2L["c"]["Size"] = UDim2.new(0, 122, 0, 35);
 G2L["c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c"]["Text"] = [[Combat]];
+G2L["c"]["Name"] = [[Combat]];
+G2L["c"]["Position"] = UDim2.new(0.08271, 0, 0, 0);
 
 
--- StarterGui.DivazScript.MainFrame.Frame.LocalScript
-G2L["d"] = Instance.new("LocalScript", G2L["c"]);
+-- StarterGui.DivazScript.MainFrame.NavBar.UIPadding
+G2L["d"] = Instance.new("UIPadding", G2L["9"]);
+G2L["d"]["PaddingTop"] = UDim.new(0.01, 0);
+G2L["d"]["PaddingLeft"] = UDim.new(0.03, 0);
+
+
+-- StarterGui.DivazScript.MainFrame.NavBar.UIListLayout
+G2L["e"] = Instance.new("UIListLayout", G2L["9"]);
+G2L["e"]["Padding"] = UDim.new(0.015, 0);
+G2L["e"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.DivazScript.MainFrame.NavBar.BuyButton
+G2L["f"] = Instance.new("TextButton", G2L["9"]);
+G2L["f"]["BorderSizePixel"] = 0;
+G2L["f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["f"]["TextSize"] = 14;
+G2L["f"]["BackgroundColor3"] = Color3.fromRGB(32, 42, 56);
+G2L["f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["f"]["Size"] = UDim2.new(0, 133, 0, 35);
+G2L["f"]["BackgroundTransparency"] = 0.01;
+G2L["f"]["Name"] = [[BuyButton]];
+G2L["f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["f"]["Text"] = [[]];
+G2L["f"]["Position"] = UDim2.new(0, 0, 0, 0);
+
+
+-- StarterGui.DivazScript.MainFrame.NavBar.BuyButton.UICorner
+G2L["10"] = Instance.new("UICorner", G2L["f"]);
 
 
 
--- StarterGui.DivazScript.MainFrame.Frame.TextLabel
-G2L["e"] = Instance.new("TextLabel", G2L["c"]);
-G2L["e"]["TextWrapped"] = true;
-G2L["e"]["BorderSizePixel"] = 0;
-G2L["e"]["TextSize"] = 35;
-G2L["e"]["BackgroundColor3"] = Color3.fromRGB(36, 36, 36);
-G2L["e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["e"]["Size"] = UDim2.new(0, 355, 0, 68);
-G2L["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["e"]["Text"] = [[Divaz Script : Wiet Hub]];
-G2L["e"]["Position"] = UDim2.new(0.01599, 0, 0, 0);
-
-
--- StarterGui.DivazScript.MainFrame.Frame.TextLabel.UICorner
-G2L["f"] = Instance.new("UICorner", G2L["e"]);
-
-
-
--- StarterGui.DivazScript.MainFrame.Frame.Frame
-G2L["10"] = Instance.new("Frame", G2L["c"]);
-G2L["10"]["BorderSizePixel"] = 0;
-G2L["10"]["BackgroundColor3"] = Color3.fromRGB(36, 36, 36);
-G2L["10"]["Size"] = UDim2.new(0, 23, 0, -322);
-G2L["10"]["Position"] = UDim2.new(0.23979, 0, 5.64706, 0);
-G2L["10"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-
-
--- StarterGui.DivazScript.MainFrame.Frame.Frame
-G2L["11"] = Instance.new("Frame", G2L["c"]);
+-- StarterGui.DivazScript.MainFrame.NavBar.BuyButton.TextLabel
+G2L["11"] = Instance.new("TextLabel", G2L["f"]);
 G2L["11"]["BorderSizePixel"] = 0;
-G2L["11"]["BackgroundColor3"] = Color3.fromRGB(55, 55, 55);
-G2L["11"]["Size"] = UDim2.new(0, 365, 0, 1);
-G2L["11"]["Position"] = UDim2.new(0.35346, 0, 1, 0);
+G2L["11"]["TextSize"] = 14;
+G2L["11"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["11"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["11"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["11"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["11"]["BackgroundTransparency"] = 1;
+G2L["11"]["Size"] = UDim2.new(0, 122, 0, 35);
 G2L["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["11"]["Text"] = [[Buy Shop]];
+G2L["11"]["Position"] = UDim2.new(0.08271, 0, 0, 0);
 
 
--- StarterGui.DivazScript.MainFrame.Frame.UICorner
-G2L["12"] = Instance.new("UICorner", G2L["c"]);
+-- StarterGui.DivazScript.MainFrame.NavBar.FarmButton
+G2L["12"] = Instance.new("TextButton", G2L["9"]);
+G2L["12"]["BorderSizePixel"] = 0;
+G2L["12"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["12"]["TextSize"] = 14;
+G2L["12"]["BackgroundColor3"] = Color3.fromRGB(32, 42, 56);
+G2L["12"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["12"]["Size"] = UDim2.new(0, 133, 0, 35);
+G2L["12"]["BackgroundTransparency"] = 0.01;
+G2L["12"]["Name"] = [[FarmButton]];
+G2L["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["12"]["Text"] = [[]];
+G2L["12"]["Position"] = UDim2.new(0, 0, 0.08378, 0);
 
 
-
--- StarterGui.DivazScript.MainFrame.Frame.VersionLabel
-G2L["13"] = Instance.new("TextLabel", G2L["c"]);
-G2L["13"]["TextWrapped"] = true;
-G2L["13"]["BorderSizePixel"] = 0;
-G2L["13"]["TextSize"] = 20;
-G2L["13"]["BackgroundColor3"] = Color3.fromRGB(36, 36, 36);
-G2L["13"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["13"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["13"]["Size"] = UDim2.new(0, 200, 0, 22);
-G2L["13"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["13"]["Text"] = [[]];
-G2L["13"]["Name"] = [[VersionLabel]];
-G2L["13"]["Position"] = UDim2.new(0.64476, 0, 0, 0);
-
-
--- StarterGui.DivazScript.MainFrame.Frame.VersionLabel.UICorner
-G2L["14"] = Instance.new("UICorner", G2L["13"]);
+-- StarterGui.DivazScript.MainFrame.NavBar.FarmButton.UICorner
+G2L["13"] = Instance.new("UICorner", G2L["12"]);
 
 
 
--- StarterGui.DivazScript.MainFrame.Frame.RiskLabel
-G2L["15"] = Instance.new("TextLabel", G2L["c"]);
-G2L["15"]["TextWrapped"] = true;
+-- StarterGui.DivazScript.MainFrame.NavBar.FarmButton.TextLabel
+G2L["14"] = Instance.new("TextLabel", G2L["12"]);
+G2L["14"]["BorderSizePixel"] = 0;
+G2L["14"]["TextSize"] = 14;
+G2L["14"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["14"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["14"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["14"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["14"]["BackgroundTransparency"] = 1;
+G2L["14"]["Size"] = UDim2.new(0, 122, 0, 35);
+G2L["14"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["14"]["Text"] = [[Farming]];
+G2L["14"]["Position"] = UDim2.new(0.08271, 0, 0, 0);
+
+
+-- StarterGui.DivazScript.MainFrame.NavBar.EspButton
+G2L["15"] = Instance.new("TextButton", G2L["9"]);
 G2L["15"]["BorderSizePixel"] = 0;
-G2L["15"]["TextSize"] = 20;
-G2L["15"]["TextScaled"] = true;
-G2L["15"]["BackgroundColor3"] = Color3.fromRGB(36, 36, 36);
-G2L["15"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["15"]["TextColor3"] = Color3.fromRGB(171, 0, 0);
-G2L["15"]["Size"] = UDim2.new(0, 200, 0, 46);
-G2L["15"]["Visible"] = false;
+G2L["15"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["15"]["TextSize"] = 14;
+G2L["15"]["BackgroundColor3"] = Color3.fromRGB(32, 42, 56);
+G2L["15"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["15"]["Size"] = UDim2.new(0, 133, 0, 35);
+G2L["15"]["BackgroundTransparency"] = 0.01;
+G2L["15"]["Name"] = [[EspButton]];
 G2L["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["15"]["Text"] = [[Script did not update to this version use it at your own risk!]];
-G2L["15"]["Name"] = [[RiskLabel]];
-G2L["15"]["Position"] = UDim2.new(0.64654, 0, 0.32353, 0);
+G2L["15"]["Text"] = [[]];
+G2L["15"]["Position"] = UDim2.new(0, 0, 0.08378, 0);
 
 
--- StarterGui.DivazScript.MainFrame.Frame.RiskLabel.UICorner
+-- StarterGui.DivazScript.MainFrame.NavBar.EspButton.UICorner
 G2L["16"] = Instance.new("UICorner", G2L["15"]);
 
 
 
--- StarterGui.DivazScript.MainFrame.UICorner
-G2L["17"] = Instance.new("UICorner", G2L["5"]);
+-- StarterGui.DivazScript.MainFrame.NavBar.EspButton.TextLabel
+G2L["17"] = Instance.new("TextLabel", G2L["15"]);
+G2L["17"]["BorderSizePixel"] = 0;
+G2L["17"]["TextSize"] = 14;
+G2L["17"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["17"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["17"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["17"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["17"]["BackgroundTransparency"] = 1;
+G2L["17"]["Size"] = UDim2.new(0, 122, 0, 35);
+G2L["17"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["17"]["Text"] = [[Esp]];
+G2L["17"]["Position"] = UDim2.new(0.08271, 0, 0, 0);
 
 
-
--- StarterGui.DivazScript.MainFrame.CombatFrame
-G2L["18"] = Instance.new("ScrollingFrame", G2L["5"]);
-G2L["18"]["Active"] = true;
+-- StarterGui.DivazScript.MainFrame.NavBar.PlayerButton
+G2L["18"] = Instance.new("TextButton", G2L["9"]);
 G2L["18"]["BorderSizePixel"] = 0;
-G2L["18"]["BackgroundColor3"] = Color3.fromRGB(55, 55, 55);
-G2L["18"]["Name"] = [[CombatFrame]];
-G2L["18"]["Size"] = UDim2.new(0, 405, 0, 314);
-G2L["18"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["18"]["Position"] = UDim2.new(0.28014, 0, 0.17922, 0);
+G2L["18"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["18"]["TextSize"] = 14;
+G2L["18"]["BackgroundColor3"] = Color3.fromRGB(32, 42, 56);
+G2L["18"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["18"]["Size"] = UDim2.new(0, 133, 0, 35);
+G2L["18"]["BackgroundTransparency"] = 0.01;
+G2L["18"]["Name"] = [[PlayerButton]];
 G2L["18"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["18"]["Text"] = [[]];
+G2L["18"]["Position"] = UDim2.new(0, 0, 0.08378, 0);
 
 
--- StarterGui.DivazScript.MainFrame.CombatFrame.UICorner
+-- StarterGui.DivazScript.MainFrame.NavBar.PlayerButton.UICorner
 G2L["19"] = Instance.new("UICorner", G2L["18"]);
 
 
 
--- StarterGui.DivazScript.MainFrame.CombatFrame.UIListLayout
-G2L["1a"] = Instance.new("UIListLayout", G2L["18"]);
-G2L["1a"]["Padding"] = UDim.new(0.015, 0);
-G2L["1a"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+-- StarterGui.DivazScript.MainFrame.NavBar.PlayerButton.TextLabel
+G2L["1a"] = Instance.new("TextLabel", G2L["18"]);
+G2L["1a"]["BorderSizePixel"] = 0;
+G2L["1a"]["TextSize"] = 14;
+G2L["1a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1a"]["BackgroundTransparency"] = 1;
+G2L["1a"]["Size"] = UDim2.new(0, 122, 0, 35);
+G2L["1a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1a"]["Text"] = [[Player]];
+G2L["1a"]["Position"] = UDim2.new(0.08271, 0, 0, 0);
+
+
+-- StarterGui.DivazScript.MainFrame.NavBar.MiscButton
+G2L["1b"] = Instance.new("TextButton", G2L["9"]);
+G2L["1b"]["BorderSizePixel"] = 0;
+G2L["1b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1b"]["TextSize"] = 14;
+G2L["1b"]["BackgroundColor3"] = Color3.fromRGB(32, 42, 56);
+G2L["1b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1b"]["Size"] = UDim2.new(0, 133, 0, 35);
+G2L["1b"]["BackgroundTransparency"] = 0.01;
+G2L["1b"]["Name"] = [[MiscButton]];
+G2L["1b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1b"]["Text"] = [[]];
+G2L["1b"]["Position"] = UDim2.new(0, 0, 0.24938, 0);
+
+
+-- StarterGui.DivazScript.MainFrame.NavBar.MiscButton.UICorner
+G2L["1c"] = Instance.new("UICorner", G2L["1b"]);
+
+
+
+-- StarterGui.DivazScript.MainFrame.NavBar.MiscButton.TextLabel
+G2L["1d"] = Instance.new("TextLabel", G2L["1b"]);
+G2L["1d"]["BorderSizePixel"] = 0;
+G2L["1d"]["TextSize"] = 14;
+G2L["1d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["1d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1d"]["BackgroundTransparency"] = 1;
+G2L["1d"]["Size"] = UDim2.new(0, 122, 0, 35);
+G2L["1d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1d"]["Text"] = [[Misc]];
+G2L["1d"]["Position"] = UDim2.new(0.08271, 0, 0, 0);
+
+
+-- StarterGui.DivazScript.MainFrame.Frame
+G2L["1e"] = Instance.new("Frame", G2L["4"]);
+G2L["1e"]["BorderSizePixel"] = 0;
+G2L["1e"]["BackgroundColor3"] = Color3.fromRGB(36, 36, 36);
+G2L["1e"]["Size"] = UDim2.new(0, 563, 0, 68);
+G2L["1e"]["Position"] = UDim2.new(-0.00177, 0, 0.0026, 0);
+G2L["1e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1e"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.DivazScript.MainFrame.Frame.LocalScript
+G2L["1f"] = Instance.new("LocalScript", G2L["1e"]);
+
+
+
+-- StarterGui.DivazScript.MainFrame.Frame.TextLabel
+G2L["20"] = Instance.new("TextLabel", G2L["1e"]);
+G2L["20"]["TextWrapped"] = true;
+G2L["20"]["BorderSizePixel"] = 0;
+G2L["20"]["TextSize"] = 35;
+G2L["20"]["BackgroundColor3"] = Color3.fromRGB(36, 36, 36);
+G2L["20"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["20"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["20"]["BackgroundTransparency"] = 1;
+G2L["20"]["Size"] = UDim2.new(0, 295, 0, 43);
+G2L["20"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["20"]["Text"] = [[Divaz Script : Wiet Hub]];
+G2L["20"]["Position"] = UDim2.new(0.00888, 0, -0.02196, 0);
+
+
+-- StarterGui.DivazScript.MainFrame.Frame.TextLabel.UICorner
+G2L["21"] = Instance.new("UICorner", G2L["20"]);
+
+
+
+-- StarterGui.DivazScript.MainFrame.Frame.UICorner
+G2L["22"] = Instance.new("UICorner", G2L["1e"]);
+
+
+
+-- StarterGui.DivazScript.MainFrame.Frame.RiskLabel
+G2L["23"] = Instance.new("TextLabel", G2L["1e"]);
+G2L["23"]["TextWrapped"] = true;
+G2L["23"]["BorderSizePixel"] = 0;
+G2L["23"]["TextSize"] = 20;
+G2L["23"]["TextScaled"] = true;
+G2L["23"]["BackgroundColor3"] = Color3.fromRGB(36, 36, 36);
+G2L["23"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["23"]["TextColor3"] = Color3.fromRGB(171, 0, 0);
+G2L["23"]["BackgroundTransparency"] = 1;
+G2L["23"]["Size"] = UDim2.new(0, 131, 0, 46);
+G2L["23"]["Visible"] = false;
+G2L["23"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["23"]["Text"] = [[Script did not update to this version use it at your own risk!]];
+G2L["23"]["Name"] = [[RiskLabel]];
+G2L["23"]["Position"] = UDim2.new(0.53286, 0, -0.07353, 0);
+
+
+-- StarterGui.DivazScript.MainFrame.Frame.RiskLabel.UICorner
+G2L["24"] = Instance.new("UICorner", G2L["23"]);
+
+
+
+-- StarterGui.DivazScript.MainFrame.Frame.VersionLabel
+G2L["25"] = Instance.new("TextLabel", G2L["1e"]);
+G2L["25"]["TextWrapped"] = true;
+G2L["25"]["BorderSizePixel"] = 0;
+G2L["25"]["TextSize"] = 20;
+G2L["25"]["BackgroundColor3"] = Color3.fromRGB(36, 36, 36);
+G2L["25"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["25"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["25"]["BackgroundTransparency"] = 1;
+G2L["25"]["Size"] = UDim2.new(0, 160, 0, 22);
+G2L["25"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["25"]["Text"] = [[]];
+G2L["25"]["Name"] = [[VersionLabel]];
+G2L["25"]["Position"] = UDim2.new(0.77442, 0, 0.13235, 0);
+
+
+-- StarterGui.DivazScript.MainFrame.Frame.VersionLabel.UICorner
+G2L["26"] = Instance.new("UICorner", G2L["25"]);
+
+
+
+-- StarterGui.DivazScript.MainFrame.CombatFrame
+G2L["27"] = Instance.new("ScrollingFrame", G2L["4"]);
+G2L["27"]["Visible"] = false;
+G2L["27"]["Active"] = true;
+G2L["27"]["BorderSizePixel"] = 0;
+G2L["27"]["TopImage"] = [[]];
+G2L["27"]["MidImage"] = [[]];
+G2L["27"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["27"]["Name"] = [[CombatFrame]];
+G2L["27"]["BottomImage"] = [[]];
+G2L["27"]["Size"] = UDim2.new(0, 415, 0, 509);
+G2L["27"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["27"]["Position"] = UDim2.new(0.28501, 0, 0.10435, 0);
+G2L["27"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["27"]["BackgroundTransparency"] = 1;
 
 
 -- StarterGui.DivazScript.MainFrame.CombatFrame.UIPadding
-G2L["1b"] = Instance.new("UIPadding", G2L["18"]);
-G2L["1b"]["PaddingTop"] = UDim.new(0.01, 0);
-G2L["1b"]["PaddingLeft"] = UDim.new(0.03, 0);
+G2L["28"] = Instance.new("UIPadding", G2L["27"]);
+G2L["28"]["PaddingTop"] = UDim.new(0.01, 0);
+G2L["28"]["PaddingLeft"] = UDim.new(0.01, 0);
 
 
--- StarterGui.DivazScript.MainFrame.CombatFrame.TargetUser
-G2L["1c"] = Instance.new("TextButton", G2L["18"]);
-G2L["1c"]["BorderSizePixel"] = 0;
-G2L["1c"]["TextColor3"] = Color3.fromRGB(178, 178, 178);
-G2L["1c"]["AutoLocalize"] = false;
-G2L["1c"]["TextSize"] = 35;
-G2L["1c"]["BackgroundColor3"] = Color3.fromRGB(51, 51, 51);
-G2L["1c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["1c"]["Selectable"] = false;
-G2L["1c"]["Size"] = UDim2.new(0, 208, 0, 29);
-G2L["1c"]["Name"] = [[TargetUser]];
-G2L["1c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1c"]["Text"] = [[Target User]];
-G2L["1c"]["Position"] = UDim2.new(0, 0, 0.1114, 0);
+-- StarterGui.DivazScript.MainFrame.CombatFrame.UIListLayout
+G2L["29"] = Instance.new("UIListLayout", G2L["27"]);
+G2L["29"]["Padding"] = UDim.new(0.007, 0);
+G2L["29"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
 
 
--- StarterGui.DivazScript.MainFrame.CombatFrame.TargetUser.LocalScript
-G2L["1d"] = Instance.new("LocalScript", G2L["1c"]);
-
-
-
--- StarterGui.DivazScript.MainFrame.CombatFrame.TargetUser.UICorner
-G2L["1e"] = Instance.new("UICorner", G2L["1c"]);
-
-
-
--- StarterGui.DivazScript.MainFrame.CombatFrame.TargetUser.UserBox
-G2L["1f"] = Instance.new("TextBox", G2L["1c"]);
-G2L["1f"]["Name"] = [[UserBox]];
-G2L["1f"]["PlaceholderColor3"] = Color3.fromRGB(179, 179, 179);
-G2L["1f"]["BorderSizePixel"] = 0;
-G2L["1f"]["TextSize"] = 25;
-G2L["1f"]["TextColor3"] = Color3.fromRGB(178, 178, 178);
-G2L["1f"]["BackgroundColor3"] = Color3.fromRGB(51, 51, 51);
-G2L["1f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["1f"]["ClearTextOnFocus"] = false;
-G2L["1f"]["Size"] = UDim2.new(0, 145, 0, 29);
-G2L["1f"]["Position"] = UDim2.new(1.05187, 0, 0, 0);
-G2L["1f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1f"]["Text"] = [[UserName]];
-
-
--- StarterGui.DivazScript.MainFrame.CombatFrame.TargetUser.UserBox.UICorner
-G2L["20"] = Instance.new("UICorner", G2L["1f"]);
-
-
-
--- StarterGui.DivazScript.MainFrame.CombatFrame.Auto heal
-G2L["21"] = Instance.new("TextButton", G2L["18"]);
-G2L["21"]["BorderSizePixel"] = 0;
-G2L["21"]["TextColor3"] = Color3.fromRGB(178, 178, 178);
-G2L["21"]["AutoLocalize"] = false;
-G2L["21"]["TextSize"] = 35;
-G2L["21"]["BackgroundColor3"] = Color3.fromRGB(51, 51, 51);
-G2L["21"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["21"]["Selectable"] = false;
-G2L["21"]["Size"] = UDim2.new(0, 364, 0, 29);
-G2L["21"]["Name"] = [[Auto heal]];
-G2L["21"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["21"]["Text"] = [[Auto heal on hopistal bed]];
-G2L["21"]["Position"] = UDim2.new(-0.00509, 0, 0.21946, 0);
-
-
--- StarterGui.DivazScript.MainFrame.CombatFrame.Auto heal.LocalScript
-G2L["22"] = Instance.new("LocalScript", G2L["21"]);
-
-
-
--- StarterGui.DivazScript.MainFrame.CombatFrame.Auto heal.UICorner
-G2L["23"] = Instance.new("UICorner", G2L["21"]);
-
-
-
--- StarterGui.DivazScript.MainFrame.CombatFrame.Auto eat
-G2L["24"] = Instance.new("TextButton", G2L["18"]);
-G2L["24"]["TextWrapped"] = true;
-G2L["24"]["BorderSizePixel"] = 0;
-G2L["24"]["TextColor3"] = Color3.fromRGB(178, 178, 178);
-G2L["24"]["AutoLocalize"] = false;
-G2L["24"]["TextSize"] = 35;
-G2L["24"]["TextScaled"] = true;
-G2L["24"]["BackgroundColor3"] = Color3.fromRGB(51, 51, 51);
-G2L["24"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["24"]["Selectable"] = false;
-G2L["24"]["Size"] = UDim2.new(0, 364, 0, 29);
-G2L["24"]["Name"] = [[Auto eat]];
-G2L["24"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["24"]["Text"] = [[Auto eat - Keybind H]];
-G2L["24"]["Position"] = UDim2.new(-0.00509, 0, 0.21946, 0);
-
-
--- StarterGui.DivazScript.MainFrame.CombatFrame.Auto eat.LocalScript
-G2L["25"] = Instance.new("LocalScript", G2L["24"]);
-
-
-
--- StarterGui.DivazScript.MainFrame.CombatFrame.Auto eat.UICorner
-G2L["26"] = Instance.new("UICorner", G2L["24"]);
-
-
-
--- StarterGui.DivazScript.MainFrame.CombatFrame.Auto Fight
-G2L["27"] = Instance.new("TextButton", G2L["18"]);
-G2L["27"]["BorderSizePixel"] = 0;
-G2L["27"]["TextColor3"] = Color3.fromRGB(178, 178, 178);
-G2L["27"]["AutoLocalize"] = false;
-G2L["27"]["TextSize"] = 35;
-G2L["27"]["BackgroundColor3"] = Color3.fromRGB(51, 51, 51);
-G2L["27"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["27"]["Selectable"] = false;
-G2L["27"]["Size"] = UDim2.new(0, 364, 0, 29);
-G2L["27"]["Name"] = [[Auto Fight]];
-G2L["27"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["27"]["Text"] = [[Auto fight keybind N]];
-G2L["27"]["Position"] = UDim2.new(-0.00509, 0, 0.21946, 0);
-
-
--- StarterGui.DivazScript.MainFrame.CombatFrame.Auto Fight.LocalScript
-G2L["28"] = Instance.new("LocalScript", G2L["27"]);
-
-
-
--- StarterGui.DivazScript.MainFrame.CombatFrame.Auto Fight.UICorner
-G2L["29"] = Instance.new("UICorner", G2L["27"]);
-
-
-
--- StarterGui.DivazScript.MainFrame.CombatFrame.Fling
-G2L["2a"] = Instance.new("TextButton", G2L["18"]);
+-- StarterGui.DivazScript.MainFrame.CombatFrame.AutoFightPerson
+G2L["2a"] = Instance.new("TextButton", G2L["27"]);
 G2L["2a"]["BorderSizePixel"] = 0;
-G2L["2a"]["TextColor3"] = Color3.fromRGB(178, 178, 178);
-G2L["2a"]["TextSize"] = 35;
-G2L["2a"]["BackgroundColor3"] = Color3.fromRGB(51, 51, 51);
+G2L["2a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2a"]["TextSize"] = 14;
+G2L["2a"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
 G2L["2a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["2a"]["Size"] = UDim2.new(0, 361, 0, 29);
-G2L["2a"]["Name"] = [[Fling]];
+G2L["2a"]["Size"] = UDim2.new(0, 397, 0, 33);
+G2L["2a"]["Name"] = [[AutoFightPerson]];
 G2L["2a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2a"]["Text"] = [[Fling - Use at your own RISK]];
-G2L["2a"]["Position"] = UDim2.new(0.02217, 0, 0.02416, 0);
+G2L["2a"]["Text"] = [[]];
+G2L["2a"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
 
 
--- StarterGui.DivazScript.MainFrame.CombatFrame.Fling.LocalScript
+-- StarterGui.DivazScript.MainFrame.CombatFrame.AutoFightPerson.LocalScript
 G2L["2b"] = Instance.new("LocalScript", G2L["2a"]);
 
 
 
--- StarterGui.DivazScript.MainFrame.CombatFrame.Fling.UICorner
+-- StarterGui.DivazScript.MainFrame.CombatFrame.AutoFightPerson.UICorner
 G2L["2c"] = Instance.new("UICorner", G2L["2a"]);
 
 
 
--- StarterGui.DivazScript.MainFrame.CombatFrame.Spam grab hair
-G2L["2d"] = Instance.new("TextButton", G2L["18"]);
+-- StarterGui.DivazScript.MainFrame.CombatFrame.AutoFightPerson.TextLabel
+G2L["2d"] = Instance.new("TextLabel", G2L["2a"]);
 G2L["2d"]["BorderSizePixel"] = 0;
-G2L["2d"]["TextColor3"] = Color3.fromRGB(178, 178, 178);
-G2L["2d"]["AutoLocalize"] = false;
-G2L["2d"]["TextSize"] = 35;
-G2L["2d"]["BackgroundColor3"] = Color3.fromRGB(51, 51, 51);
+G2L["2d"]["TextSize"] = 16;
+G2L["2d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["2d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["2d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["2d"]["Selectable"] = false;
-G2L["2d"]["Size"] = UDim2.new(0, 364, 0, 29);
-G2L["2d"]["Name"] = [[Spam grab hair]];
+G2L["2d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2d"]["BackgroundTransparency"] = 1;
+G2L["2d"]["Size"] = UDim2.new(0, 385, 0, 33);
 G2L["2d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2d"]["Text"] = [[Spam grab hair]];
-G2L["2d"]["Position"] = UDim2.new(-0.00509, 0, 0.21946, 0);
+G2L["2d"]["Text"] = [[Auto Fight With Animations (More Legit)]];
+G2L["2d"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
 
 
--- StarterGui.DivazScript.MainFrame.CombatFrame.Spam grab hair.LocalScript
-G2L["2e"] = Instance.new("LocalScript", G2L["2d"]);
+-- StarterGui.DivazScript.MainFrame.CombatFrame.SpamGrabHair
+G2L["2e"] = Instance.new("TextButton", G2L["27"]);
+G2L["2e"]["BorderSizePixel"] = 0;
+G2L["2e"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2e"]["TextSize"] = 14;
+G2L["2e"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
+G2L["2e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2e"]["Size"] = UDim2.new(0, 397, 0, 33);
+G2L["2e"]["Name"] = [[SpamGrabHair]];
+G2L["2e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2e"]["Text"] = [[]];
+G2L["2e"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
 
 
-
--- StarterGui.DivazScript.MainFrame.CombatFrame.Spam grab hair.UICorner
-G2L["2f"] = Instance.new("UICorner", G2L["2d"]);
-
-
-
--- StarterGui.DivazScript.MainFrame.CombatFrame.Grab Player to void
-G2L["30"] = Instance.new("TextButton", G2L["18"]);
-G2L["30"]["TextWrapped"] = true;
-G2L["30"]["BorderSizePixel"] = 0;
-G2L["30"]["TextColor3"] = Color3.fromRGB(178, 178, 178);
-G2L["30"]["AutoLocalize"] = false;
-G2L["30"]["TextSize"] = 35;
-G2L["30"]["TextScaled"] = true;
-G2L["30"]["BackgroundColor3"] = Color3.fromRGB(51, 51, 51);
-G2L["30"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["30"]["Selectable"] = false;
-G2L["30"]["Size"] = UDim2.new(0, 208, 0, 29);
-G2L["30"]["Name"] = [[Grab Player to void]];
-G2L["30"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["30"]["Text"] = [[Grab Player to void]];
-G2L["30"]["Position"] = UDim2.new(0, 0, 0.1114, 0);
-
-
--- StarterGui.DivazScript.MainFrame.CombatFrame.Grab Player to void.LocalScript
-G2L["31"] = Instance.new("LocalScript", G2L["30"]);
+-- StarterGui.DivazScript.MainFrame.CombatFrame.SpamGrabHair.LocalScript
+G2L["2f"] = Instance.new("LocalScript", G2L["2e"]);
 
 
 
--- StarterGui.DivazScript.MainFrame.CombatFrame.Grab Player to void.UICorner
-G2L["32"] = Instance.new("UICorner", G2L["30"]);
+-- StarterGui.DivazScript.MainFrame.CombatFrame.SpamGrabHair.UICorner
+G2L["30"] = Instance.new("UICorner", G2L["2e"]);
 
 
 
--- StarterGui.DivazScript.MainFrame.CombatFrame.Grab Player to void.UserBox
-G2L["33"] = Instance.new("TextBox", G2L["30"]);
-G2L["33"]["Name"] = [[UserBox]];
-G2L["33"]["PlaceholderColor3"] = Color3.fromRGB(179, 179, 179);
-G2L["33"]["BorderSizePixel"] = 0;
-G2L["33"]["TextSize"] = 25;
-G2L["33"]["TextColor3"] = Color3.fromRGB(178, 178, 178);
-G2L["33"]["BackgroundColor3"] = Color3.fromRGB(51, 51, 51);
-G2L["33"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["33"]["ClearTextOnFocus"] = false;
-G2L["33"]["Size"] = UDim2.new(0, 145, 0, 29);
-G2L["33"]["Position"] = UDim2.new(1.05187, 0, 0, 0);
-G2L["33"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["33"]["Text"] = [[UserName]];
+-- StarterGui.DivazScript.MainFrame.CombatFrame.SpamGrabHair.TextLabel
+G2L["31"] = Instance.new("TextLabel", G2L["2e"]);
+G2L["31"]["BorderSizePixel"] = 0;
+G2L["31"]["TextSize"] = 16;
+G2L["31"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["31"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["31"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["31"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["31"]["BackgroundTransparency"] = 1;
+G2L["31"]["Size"] = UDim2.new(0, 385, 0, 33);
+G2L["31"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["31"]["Text"] = [[Spam Grab Hair]];
+G2L["31"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
 
 
--- StarterGui.DivazScript.MainFrame.CombatFrame.Grab Player to void.UserBox.UICorner
-G2L["34"] = Instance.new("UICorner", G2L["33"]);
+-- StarterGui.DivazScript.MainFrame.CombatFrame.Heal
+G2L["32"] = Instance.new("TextButton", G2L["27"]);
+G2L["32"]["BorderSizePixel"] = 0;
+G2L["32"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["32"]["TextSize"] = 14;
+G2L["32"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
+G2L["32"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["32"]["Size"] = UDim2.new(0, 397, 0, 33);
+G2L["32"]["Name"] = [[Heal]];
+G2L["32"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["32"]["Text"] = [[]];
+G2L["32"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
 
+
+-- StarterGui.DivazScript.MainFrame.CombatFrame.Heal.LocalScript
+G2L["33"] = Instance.new("LocalScript", G2L["32"]);
+
+
+
+-- StarterGui.DivazScript.MainFrame.CombatFrame.Heal.UICorner
+G2L["34"] = Instance.new("UICorner", G2L["32"]);
+
+
+
+-- StarterGui.DivazScript.MainFrame.CombatFrame.Heal.TextLabel
+G2L["35"] = Instance.new("TextLabel", G2L["32"]);
+G2L["35"]["BorderSizePixel"] = 0;
+G2L["35"]["TextSize"] = 15;
+G2L["35"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["35"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["35"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["35"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["35"]["BackgroundTransparency"] = 1;
+G2L["35"]["Size"] = UDim2.new(0, 385, 0, 33);
+G2L["35"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["35"]["Text"] = [[Tp To Hospital Bed Under costum health]];
+G2L["35"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
+
+
+-- StarterGui.DivazScript.MainFrame.CombatFrame.Heal.TextBox
+G2L["36"] = Instance.new("TextBox", G2L["32"]);
+G2L["36"]["BorderSizePixel"] = 0;
+G2L["36"]["TextSize"] = 20;
+G2L["36"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["36"]["BackgroundColor3"] = Color3.fromRGB(18, 24, 35);
+G2L["36"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["36"]["Size"] = UDim2.new(0, 146, 0, 21);
+G2L["36"]["Position"] = UDim2.new(0.57683, 0, 0.18182, 0);
+G2L["36"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["36"]["Text"] = [[30 HP]];
+
+
+-- StarterGui.DivazScript.MainFrame.CombatFrame.AutoStomp
+G2L["37"] = Instance.new("TextButton", G2L["27"]);
+G2L["37"]["BorderSizePixel"] = 0;
+G2L["37"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["37"]["TextSize"] = 14;
+G2L["37"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
+G2L["37"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["37"]["Size"] = UDim2.new(0, 397, 0, 33);
+G2L["37"]["Name"] = [[AutoStomp]];
+G2L["37"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["37"]["Text"] = [[]];
+G2L["37"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
+
+
+-- StarterGui.DivazScript.MainFrame.CombatFrame.AutoStomp.LocalScript
+G2L["38"] = Instance.new("LocalScript", G2L["37"]);
+
+
+
+-- StarterGui.DivazScript.MainFrame.CombatFrame.AutoStomp.UICorner
+G2L["39"] = Instance.new("UICorner", G2L["37"]);
+
+
+
+-- StarterGui.DivazScript.MainFrame.CombatFrame.AutoStomp.TextLabel
+G2L["3a"] = Instance.new("TextLabel", G2L["37"]);
+G2L["3a"]["BorderSizePixel"] = 0;
+G2L["3a"]["TextSize"] = 15;
+G2L["3a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["3a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3a"]["BackgroundTransparency"] = 1;
+G2L["3a"]["Size"] = UDim2.new(0, 385, 0, 33);
+G2L["3a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3a"]["Text"] = [[Auto Stomp]];
+G2L["3a"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
+
+
+-- StarterGui.DivazScript.MainFrame.CombatFrame.Fling
+G2L["3b"] = Instance.new("TextButton", G2L["27"]);
+G2L["3b"]["BorderSizePixel"] = 0;
+G2L["3b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3b"]["TextSize"] = 14;
+G2L["3b"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
+G2L["3b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3b"]["Size"] = UDim2.new(0, 397, 0, 33);
+G2L["3b"]["Name"] = [[Fling]];
+G2L["3b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3b"]["Text"] = [[]];
+G2L["3b"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
+
+
+-- StarterGui.DivazScript.MainFrame.CombatFrame.Fling.LocalScript
+G2L["3c"] = Instance.new("LocalScript", G2L["3b"]);
+
+
+
+-- StarterGui.DivazScript.MainFrame.CombatFrame.Fling.UICorner
+G2L["3d"] = Instance.new("UICorner", G2L["3b"]);
+
+
+
+-- StarterGui.DivazScript.MainFrame.CombatFrame.Fling.TextLabel
+G2L["3e"] = Instance.new("TextLabel", G2L["3b"]);
+G2L["3e"]["BorderSizePixel"] = 0;
+G2L["3e"]["TextSize"] = 15;
+G2L["3e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["3e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3e"]["BackgroundTransparency"] = 1;
+G2L["3e"]["Size"] = UDim2.new(0, 385, 0, 33);
+G2L["3e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3e"]["Text"] = [[Fling]];
+G2L["3e"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
 
 
 -- StarterGui.DivazScript.MainFrame.EspFrame
-G2L["35"] = Instance.new("ScrollingFrame", G2L["5"]);
-G2L["35"]["Visible"] = false;
-G2L["35"]["BorderSizePixel"] = 0;
-G2L["35"]["BackgroundColor3"] = Color3.fromRGB(55, 55, 55);
-G2L["35"]["Name"] = [[EspFrame]];
-G2L["35"]["Size"] = UDim2.new(0, 405, 0, 314);
-G2L["35"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["35"]["Position"] = UDim2.new(0.28014, 0, 0.17922, 0);
-G2L["35"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3f"] = Instance.new("ScrollingFrame", G2L["4"]);
+G2L["3f"]["Visible"] = false;
+G2L["3f"]["Active"] = true;
+G2L["3f"]["BorderSizePixel"] = 0;
+G2L["3f"]["TopImage"] = [[]];
+G2L["3f"]["MidImage"] = [[]];
+G2L["3f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3f"]["Name"] = [[EspFrame]];
+G2L["3f"]["BottomImage"] = [[]];
+G2L["3f"]["Size"] = UDim2.new(0, 415, 0, 509);
+G2L["3f"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3f"]["Position"] = UDim2.new(0.28501, 0, 0.10435, 0);
+G2L["3f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3f"]["BackgroundTransparency"] = 1;
 
 
 -- StarterGui.DivazScript.MainFrame.EspFrame.LocalScript
-G2L["36"] = Instance.new("LocalScript", G2L["35"]);
+G2L["40"] = Instance.new("LocalScript", G2L["3f"]);
 
-
-
--- StarterGui.DivazScript.MainFrame.EspFrame.UICorner
-G2L["37"] = Instance.new("UICorner", G2L["35"]);
-
-
-
--- StarterGui.DivazScript.MainFrame.EspFrame.UIListLayout
-G2L["38"] = Instance.new("UIListLayout", G2L["35"]);
-G2L["38"]["Padding"] = UDim.new(0.015, 0);
-G2L["38"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
 
 
 -- StarterGui.DivazScript.MainFrame.EspFrame.UIPadding
-G2L["39"] = Instance.new("UIPadding", G2L["35"]);
-G2L["39"]["PaddingTop"] = UDim.new(0.01, 0);
-G2L["39"]["PaddingLeft"] = UDim.new(0.03, 0);
+G2L["41"] = Instance.new("UIPadding", G2L["3f"]);
+G2L["41"]["PaddingTop"] = UDim.new(0.01, 0);
+G2L["41"]["PaddingLeft"] = UDim.new(0.01, 0);
+
+
+-- StarterGui.DivazScript.MainFrame.EspFrame.UIListLayout
+G2L["42"] = Instance.new("UIListLayout", G2L["3f"]);
+G2L["42"]["Padding"] = UDim.new(0.007, 0);
+G2L["42"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
 
 
 -- StarterGui.DivazScript.MainFrame.EspFrame.HealthEsp
-G2L["3a"] = Instance.new("TextButton", G2L["35"]);
-G2L["3a"]["BorderSizePixel"] = 0;
-G2L["3a"]["TextColor3"] = Color3.fromRGB(178, 178, 178);
-G2L["3a"]["TextSize"] = 35;
-G2L["3a"]["BackgroundColor3"] = Color3.fromRGB(51, 51, 51);
-G2L["3a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["3a"]["Size"] = UDim2.new(0, 361, 0, 29);
-G2L["3a"]["Name"] = [[HealthEsp]];
-G2L["3a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3a"]["Text"] = [[Health Esp]];
-G2L["3a"]["Position"] = UDim2.new(0.01951, 0, 0.39783, 0);
+G2L["43"] = Instance.new("TextButton", G2L["3f"]);
+G2L["43"]["BorderSizePixel"] = 0;
+G2L["43"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["43"]["TextSize"] = 14;
+G2L["43"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
+G2L["43"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["43"]["Size"] = UDim2.new(0, 397, 0, 33);
+G2L["43"]["Name"] = [[HealthEsp]];
+G2L["43"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["43"]["Text"] = [[]];
+G2L["43"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
 
 
 -- StarterGui.DivazScript.MainFrame.EspFrame.HealthEsp.UICorner
-G2L["3b"] = Instance.new("UICorner", G2L["3a"]);
+G2L["44"] = Instance.new("UICorner", G2L["43"]);
 
+
+
+-- StarterGui.DivazScript.MainFrame.EspFrame.HealthEsp.TextLabel
+G2L["45"] = Instance.new("TextLabel", G2L["43"]);
+G2L["45"]["BorderSizePixel"] = 0;
+G2L["45"]["TextSize"] = 16;
+G2L["45"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["45"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["45"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["45"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["45"]["BackgroundTransparency"] = 1;
+G2L["45"]["Size"] = UDim2.new(0, 385, 0, 33);
+G2L["45"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["45"]["Text"] = [[Health Esp]];
+G2L["45"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
 
 
 -- StarterGui.DivazScript.MainFrame.EspFrame.HighLightPlayer
-G2L["3c"] = Instance.new("TextButton", G2L["35"]);
-G2L["3c"]["BorderSizePixel"] = 0;
-G2L["3c"]["TextColor3"] = Color3.fromRGB(178, 178, 178);
-G2L["3c"]["TextSize"] = 35;
-G2L["3c"]["BackgroundColor3"] = Color3.fromRGB(51, 51, 51);
-G2L["3c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["3c"]["Size"] = UDim2.new(0, 361, 0, 29);
-G2L["3c"]["Name"] = [[HighLightPlayer]];
-G2L["3c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3c"]["Text"] = [[Highlight Player]];
-G2L["3c"]["Position"] = UDim2.new(0.01951, 0, 0.02061, 0);
+G2L["46"] = Instance.new("TextButton", G2L["3f"]);
+G2L["46"]["BorderSizePixel"] = 0;
+G2L["46"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["46"]["TextSize"] = 14;
+G2L["46"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
+G2L["46"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["46"]["Size"] = UDim2.new(0, 397, 0, 33);
+G2L["46"]["Name"] = [[HighLightPlayer]];
+G2L["46"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["46"]["Text"] = [[]];
+G2L["46"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
 
 
 -- StarterGui.DivazScript.MainFrame.EspFrame.HighLightPlayer.UICorner
-G2L["3d"] = Instance.new("UICorner", G2L["3c"]);
+G2L["47"] = Instance.new("UICorner", G2L["46"]);
 
+
+
+-- StarterGui.DivazScript.MainFrame.EspFrame.HighLightPlayer.TextLabel
+G2L["48"] = Instance.new("TextLabel", G2L["46"]);
+G2L["48"]["BorderSizePixel"] = 0;
+G2L["48"]["TextSize"] = 16;
+G2L["48"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["48"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["48"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["48"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["48"]["BackgroundTransparency"] = 1;
+G2L["48"]["Size"] = UDim2.new(0, 385, 0, 33);
+G2L["48"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["48"]["Text"] = [[HighLight Esp]];
+G2L["48"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
 
 
 -- StarterGui.DivazScript.MainFrame.EspFrame.NameEsp
-G2L["3e"] = Instance.new("TextButton", G2L["35"]);
-G2L["3e"]["BorderSizePixel"] = 0;
-G2L["3e"]["TextColor3"] = Color3.fromRGB(178, 178, 178);
-G2L["3e"]["TextSize"] = 35;
-G2L["3e"]["BackgroundColor3"] = Color3.fromRGB(51, 51, 51);
-G2L["3e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["3e"]["Size"] = UDim2.new(0, 361, 0, 29);
-G2L["3e"]["Name"] = [[NameEsp]];
-G2L["3e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3e"]["Text"] = [[Name Esp]];
-G2L["3e"]["Position"] = UDim2.new(0.01951, 0, 0.39783, 0);
+G2L["49"] = Instance.new("TextButton", G2L["3f"]);
+G2L["49"]["BorderSizePixel"] = 0;
+G2L["49"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["49"]["TextSize"] = 14;
+G2L["49"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
+G2L["49"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["49"]["Size"] = UDim2.new(0, 397, 0, 33);
+G2L["49"]["Name"] = [[NameEsp]];
+G2L["49"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["49"]["Text"] = [[]];
+G2L["49"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
 
 
 -- StarterGui.DivazScript.MainFrame.EspFrame.NameEsp.UICorner
-G2L["3f"] = Instance.new("UICorner", G2L["3e"]);
+G2L["4a"] = Instance.new("UICorner", G2L["49"]);
 
+
+
+-- StarterGui.DivazScript.MainFrame.EspFrame.NameEsp.TextLabel
+G2L["4b"] = Instance.new("TextLabel", G2L["49"]);
+G2L["4b"]["BorderSizePixel"] = 0;
+G2L["4b"]["TextSize"] = 16;
+G2L["4b"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["4b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4b"]["BackgroundTransparency"] = 1;
+G2L["4b"]["Size"] = UDim2.new(0, 385, 0, 33);
+G2L["4b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4b"]["Text"] = [[Name Esp]];
+G2L["4b"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
 
 
 -- StarterGui.DivazScript.MainFrame.EspFrame.RobberyEsp
-G2L["40"] = Instance.new("TextButton", G2L["35"]);
-G2L["40"]["BorderSizePixel"] = 0;
-G2L["40"]["TextColor3"] = Color3.fromRGB(178, 178, 178);
-G2L["40"]["TextSize"] = 35;
-G2L["40"]["BackgroundColor3"] = Color3.fromRGB(51, 51, 51);
-G2L["40"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["40"]["Size"] = UDim2.new(0, 361, 0, 29);
-G2L["40"]["Name"] = [[RobberyEsp]];
-G2L["40"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["40"]["Text"] = [[Robbery Esp]];
-G2L["40"]["Position"] = UDim2.new(0.01951, 0, 0.27683, 0);
+G2L["4c"] = Instance.new("TextButton", G2L["3f"]);
+G2L["4c"]["BorderSizePixel"] = 0;
+G2L["4c"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4c"]["TextSize"] = 14;
+G2L["4c"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
+G2L["4c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4c"]["Size"] = UDim2.new(0, 397, 0, 33);
+G2L["4c"]["Name"] = [[RobberyEsp]];
+G2L["4c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4c"]["Text"] = [[]];
+G2L["4c"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
 
 
 -- StarterGui.DivazScript.MainFrame.EspFrame.RobberyEsp.UICorner
-G2L["41"] = Instance.new("UICorner", G2L["40"]);
+G2L["4d"] = Instance.new("UICorner", G2L["4c"]);
 
+
+
+-- StarterGui.DivazScript.MainFrame.EspFrame.RobberyEsp.TextLabel
+G2L["4e"] = Instance.new("TextLabel", G2L["4c"]);
+G2L["4e"]["BorderSizePixel"] = 0;
+G2L["4e"]["TextSize"] = 16;
+G2L["4e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["4e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4e"]["BackgroundTransparency"] = 1;
+G2L["4e"]["Size"] = UDim2.new(0, 385, 0, 33);
+G2L["4e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4e"]["Text"] = [[Robbery Esp]];
+G2L["4e"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
 
 
 -- StarterGui.DivazScript.MainFrame.EspFrame.Tracers
-G2L["42"] = Instance.new("TextButton", G2L["35"]);
-G2L["42"]["BorderSizePixel"] = 0;
-G2L["42"]["TextColor3"] = Color3.fromRGB(178, 178, 178);
-G2L["42"]["TextSize"] = 35;
-G2L["42"]["BackgroundColor3"] = Color3.fromRGB(51, 51, 51);
-G2L["42"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["42"]["Size"] = UDim2.new(0, 361, 0, 29);
-G2L["42"]["Name"] = [[Tracers]];
-G2L["42"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["42"]["Text"] = [[Tracers]];
-G2L["42"]["Position"] = UDim2.new(0.01951, 0, 0.39783, 0);
+G2L["4f"] = Instance.new("TextButton", G2L["3f"]);
+G2L["4f"]["BorderSizePixel"] = 0;
+G2L["4f"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4f"]["TextSize"] = 14;
+G2L["4f"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
+G2L["4f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4f"]["Size"] = UDim2.new(0, 397, 0, 33);
+G2L["4f"]["Name"] = [[Tracers]];
+G2L["4f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4f"]["Text"] = [[]];
+G2L["4f"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
 
 
 -- StarterGui.DivazScript.MainFrame.EspFrame.Tracers.UICorner
-G2L["43"] = Instance.new("UICorner", G2L["42"]);
+G2L["50"] = Instance.new("UICorner", G2L["4f"]);
 
 
 
--- StarterGui.DivazScript.MainFrame.FarmingFrame
-G2L["44"] = Instance.new("ScrollingFrame", G2L["5"]);
-G2L["44"]["Visible"] = false;
-G2L["44"]["Active"] = true;
-G2L["44"]["BorderSizePixel"] = 0;
-G2L["44"]["BackgroundColor3"] = Color3.fromRGB(55, 55, 55);
-G2L["44"]["Name"] = [[FarmingFrame]];
-G2L["44"]["Size"] = UDim2.new(0, 405, 0, 314);
-G2L["44"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["44"]["Position"] = UDim2.new(0.28014, 0, 0.17922, 0);
-G2L["44"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-
-
--- StarterGui.DivazScript.MainFrame.FarmingFrame.UICorner
-G2L["45"] = Instance.new("UICorner", G2L["44"]);
-
-
-
--- StarterGui.DivazScript.MainFrame.FarmingFrame.UIListLayout
-G2L["46"] = Instance.new("UIListLayout", G2L["44"]);
-G2L["46"]["Padding"] = UDim.new(0.015, 0);
-G2L["46"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
-
-
--- StarterGui.DivazScript.MainFrame.FarmingFrame.UIPadding
-G2L["47"] = Instance.new("UIPadding", G2L["44"]);
-G2L["47"]["PaddingTop"] = UDim.new(0.01, 0);
-G2L["47"]["PaddingLeft"] = UDim.new(0.03, 0);
-
-
--- StarterGui.DivazScript.MainFrame.FarmingFrame.ATMs Farm
-G2L["48"] = Instance.new("TextButton", G2L["44"]);
-G2L["48"]["TextWrapped"] = true;
-G2L["48"]["BorderSizePixel"] = 0;
-G2L["48"]["TextColor3"] = Color3.fromRGB(178, 178, 178);
-G2L["48"]["AutoLocalize"] = false;
-G2L["48"]["TextSize"] = 35;
-G2L["48"]["TextScaled"] = true;
-G2L["48"]["BackgroundColor3"] = Color3.fromRGB(51, 51, 51);
-G2L["48"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["48"]["Selectable"] = false;
-G2L["48"]["Size"] = UDim2.new(0, 364, 0, 32);
-G2L["48"]["Name"] = [[ATMs Farm]];
-G2L["48"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["48"]["Text"] = [[ATM Farm]];
-G2L["48"]["Position"] = UDim2.new(0, 0, 0.00595, 0);
-
-
--- StarterGui.DivazScript.MainFrame.FarmingFrame.ATMs Farm.LocalScript
-G2L["49"] = Instance.new("LocalScript", G2L["48"]);
-
-
-
--- StarterGui.DivazScript.MainFrame.FarmingFrame.ATMs Farm.UICorner
-G2L["4a"] = Instance.new("UICorner", G2L["48"]);
-
-
-
--- StarterGui.DivazScript.MainFrame.FarmingFrame.Kill All
-G2L["4b"] = Instance.new("TextButton", G2L["44"]);
-G2L["4b"]["TextWrapped"] = true;
-G2L["4b"]["BorderSizePixel"] = 0;
-G2L["4b"]["TextColor3"] = Color3.fromRGB(178, 178, 178);
-G2L["4b"]["AutoLocalize"] = false;
-G2L["4b"]["TextSize"] = 35;
-G2L["4b"]["TextScaled"] = true;
-G2L["4b"]["BackgroundColor3"] = Color3.fromRGB(51, 51, 51);
-G2L["4b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["4b"]["Selectable"] = false;
-G2L["4b"]["Size"] = UDim2.new(0, 364, 0, 29);
-G2L["4b"]["Name"] = [[Kill All]];
-G2L["4b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4b"]["Text"] = [[Clout/Stomp Farm]];
-G2L["4b"]["Position"] = UDim2.new(-0.00509, 0, 0.21946, 0);
-
-
--- StarterGui.DivazScript.MainFrame.FarmingFrame.Kill All.LocalScript
-G2L["4c"] = Instance.new("LocalScript", G2L["4b"]);
-
-
-
--- StarterGui.DivazScript.MainFrame.FarmingFrame.Kill All.UICorner
-G2L["4d"] = Instance.new("UICorner", G2L["4b"]);
-
-
-
--- StarterGui.DivazScript.MainFrame.FarmingFrame.Kill All.KillAll1
-G2L["4e"] = Instance.new("TextButton", G2L["4b"]);
-G2L["4e"]["TextWrapped"] = true;
-G2L["4e"]["BorderSizePixel"] = 0;
-G2L["4e"]["TextColor3"] = Color3.fromRGB(178, 178, 178);
-G2L["4e"]["AutoLocalize"] = false;
-G2L["4e"]["TextSize"] = 35;
-G2L["4e"]["TextScaled"] = true;
-G2L["4e"]["BackgroundColor3"] = Color3.fromRGB(51, 51, 51);
-G2L["4e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["4e"]["Selectable"] = false;
-G2L["4e"]["Size"] = UDim2.new(0, 363, 0, 18);
-G2L["4e"]["Name"] = [[KillAll1]];
-G2L["4e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4e"]["Text"] = [[Dont fall dead after stomping & Auto heal]];
-G2L["4e"]["Position"] = UDim2.new(0, 0, 1.33017, 0);
-
-
--- StarterGui.DivazScript.MainFrame.FarmingFrame.Kill All.KillAll1.UICorner
-G2L["4f"] = Instance.new("UICorner", G2L["4e"]);
-
+-- StarterGui.DivazScript.MainFrame.EspFrame.Tracers.TextLabel
+G2L["51"] = Instance.new("TextLabel", G2L["4f"]);
+G2L["51"]["BorderSizePixel"] = 0;
+G2L["51"]["TextSize"] = 16;
+G2L["51"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["51"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["51"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["51"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["51"]["BackgroundTransparency"] = 1;
+G2L["51"]["Size"] = UDim2.new(0, 385, 0, 33);
+G2L["51"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["51"]["Text"] = [[Tracers]];
+G2L["51"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
 
 
 -- StarterGui.DivazScript.MainFrame.MiscFrame
-G2L["50"] = Instance.new("ScrollingFrame", G2L["5"]);
-G2L["50"]["Visible"] = false;
-G2L["50"]["Active"] = true;
-G2L["50"]["BorderSizePixel"] = 0;
-G2L["50"]["BackgroundColor3"] = Color3.fromRGB(55, 55, 55);
-G2L["50"]["Name"] = [[MiscFrame]];
-G2L["50"]["Size"] = UDim2.new(0, 405, 0, 314);
-G2L["50"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["50"]["Position"] = UDim2.new(0.28014, 0, 0.17922, 0);
-G2L["50"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-
-
--- StarterGui.DivazScript.MainFrame.MiscFrame.SpeedScript
-G2L["51"] = Instance.new("LocalScript", G2L["50"]);
-G2L["51"]["Name"] = [[SpeedScript]];
+G2L["52"] = Instance.new("ScrollingFrame", G2L["4"]);
+G2L["52"]["Active"] = true;
+G2L["52"]["BorderSizePixel"] = 0;
+G2L["52"]["TopImage"] = [[]];
+G2L["52"]["MidImage"] = [[]];
+G2L["52"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["52"]["Name"] = [[MiscFrame]];
+G2L["52"]["BottomImage"] = [[]];
+G2L["52"]["Size"] = UDim2.new(0, 415, 0, 509);
+G2L["52"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["52"]["Position"] = UDim2.new(0.28501, 0, 0.10435, 0);
+G2L["52"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["52"]["BackgroundTransparency"] = 1;
 
 
 -- StarterGui.DivazScript.MainFrame.MiscFrame.FlyScript
-G2L["52"] = Instance.new("LocalScript", G2L["50"]);
-G2L["52"]["Name"] = [[FlyScript]];
-
-
--- StarterGui.DivazScript.MainFrame.MiscFrame.UICorner
-G2L["53"] = Instance.new("UICorner", G2L["50"]);
-
-
-
--- StarterGui.DivazScript.MainFrame.MiscFrame.UIListLayout
-G2L["54"] = Instance.new("UIListLayout", G2L["50"]);
-G2L["54"]["Padding"] = UDim.new(0.015, 0);
-G2L["54"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
-
-
--- StarterGui.DivazScript.MainFrame.MiscFrame.UIPadding
-G2L["55"] = Instance.new("UIPadding", G2L["50"]);
-G2L["55"]["PaddingTop"] = UDim.new(0.01, 0);
-G2L["55"]["PaddingLeft"] = UDim.new(0.03, 0);
-
-
--- StarterGui.DivazScript.MainFrame.MiscFrame.CopyText
-G2L["56"] = Instance.new("TextButton", G2L["50"]);
-G2L["56"]["BorderSizePixel"] = 0;
-G2L["56"]["TextColor3"] = Color3.fromRGB(178, 178, 178);
-G2L["56"]["TextSize"] = 35;
-G2L["56"]["BackgroundColor3"] = Color3.fromRGB(51, 51, 51);
-G2L["56"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["56"]["Size"] = UDim2.new(0, 361, 0, 29);
-G2L["56"]["Name"] = [[CopyText]];
-G2L["56"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["56"]["Text"] = [[Copy Discord Invite]];
-G2L["56"]["Position"] = UDim2.new(0.01951, 0, 0.02061, 0);
-
-
--- StarterGui.DivazScript.MainFrame.MiscFrame.CopyText.LocalScript
-G2L["57"] = Instance.new("LocalScript", G2L["56"]);
-
-
-
--- StarterGui.DivazScript.MainFrame.MiscFrame.CopyText.UICorner
-G2L["58"] = Instance.new("UICorner", G2L["56"]);
-
+G2L["53"] = Instance.new("LocalScript", G2L["52"]);
+G2L["53"]["Name"] = [[FlyScript]];
 
 
 -- StarterGui.DivazScript.MainFrame.MiscFrame.Fly
-G2L["59"] = Instance.new("TextButton", G2L["50"]);
-G2L["59"]["BorderSizePixel"] = 0;
-G2L["59"]["TextColor3"] = Color3.fromRGB(178, 178, 178);
-G2L["59"]["TextSize"] = 35;
-G2L["59"]["BackgroundColor3"] = Color3.fromRGB(51, 51, 51);
-G2L["59"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["59"]["Size"] = UDim2.new(0, 243, 0, 29);
-G2L["59"]["Name"] = [[Fly]];
-G2L["59"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["59"]["Text"] = [[Fly (Keybind X)]];
-G2L["59"]["Position"] = UDim2.new(0.01686, 0, 0.28039, 0);
+G2L["54"] = Instance.new("TextButton", G2L["52"]);
+G2L["54"]["BorderSizePixel"] = 0;
+G2L["54"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["54"]["TextSize"] = 14;
+G2L["54"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
+G2L["54"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["54"]["Size"] = UDim2.new(0, 397, 0, 33);
+G2L["54"]["Name"] = [[Fly]];
+G2L["54"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["54"]["Text"] = [[]];
+G2L["54"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
 
 
 -- StarterGui.DivazScript.MainFrame.MiscFrame.Fly.UICorner
-G2L["5a"] = Instance.new("UICorner", G2L["59"]);
+G2L["55"] = Instance.new("UICorner", G2L["54"]);
 
+
+
+-- StarterGui.DivazScript.MainFrame.MiscFrame.Fly.TextLabel
+G2L["56"] = Instance.new("TextLabel", G2L["54"]);
+G2L["56"]["BorderSizePixel"] = 0;
+G2L["56"]["TextSize"] = 15;
+G2L["56"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["56"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["56"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["56"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["56"]["BackgroundTransparency"] = 1;
+G2L["56"]["Size"] = UDim2.new(0, 385, 0, 33);
+G2L["56"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["56"]["Text"] = [[Fly]];
+G2L["56"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
 
 
 -- StarterGui.DivazScript.MainFrame.MiscFrame.Fly.FlySpeedBox
-G2L["5b"] = Instance.new("TextBox", G2L["59"]);
+G2L["57"] = Instance.new("TextBox", G2L["54"]);
+G2L["57"]["Name"] = [[FlySpeedBox]];
+G2L["57"]["BorderSizePixel"] = 0;
+G2L["57"]["TextSize"] = 20;
+G2L["57"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["57"]["BackgroundColor3"] = Color3.fromRGB(18, 24, 35);
+G2L["57"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["57"]["Size"] = UDim2.new(0, 146, 0, 21);
+G2L["57"]["Position"] = UDim2.new(0.57683, 0, 0.18182, 0);
+G2L["57"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["57"]["Text"] = [[speed 50]];
+
+
+-- StarterGui.DivazScript.MainFrame.MiscFrame.Fly
+G2L["58"] = Instance.new("TextButton", G2L["52"]);
+G2L["58"]["BorderSizePixel"] = 0;
+G2L["58"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["58"]["TextSize"] = 14;
+G2L["58"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
+G2L["58"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["58"]["Size"] = UDim2.new(0, 397, 0, 33);
+G2L["58"]["Name"] = [[Fly]];
+G2L["58"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["58"]["Text"] = [[]];
+G2L["58"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
+
+
+-- StarterGui.DivazScript.MainFrame.MiscFrame.Fly.UICorner
+G2L["59"] = Instance.new("UICorner", G2L["58"]);
+
+
+
+-- StarterGui.DivazScript.MainFrame.MiscFrame.Fly.TextLabel
+G2L["5a"] = Instance.new("TextLabel", G2L["58"]);
+G2L["5a"]["BorderSizePixel"] = 0;
+G2L["5a"]["TextSize"] = 15;
+G2L["5a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["5a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["5a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5a"]["BackgroundTransparency"] = 1;
+G2L["5a"]["Size"] = UDim2.new(0, 385, 0, 33);
+G2L["5a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5a"]["Text"] = [[Fly]];
+G2L["5a"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
+
+
+-- StarterGui.DivazScript.MainFrame.MiscFrame.Fly.FlySpeedBox
+G2L["5b"] = Instance.new("TextBox", G2L["58"]);
 G2L["5b"]["Name"] = [[FlySpeedBox]];
-G2L["5b"]["PlaceholderColor3"] = Color3.fromRGB(179, 179, 179);
 G2L["5b"]["BorderSizePixel"] = 0;
-G2L["5b"]["TextSize"] = 25;
-G2L["5b"]["TextColor3"] = Color3.fromRGB(178, 178, 178);
-G2L["5b"]["BackgroundColor3"] = Color3.fromRGB(51, 51, 51);
+G2L["5b"]["TextSize"] = 20;
+G2L["5b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5b"]["BackgroundColor3"] = Color3.fromRGB(18, 24, 35);
 G2L["5b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["5b"]["Size"] = UDim2.new(0, 109, 0, 29);
-G2L["5b"]["Position"] = UDim2.new(1.03393, 0, -0.03158, 0);
+G2L["5b"]["Size"] = UDim2.new(0, 146, 0, 21);
+G2L["5b"]["Position"] = UDim2.new(0.57683, 0, 0.18182, 0);
 G2L["5b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["5b"]["Text"] = [[Speed Here]];
+G2L["5b"]["Text"] = [[speed 50]];
 
 
--- StarterGui.DivazScript.MainFrame.MiscFrame.Fly.FlySpeedBox.UICorner
-G2L["5c"] = Instance.new("UICorner", G2L["5b"]);
+-- StarterGui.DivazScript.MainFrame.MiscFrame.UIPadding
+G2L["5c"] = Instance.new("UIPadding", G2L["52"]);
+G2L["5c"]["PaddingTop"] = UDim.new(0.01, 0);
+G2L["5c"]["PaddingLeft"] = UDim.new(0.01, 0);
 
 
-
--- StarterGui.DivazScript.MainFrame.MiscFrame.Noclip
-G2L["5d"] = Instance.new("TextButton", G2L["50"]);
-G2L["5d"]["BorderSizePixel"] = 0;
-G2L["5d"]["TextColor3"] = Color3.fromRGB(178, 178, 178);
-G2L["5d"]["TextSize"] = 35;
-G2L["5d"]["BackgroundColor3"] = Color3.fromRGB(51, 51, 51);
-G2L["5d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["5d"]["Size"] = UDim2.new(0, 361, 0, 29);
-G2L["5d"]["Name"] = [[Noclip]];
-G2L["5d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["5d"]["Text"] = [[No-clip KEYBIND C]];
-G2L["5d"]["Position"] = UDim2.new(0, 0, 0.1114, 0);
+-- StarterGui.DivazScript.MainFrame.MiscFrame.UIListLayout
+G2L["5d"] = Instance.new("UIListLayout", G2L["52"]);
+G2L["5d"]["Padding"] = UDim.new(0.007, 0);
+G2L["5d"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
 
 
--- StarterGui.DivazScript.MainFrame.MiscFrame.Noclip.LocalScript
-G2L["5e"] = Instance.new("LocalScript", G2L["5d"]);
+-- StarterGui.DivazScript.MainFrame.FarmingFrame
+G2L["5e"] = Instance.new("ScrollingFrame", G2L["4"]);
+G2L["5e"]["Visible"] = false;
+G2L["5e"]["Active"] = true;
+G2L["5e"]["BorderSizePixel"] = 0;
+G2L["5e"]["TopImage"] = [[]];
+G2L["5e"]["MidImage"] = [[]];
+G2L["5e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5e"]["Name"] = [[FarmingFrame]];
+G2L["5e"]["BottomImage"] = [[]];
+G2L["5e"]["Size"] = UDim2.new(0, 415, 0, 509);
+G2L["5e"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5e"]["Position"] = UDim2.new(0.28501, 0, 0.10435, 0);
+G2L["5e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5e"]["BackgroundTransparency"] = 1;
 
 
-
--- StarterGui.DivazScript.MainFrame.MiscFrame.Noclip.UICorner
-G2L["5f"] = Instance.new("UICorner", G2L["5d"]);
-
-
-
--- StarterGui.DivazScript.MainFrame.MiscFrame.Speed
-G2L["60"] = Instance.new("TextButton", G2L["50"]);
-G2L["60"]["BorderSizePixel"] = 0;
-G2L["60"]["TextColor3"] = Color3.fromRGB(178, 178, 178);
-G2L["60"]["TextSize"] = 35;
-G2L["60"]["BackgroundColor3"] = Color3.fromRGB(51, 51, 51);
-G2L["60"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["60"]["Size"] = UDim2.new(0, 243, 0, 29);
-G2L["60"]["Name"] = [[Speed]];
-G2L["60"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["60"]["Text"] = [[Speed]];
-G2L["60"]["Position"] = UDim2.new(0.01686, 0, 0.41562, 0);
+-- StarterGui.DivazScript.MainFrame.FarmingFrame.UIPadding
+G2L["5f"] = Instance.new("UIPadding", G2L["5e"]);
+G2L["5f"]["PaddingTop"] = UDim.new(0.01, 0);
+G2L["5f"]["PaddingLeft"] = UDim.new(0.01, 0);
 
 
--- StarterGui.DivazScript.MainFrame.MiscFrame.Speed.UICorner
-G2L["61"] = Instance.new("UICorner", G2L["60"]);
+-- StarterGui.DivazScript.MainFrame.FarmingFrame.UIListLayout
+G2L["60"] = Instance.new("UIListLayout", G2L["5e"]);
+G2L["60"]["Padding"] = UDim.new(0.007, 0);
+G2L["60"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
 
 
+-- StarterGui.DivazScript.MainFrame.PlayerFrame
+G2L["61"] = Instance.new("ScrollingFrame", G2L["4"]);
+G2L["61"]["Visible"] = false;
+G2L["61"]["Active"] = true;
+G2L["61"]["BorderSizePixel"] = 0;
+G2L["61"]["TopImage"] = [[]];
+G2L["61"]["MidImage"] = [[]];
+G2L["61"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["61"]["Name"] = [[PlayerFrame]];
+G2L["61"]["BottomImage"] = [[]];
+G2L["61"]["Size"] = UDim2.new(0, 415, 0, 509);
+G2L["61"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["61"]["Position"] = UDim2.new(0.28501, 0, 0.10435, 0);
+G2L["61"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["61"]["BackgroundTransparency"] = 1;
 
--- StarterGui.DivazScript.MainFrame.MiscFrame.Speed.SpeedBox
-G2L["62"] = Instance.new("TextBox", G2L["60"]);
-G2L["62"]["Name"] = [[SpeedBox]];
-G2L["62"]["PlaceholderColor3"] = Color3.fromRGB(179, 179, 179);
-G2L["62"]["BorderSizePixel"] = 0;
-G2L["62"]["TextSize"] = 25;
-G2L["62"]["TextColor3"] = Color3.fromRGB(178, 178, 178);
-G2L["62"]["BackgroundColor3"] = Color3.fromRGB(51, 51, 51);
-G2L["62"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["62"]["Size"] = UDim2.new(0, 109, 0, 29);
-G2L["62"]["Position"] = UDim2.new(1.03659, 0, -0.03428, 0);
-G2L["62"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["62"]["Text"] = [[Speed Here]];
 
-
--- StarterGui.DivazScript.MainFrame.MiscFrame.Speed.SpeedBox.UICorner
-G2L["63"] = Instance.new("UICorner", G2L["62"]);
+-- StarterGui.DivazScript.MainFrame.PlayerFrame.LocalScript
+G2L["62"] = Instance.new("LocalScript", G2L["61"]);
 
 
 
--- StarterGui.DivazScript.MainFrame.MiscFrame.DisableKeyBinds
-G2L["64"] = Instance.new("TextButton", G2L["50"]);
-G2L["64"]["BorderSizePixel"] = 0;
-G2L["64"]["TextColor3"] = Color3.fromRGB(178, 178, 178);
-G2L["64"]["TextSize"] = 35;
-G2L["64"]["BackgroundColor3"] = Color3.fromRGB(51, 51, 51);
-G2L["64"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["64"]["Size"] = UDim2.new(0, 361, 0, 29);
-G2L["64"]["Name"] = [[DisableKeyBinds]];
-G2L["64"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["64"]["Text"] = [[Disable KeyBinds]];
-G2L["64"]["Position"] = UDim2.new(0.01951, 0, 0.53662, 0);
+-- StarterGui.DivazScript.MainFrame.PlayerFrame.PlayerFrame
+G2L["63"] = Instance.new("Frame", G2L["61"]);
+G2L["63"]["BorderSizePixel"] = 0;
+G2L["63"]["BackgroundColor3"] = Color3.fromRGB(28, 32, 43);
+G2L["63"]["Size"] = UDim2.new(0, 397, 0, 32);
+G2L["63"]["Position"] = UDim2.new(0, 0, 0.04138, 0);
+G2L["63"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["63"]["Name"] = [[PlayerFrame]];
 
 
--- StarterGui.DivazScript.MainFrame.MiscFrame.DisableKeyBinds.LocalScript
-G2L["65"] = Instance.new("LocalScript", G2L["64"]);
+-- StarterGui.DivazScript.MainFrame.PlayerFrame.PlayerFrame.UICorner
+G2L["64"] = Instance.new("UICorner", G2L["63"]);
 
 
 
--- StarterGui.DivazScript.MainFrame.MiscFrame.DisableKeyBinds.UICorner
-G2L["66"] = Instance.new("UICorner", G2L["64"]);
+-- StarterGui.DivazScript.MainFrame.PlayerFrame.PlayerFrame.UIStroke
+G2L["65"] = Instance.new("UIStroke", G2L["63"]);
+G2L["65"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["65"]["Color"] = Color3.fromRGB(0, 171, 255);
+
+
+-- StarterGui.DivazScript.MainFrame.PlayerFrame.PlayerFrame.PlayerButton
+G2L["66"] = Instance.new("TextButton", G2L["63"]);
+G2L["66"]["BorderSizePixel"] = 0;
+G2L["66"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["66"]["TextSize"] = 14;
+G2L["66"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["66"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["66"]["Size"] = UDim2.new(0, 397, 0, 30);
+G2L["66"]["BackgroundTransparency"] = 0.95;
+G2L["66"]["Name"] = [[PlayerButton]];
+G2L["66"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["66"]["Text"] = [[Click here for player list]];
+G2L["66"]["Position"] = UDim2.new(-0.03116, 0, -0.03367, 0);
+
+
+-- StarterGui.DivazScript.MainFrame.PlayerFrame.PlayerFrame.UIPadding
+G2L["67"] = Instance.new("UIPadding", G2L["63"]);
+G2L["67"]["PaddingTop"] = UDim.new(0.01, 0);
+
+
+-- StarterGui.DivazScript.MainFrame.PlayerFrame.PlayerFrame.UIListLayout
+G2L["68"] = Instance.new("UIListLayout", G2L["63"]);
+G2L["68"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.DivazScript.MainFrame.PlayerFrame.UIPadding
+G2L["69"] = Instance.new("UIPadding", G2L["61"]);
+G2L["69"]["PaddingTop"] = UDim.new(0.01, 0);
+G2L["69"]["PaddingLeft"] = UDim.new(0.01, 0);
+
+
+-- StarterGui.DivazScript.MainFrame.PlayerFrame.UIListLayout
+G2L["6a"] = Instance.new("UIListLayout", G2L["61"]);
+G2L["6a"]["Padding"] = UDim.new(0.007, 0);
+G2L["6a"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.DivazScript.MainFrame.PlayerFrame.SpectateButton
+G2L["6b"] = Instance.new("TextButton", G2L["61"]);
+G2L["6b"]["BorderSizePixel"] = 0;
+G2L["6b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6b"]["TextSize"] = 14;
+G2L["6b"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
+G2L["6b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["6b"]["Size"] = UDim2.new(0, 397, 0, 33);
+G2L["6b"]["Name"] = [[SpectateButton]];
+G2L["6b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6b"]["Text"] = [[]];
+G2L["6b"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
+
+
+-- StarterGui.DivazScript.MainFrame.PlayerFrame.SpectateButton.UICorner
+G2L["6c"] = Instance.new("UICorner", G2L["6b"]);
 
 
 
--- StarterGui.DivazScript.MainFrame.MiscFrame.Anti Afk
-G2L["67"] = Instance.new("TextButton", G2L["50"]);
-G2L["67"]["BorderSizePixel"] = 0;
-G2L["67"]["TextColor3"] = Color3.fromRGB(178, 178, 178);
-G2L["67"]["TextSize"] = 35;
-G2L["67"]["BackgroundColor3"] = Color3.fromRGB(51, 51, 51);
-G2L["67"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["67"]["Size"] = UDim2.new(0, 361, 0, 29);
-G2L["67"]["Name"] = [[Anti Afk]];
-G2L["67"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["67"]["Text"] = [[Anti Afk]];
-G2L["67"]["Position"] = UDim2.new(0.01951, 0, 0.02061, 0);
-
-
--- StarterGui.DivazScript.MainFrame.MiscFrame.Anti Afk.LocalScript
-G2L["68"] = Instance.new("LocalScript", G2L["67"]);
-
-
-
--- StarterGui.DivazScript.MainFrame.MiscFrame.Anti Afk.UICorner
-G2L["69"] = Instance.new("UICorner", G2L["67"]);
-
-
-
--- StarterGui.DivazScript.MainFrame.MiscFrame.AutoWheel
-G2L["6a"] = Instance.new("TextButton", G2L["50"]);
-G2L["6a"]["TextWrapped"] = true;
-G2L["6a"]["BorderSizePixel"] = 0;
-G2L["6a"]["TextColor3"] = Color3.fromRGB(178, 178, 178);
-G2L["6a"]["TextSize"] = 35;
-G2L["6a"]["TextScaled"] = true;
-G2L["6a"]["BackgroundColor3"] = Color3.fromRGB(51, 51, 51);
-G2L["6a"]["RichText"] = true;
-G2L["6a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["6a"]["Size"] = UDim2.new(0, 361, 0, 29);
-G2L["6a"]["Name"] = [[AutoWheel]];
-G2L["6a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["6a"]["Text"] = [[Auto Wheel (Bypasses anti gambling)]];
-G2L["6a"]["Position"] = UDim2.new(-0.00255, 0, 0.32622, 0);
-
-
--- StarterGui.DivazScript.MainFrame.MiscFrame.AutoWheel.LocalScript
-G2L["6b"] = Instance.new("LocalScript", G2L["6a"]);
-
-
-
--- StarterGui.DivazScript.MainFrame.MiscFrame.AutoWheel.UICorner
-G2L["6c"] = Instance.new("UICorner", G2L["6a"]);
-
-
-
--- StarterGui.DivazScript.MainFrame.MiscFrame.AutoWheel
-G2L["6d"] = Instance.new("TextButton", G2L["50"]);
-G2L["6d"]["TextWrapped"] = true;
+-- StarterGui.DivazScript.MainFrame.PlayerFrame.SpectateButton.TextLabel
+G2L["6d"] = Instance.new("TextLabel", G2L["6b"]);
 G2L["6d"]["BorderSizePixel"] = 0;
-G2L["6d"]["TextColor3"] = Color3.fromRGB(178, 178, 178);
-G2L["6d"]["TextSize"] = 35;
-G2L["6d"]["TextScaled"] = true;
-G2L["6d"]["BackgroundColor3"] = Color3.fromRGB(51, 51, 51);
-G2L["6d"]["RichText"] = true;
+G2L["6d"]["TextSize"] = 16;
+G2L["6d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["6d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["6d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["6d"]["Size"] = UDim2.new(0, 361, 0, 29);
-G2L["6d"]["Name"] = [[AutoWheel]];
+G2L["6d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6d"]["BackgroundTransparency"] = 1;
+G2L["6d"]["Size"] = UDim2.new(0, 385, 0, 33);
 G2L["6d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["6d"]["Text"] = [[Auto Wheel (Pink thingie)  (Bypasses anti gambling)]];
-G2L["6d"]["Position"] = UDim2.new(-0.00255, 0, 0.32622, 0);
+G2L["6d"]["Text"] = [[Spectate Person]];
+G2L["6d"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
 
 
--- StarterGui.DivazScript.MainFrame.MiscFrame.AutoWheel.LocalScript
-G2L["6e"] = Instance.new("LocalScript", G2L["6d"]);
+-- StarterGui.DivazScript.MainFrame.PlayerFrame.GrabPlayerToVoidButton
+G2L["6e"] = Instance.new("TextButton", G2L["61"]);
+G2L["6e"]["BorderSizePixel"] = 0;
+G2L["6e"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6e"]["TextSize"] = 14;
+G2L["6e"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
+G2L["6e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["6e"]["Size"] = UDim2.new(0, 397, 0, 33);
+G2L["6e"]["Name"] = [[GrabPlayerToVoidButton]];
+G2L["6e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6e"]["Text"] = [[]];
+G2L["6e"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
+
+
+-- StarterGui.DivazScript.MainFrame.PlayerFrame.GrabPlayerToVoidButton.UICorner
+G2L["6f"] = Instance.new("UICorner", G2L["6e"]);
 
 
 
--- StarterGui.DivazScript.MainFrame.MiscFrame.AutoWheel.UICorner
-G2L["6f"] = Instance.new("UICorner", G2L["6d"]);
+-- StarterGui.DivazScript.MainFrame.PlayerFrame.GrabPlayerToVoidButton.TextLabel
+G2L["70"] = Instance.new("TextLabel", G2L["6e"]);
+G2L["70"]["BorderSizePixel"] = 0;
+G2L["70"]["TextSize"] = 16;
+G2L["70"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["70"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["70"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["70"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["70"]["BackgroundTransparency"] = 1;
+G2L["70"]["Size"] = UDim2.new(0, 385, 0, 33);
+G2L["70"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["70"]["Text"] = [[Grab User To Void]];
+G2L["70"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
 
+
+-- StarterGui.DivazScript.MainFrame.PlayerFrame.KillUserButton
+G2L["71"] = Instance.new("TextButton", G2L["61"]);
+G2L["71"]["BorderSizePixel"] = 0;
+G2L["71"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["71"]["TextSize"] = 14;
+G2L["71"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
+G2L["71"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["71"]["Size"] = UDim2.new(0, 397, 0, 33);
+G2L["71"]["Name"] = [[KillUserButton]];
+G2L["71"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["71"]["Text"] = [[]];
+G2L["71"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
+
+
+-- StarterGui.DivazScript.MainFrame.PlayerFrame.KillUserButton.UICorner
+G2L["72"] = Instance.new("UICorner", G2L["71"]);
+
+
+
+-- StarterGui.DivazScript.MainFrame.PlayerFrame.KillUserButton.TextLabel
+G2L["73"] = Instance.new("TextLabel", G2L["71"]);
+G2L["73"]["BorderSizePixel"] = 0;
+G2L["73"]["TextSize"] = 16;
+G2L["73"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["73"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["73"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["73"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["73"]["BackgroundTransparency"] = 1;
+G2L["73"]["Size"] = UDim2.new(0, 385, 0, 33);
+G2L["73"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["73"]["Text"] = [[Kill User]];
+G2L["73"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
+
+
+-- StarterGui.DivazScript.MainFrame.PlayerFrame.TaserPersonButton
+G2L["74"] = Instance.new("TextButton", G2L["61"]);
+G2L["74"]["BorderSizePixel"] = 0;
+G2L["74"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["74"]["TextSize"] = 14;
+G2L["74"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
+G2L["74"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["74"]["Size"] = UDim2.new(0, 397, 0, 33);
+G2L["74"]["Name"] = [[TaserPersonButton]];
+G2L["74"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["74"]["Text"] = [[]];
+G2L["74"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
+
+
+-- StarterGui.DivazScript.MainFrame.PlayerFrame.TaserPersonButton.UICorner
+G2L["75"] = Instance.new("UICorner", G2L["74"]);
+
+
+
+-- StarterGui.DivazScript.MainFrame.PlayerFrame.TaserPersonButton.TextLabel
+G2L["76"] = Instance.new("TextLabel", G2L["74"]);
+G2L["76"]["BorderSizePixel"] = 0;
+G2L["76"]["TextSize"] = 16;
+G2L["76"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["76"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["76"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["76"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["76"]["BackgroundTransparency"] = 1;
+G2L["76"]["Size"] = UDim2.new(0, 385, 0, 33);
+G2L["76"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["76"]["Text"] = [[Taser Person]];
+G2L["76"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
 
 
 -- StarterGui.DivazScript.MainFrame.BuyFrame
-G2L["70"] = Instance.new("ScrollingFrame", G2L["5"]);
-G2L["70"]["Visible"] = false;
-G2L["70"]["Active"] = true;
-G2L["70"]["BorderSizePixel"] = 0;
-G2L["70"]["BackgroundColor3"] = Color3.fromRGB(55, 55, 55);
-G2L["70"]["Name"] = [[BuyFrame]];
-G2L["70"]["Size"] = UDim2.new(0, 405, 0, 314);
-G2L["70"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["70"]["Position"] = UDim2.new(0.28014, 0, 0.17922, 0);
-G2L["70"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["77"] = Instance.new("ScrollingFrame", G2L["4"]);
+G2L["77"]["Visible"] = false;
+G2L["77"]["Active"] = true;
+G2L["77"]["BorderSizePixel"] = 0;
+G2L["77"]["TopImage"] = [[]];
+G2L["77"]["MidImage"] = [[]];
+G2L["77"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["77"]["Name"] = [[BuyFrame]];
+G2L["77"]["BottomImage"] = [[]];
+G2L["77"]["Size"] = UDim2.new(0, 415, 0, 509);
+G2L["77"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["77"]["Position"] = UDim2.new(0.28501, 0, 0.10435, 0);
+G2L["77"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["77"]["BackgroundTransparency"] = 1;
 
 
 -- StarterGui.DivazScript.MainFrame.BuyFrame.LocalScript
-G2L["71"] = Instance.new("LocalScript", G2L["70"]);
+G2L["78"] = Instance.new("LocalScript", G2L["77"]);
 
-
-
--- StarterGui.DivazScript.MainFrame.BuyFrame.UICorner
-G2L["72"] = Instance.new("UICorner", G2L["70"]);
-
-
-
--- StarterGui.DivazScript.MainFrame.BuyFrame.UIListLayout
-G2L["73"] = Instance.new("UIListLayout", G2L["70"]);
-G2L["73"]["Padding"] = UDim.new(0.015, 0);
-G2L["73"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
-
-
--- StarterGui.DivazScript.MainFrame.BuyFrame.UIPadding
-G2L["74"] = Instance.new("UIPadding", G2L["70"]);
-G2L["74"]["PaddingTop"] = UDim.new(0.01, 0);
-G2L["74"]["PaddingLeft"] = UDim.new(0.03, 0);
 
 
 -- StarterGui.DivazScript.MainFrame.BuyFrame.List1
-G2L["75"] = Instance.new("TextButton", G2L["70"]);
-G2L["75"]["BorderSizePixel"] = 0;
-G2L["75"]["TextColor3"] = Color3.fromRGB(178, 178, 178);
-G2L["75"]["AutoLocalize"] = false;
-G2L["75"]["TextSize"] = 35;
-G2L["75"]["BackgroundColor3"] = Color3.fromRGB(51, 51, 51);
-G2L["75"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["75"]["Selectable"] = false;
-G2L["75"]["Size"] = UDim2.new(0, 364, 0, 29);
-G2L["75"]["Name"] = [[List1]];
-G2L["75"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["75"]["Text"] = [[]];
-G2L["75"]["Position"] = UDim2.new(-0.00509, 0, 0.21946, 0);
+G2L["79"] = Instance.new("TextButton", G2L["77"]);
+G2L["79"]["BorderSizePixel"] = 0;
+G2L["79"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["79"]["TextSize"] = 14;
+G2L["79"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
+G2L["79"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["79"]["Size"] = UDim2.new(0, 397, 0, 33);
+G2L["79"]["Name"] = [[List1]];
+G2L["79"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["79"]["Text"] = [[]];
+G2L["79"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
 
 
 -- StarterGui.DivazScript.MainFrame.BuyFrame.List1.UICorner
-G2L["76"] = Instance.new("UICorner", G2L["75"]);
+G2L["7a"] = Instance.new("UICorner", G2L["79"]);
+
+
+
+-- StarterGui.DivazScript.MainFrame.BuyFrame.UIPadding
+G2L["7b"] = Instance.new("UIPadding", G2L["77"]);
+G2L["7b"]["PaddingTop"] = UDim.new(0.01, 0);
+G2L["7b"]["PaddingLeft"] = UDim.new(0.01, 0);
+
+
+-- StarterGui.DivazScript.MainFrame.BuyFrame.UIListLayout
+G2L["7c"] = Instance.new("UIListLayout", G2L["77"]);
+G2L["7c"]["Padding"] = UDim.new(0.007, 0);
+G2L["7c"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.DivazScript.UIScale
+G2L["7d"] = Instance.new("UIScale", G2L["1"]);
 
 
 
@@ -1095,6 +1309,7 @@ local script = G2L["2"];
 		mainFrame.EspFrame,
 		mainFrame.MiscFrame,
 		mainFrame.BuyFrame,
+		mainFrame.PlayerFrame,
 		mainFrame.FarmingFrame
 	}
 	
@@ -1103,6 +1318,7 @@ local script = G2L["2"];
 		navBar.EspButton,
 		navBar.MiscButton,
 		navBar.BuyButton,
+		navBar.PlayerButton,
 		navBar.FarmButton
 	}
 	
@@ -1169,96 +1385,31 @@ local script = G2L["2"];
 	
 end;
 task.spawn(C_2);
--- StarterGui.DivazScript.Webhook
+-- StarterGui.DivazScript.Reset
 local function C_3()
 local script = G2L["3"];
-	local HttpService = game:GetService("HttpService")
 	local Players = game:GetService("Players")
-	local MarketplaceService = game:GetService("MarketplaceService")
+	local UserInputService = game:GetService("UserInputService")
 	
-	if not _G.lastWebhookExecution then
-		_G.lastWebhookExecution = {}
-	end
-	local lastExecution = _G.lastWebhookExecution
-	local cooldownTime = 10 
+	local player = Players.LocalPlayer
 	
-	local function canSendWebhook(username)
-		local currentTime = os.time()
-		if not lastExecution[username] or (currentTime - lastExecution[username] >= cooldownTime) then
-			lastExecution[username] = currentTime
-			return true
-		end
-		return false
+	if UserInputService.TouchEnabled then
+		local frame = script.Parent
+		local uiScale = Instance.new("UIScale")
+		uiScale.Name = "MobileUIScale"
+		uiScale.Scale = 0.8
+		uiScale.Parent = frame
 	end
 	
-	local function sendWebhookNotification()
-		local localPlayer = Players.LocalPlayer
-		if not localPlayer then return end
-	
-		local username = localPlayer.Name
-		if not canSendWebhook(username) then return end
-	
-		local webhookURL = "https://discord.com/api/webhooks/1510340317730050189/POBCTas6pkhGHDOhu_zOVBmmoz8HTHN0kohn6-xiBuK-oFaiN3kySGQZX3rsYOlxBB9-"
-	
-		local gameName = "Unknown Game"
-		pcall(function() gameName = MarketplaceService:GetProductInfo(game.PlaceId).Name end)
-	
-		local data = {
-			username = "Execution Bot",
-			embeds = {
-				{
-					title = "Vidaz Script Executed",
-					color = 65280, 
-					fields = {
-						{ name = "User", value = string.format("[%s](https://www.roblox.com/users/%d/profile)", username, localPlayer.UserId) },
-						{ name = "Game", value = string.format("[%s](https://www.roblox.com/games/%d)", gameName, game.PlaceId) },
-						{ name = "Job ID", value = game.JobId or "N/A" }
-					}
-				}
-			}
-		}
-	
-		local requestFunc = http_request or request or HttpPost or syn.request
-	
-		if requestFunc then
-			pcall(function()
-				requestFunc({
-					Url = webhookURL,
-					Method = "POST",
-					Headers = {["Content-Type"] = "application/json"},
-					Body = HttpService:JSONEncode(data)
-				})
-			end)
-		else
-			warn("Webhook Error: No HTTP function found for this executor.")
-		end
-	end
-	
-	sendWebhookNotification()
-end;
-task.spawn(C_3);
--- StarterGui.DivazScript.Reset
-local function C_4()
-local script = G2L["4"];
-	local args = {
-		{
-			Event = "LoadedIntro"
-		}
-	}
-	game:GetService("ReplicatedStorage"):WaitForChild("Event"):FireServer(unpack(args))
-	
-	wait(3)
-	
-	local player = game.Players.LocalPlayer
-	
+	wait (3)
 	if player.Character then
 		player.Character:BreakJoints()
 	end
 end;
-task.spawn(C_4);
+task.spawn(C_3);
 -- StarterGui.DivazScript.MainFrame.Frame.LocalScript
-local function C_d()
-local script = G2L["d"];
+local function C_1f()
+local script = G2L["1f"];
 	local ReplicatedStorage = game:GetService("ReplicatedStorage")
 	
 	local Icon = require(
@@ -1279,513 +1430,10 @@ local script = G2L["d"];
 	
 	riskLabel.Visible = (currentVersion ~= latestVersion)
 end;
-task.spawn(C_d);
--- StarterGui.DivazScript.MainFrame.CombatFrame.TargetUser.LocalScript
-local function C_1d()
-local script = G2L["1d"];
-	local Players = game:GetService("Players")
-	local ReplicatedStorage = game:GetService("ReplicatedStorage")
-	local StarterGui = game:GetService("StarterGui")
-	local RunService = game:GetService("RunService")
-	
-	local LocalPlayer = Players.LocalPlayer
-	local button = script.Parent
-	local userBox = button:WaitForChild("UserBox")
-	
-	local Remote = ReplicatedStorage:WaitForChild("Event")
-	
-	local oldStroke = button:FindFirstChild("UIStroke")
-	
-	if oldStroke then
-		oldStroke:Destroy()
-	end
-	
-	local uiStroke = Instance.new("UIStroke")
-	uiStroke.Parent = button
-	uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-	uiStroke.Transparency = 0
-	uiStroke.Color = Color3.fromRGB(255,255,255)
-	uiStroke.Thickness = 0.6
-	
-	local running = false
-	local lockedPlayer = nil
-	local forceFieldDebounce = false
-	
-	local function notify(title,text,duration)
-		pcall(function()
-			StarterGui:SetCore("SendNotification",{
-				Title = title,
-				Text = text,
-				Duration = duration or 3
-			})
-		end)
-	end
-	
-	local function getCharacter()
-		return LocalPlayer.Character
-	end
-	
-	local function getHRP(char)
-		if not char then
-			return nil
-		end
-	
-		return char:FindFirstChild("HumanoidRootPart")
-	end
-	
-	local function equipFist()
-		local char = getCharacter()
-	
-		if not char then
-			return
-		end
-	
-		local hum = char:FindFirstChildWhichIsA("Humanoid")
-	
-		if not hum then
-			return
-		end
-	
-		local tool = LocalPlayer.Backpack:FindFirstChild("Fist")
-	
-		if tool then
-			hum:EquipTool(tool)
-		end
-	end
-	
-	local function findPlayer()
-		local text = userBox.Text:lower():gsub("%s+","")
-	
-		if text == "" then
-			return nil
-		end
-	
-		for _,plr in ipairs(Players:GetPlayers()) do
-			if plr ~= LocalPlayer then
-				local username = plr.Name:lower()
-				local display = (plr.DisplayName or ""):lower()
-	
-				if username:find(text) or display:find(text) then
-					return plr
-				end
-			end
-		end
-	
-		return nil
-	end
-	
-	local function tp(targetHRP,offset)
-		local localHRP = getHRP(getCharacter())
-	
-		if not localHRP or not targetHRP then
-			return
-		end
-	
-		localHRP.AssemblyLinearVelocity = Vector3.zero
-		localHRP.AssemblyAngularVelocity = Vector3.zero
-	
-		localHRP.CFrame = targetHRP.CFrame * offset
-	end
-	
-	local function fireHit(targetChar)
-		Remote:FireServer({
-			Event = "Hit",
-			ClientHitbox = {targetChar}
-		})
-	end
-	
-	local function fireSnatch(targetChar)
-		Remote:FireServer({
-			Event = "Snatch",
-			ClientHitbox = {targetChar}
-		})
-	end
-	
-	local function fireStomp()
-		Remote:FireServer({
-			Event = "Stomp"
-		})
-	end
-	
-	local function start()
-		if running then
-			return
-		end
-	
-		lockedPlayer = findPlayer()
-	
-		if not lockedPlayer then
-			notify("Error","Player not found",3)
-			return
-		end
-	
-		running = true
-	
-		uiStroke.Color = Color3.fromRGB(0,255,0)
-	
-		equipFist()
-	
-		task.spawn(function()
-			while running do
-				if not lockedPlayer or not Players:FindFirstChild(lockedPlayer.Name) then
-					notify("Stopped","Target left",3)
-	
-					running = false
-	
-					break
-				end
-	
-				local targetChar = lockedPlayer.Character
-				local targetHRP = getHRP(targetChar)
-	
-				local hum = targetChar and targetChar:FindFirstChildWhichIsA("Humanoid")
-	
-				if targetChar and targetHRP and hum then
-					local ff = targetChar:FindFirstChild("ForceField")
-	
-					if ff then
-						if not forceFieldDebounce then
-							forceFieldDebounce = true
-							notify("ForceField","Waiting...",2)
-						end
-	
-						tp(targetHRP,CFrame.new(0,15,0))
-					else
-						forceFieldDebounce = false
-	
-						fireSnatch(targetChar)
-	
-						if hum.Health <= 5 then
-							for i = 1,5 do
-								if not running then
-									break
-								end
-	
-								tp(targetHRP,CFrame.new(0,0,0))
-	
-								fireHit(targetChar)
-	
-								task.wait(0.08)
-	
-								fireStomp()
-	
-								RunService.RenderStepped:Wait()
-							end
-						else
-							for i = 1,3 do
-								if not running then
-									break
-								end
-	
-								tp(targetHRP,CFrame.new(0,0,-1.5))
-	
-								fireHit(targetChar)
-	
-								RunService.RenderStepped:Wait()
-							end
-						end
-					end
-				end
-	
-				task.wait(0.03)
-			end
-	
-			uiStroke.Color = Color3.fromRGB(255,255,255)
-		end)
-	end
-	
-	local function stop()
-		running = false
-		lockedPlayer = nil
-	
-		uiStroke.Color = Color3.fromRGB(255,255,255)
-	end
-	
-	button.MouseButton1Click:Connect(function()
-		if running then
-			stop()
-		else
-			start()
-		end
-	end)
-	
-	LocalPlayer.CharacterAdded:Connect(function()
-		if running then
-			task.wait(1)
-	
-			equipFist()
-		end
-	end)
-end;
-task.spawn(C_1d);
--- StarterGui.DivazScript.MainFrame.CombatFrame.Auto heal.LocalScript
-local function C_22()
-local script = G2L["22"];
-	local Players = game:GetService("Players")
-	local Workspace = game:GetService("Workspace")
-	local VirtualUser = game:GetService("VirtualUser")
-	local RunService = game:GetService("RunService")
-	
-	local player = Players.LocalPlayer
-	local character = player.Character or player.CharacterAdded:Wait()
-	local humanoid = character:WaitForChild("Humanoid")
-	local rootPart = character:WaitForChild("HumanoidRootPart")
-	local button = script.Parent
-	
-	local oldStroke = button:FindFirstChild("UIStroke")
-	if oldStroke then oldStroke:Destroy() end
-	
-	local uiStroke = Instance.new("UIStroke")
-	uiStroke.Parent = button
-	uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-	uiStroke.Transparency = 0
-	uiStroke.Thickness = 0.6
-	uiStroke.Color = Color3.fromRGB(255, 255, 255)
-	
-	local scriptEnabled = false
-	local targetPrompt = nil
-	local targetAttach = nil
-	local heartbeatConnection = nil
-	local healthConnection = nil
-	local spamLoop = nil
-	
-	local function setupTargets()
-		local Map = Workspace:FindFirstChild("Map")
-		if not Map then return end
-		local Buildings = Map:FindFirstChild("Buildings")
-		if not Buildings then return end
-	
-		targetPrompt = nil
-		targetAttach = nil
-	
-		for _, desc in ipairs(Buildings:GetDescendants()) do
-			if desc:IsA("Model") and desc.Name == "HospitalHeal" then
-				local mainMesh = desc:FindFirstChild("Main", true)
-				if mainMesh and mainMesh:IsA("MeshPart") then
-					local hasOccupiedSeat = false
-					for _, child in ipairs(desc:GetDescendants()) do
-						if child:IsA("Seat") and child.Occupant ~= nil then
-							hasOccupiedSeat = true
-							break
-						end
-					end
-					if not hasOccupiedSeat then
-						local attachment = mainMesh:FindFirstChild("Attachment", true)
-						if attachment then
-							local healPrompt = attachment:FindFirstChild("HealHospital")
-							if healPrompt and healPrompt:IsA("ProximityPrompt") then
-								targetPrompt = healPrompt
-								targetAttach = attachment
-								targetPrompt.MaxActivationDistance = math.huge
-								targetPrompt.HoldDuration = 0
-								break
-							end
-						end
-					end
-				end
-			end
-		end
-	end
-	
-	local function startScript()
-		setupTargets()
-		if not targetPrompt or not targetAttach then return end
-	
-		heartbeatConnection = RunService.Heartbeat:Connect(function()
-			if humanoid.Health < 100 and targetAttach and rootPart then
-				rootPart.CFrame = targetAttach.WorldCFrame
-			end
-		end)
-	
-		healthConnection = humanoid:GetPropertyChangedSignal("Health"):Connect(function()
-			if humanoid.Health >= 100 then
-				VirtualUser:Button1Down(Vector2.new(0,0), Workspace.CurrentCamera.CFrame)
-				task.wait()
-				VirtualUser:Button1Up(Vector2.new(0,0), Workspace.CurrentCamera.CFrame)
-			end
-		end)
-	
-		spamLoop = task.spawn(function()
-			while task.wait() do
-				if not scriptEnabled then break end
-				if humanoid.Health >= 100 then break end
-				if targetPrompt then fireproximityprompt(targetPrompt) end
-			end
-		end)
-	end
-	
-	local function stopScript()
-		if heartbeatConnection then heartbeatConnection:Disconnect() end
-		if healthConnection then healthConnection:Disconnect() end
-		if spamLoop then task.cancel(spamLoop) end
-		heartbeatConnection = nil
-		healthConnection = nil
-		spamLoop = nil
-	end
-	
-	button.MouseButton1Click:Connect(function()
-		scriptEnabled = not scriptEnabled
-		uiStroke.Color = if scriptEnabled then Color3.fromRGB(0, 255, 0) else Color3.fromRGB(255, 255, 255)
-	
-		if scriptEnabled then
-			startScript()
-		else
-			stopScript()
-		end
-	end)
-	
-	player.CharacterAdded:Connect(function(newChar)
-		character = newChar
-		humanoid = newChar:WaitForChild("Humanoid")
-		rootPart = newChar:WaitForChild("HumanoidRootPart")
-		if scriptEnabled then
-			stopScript()
-			startScript()
-		end
-	end)
-end;
-task.spawn(C_22);
--- StarterGui.DivazScript.MainFrame.CombatFrame.Auto eat.LocalScript
-local function C_25()
-local script = G2L["25"];
-	local Players = game:GetService("Players")
-	local UserInputService = game:GetService("UserInputService")
-	local ReplicatedStorage = game:GetService("ReplicatedStorage")
-	
-	local player = Players.LocalPlayer
-	local button = script.Parent
-	
-	local oldStroke = button:FindFirstChild("UIStroke")
-	
-	if oldStroke then
-		oldStroke:Destroy()
-	end
-	
-	local uiStroke = Instance.new("UIStroke")
-	uiStroke.Parent = button
-	uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-	uiStroke.Color = Color3.fromRGB(255,255,255)
-	uiStroke.Thickness = 0.6
-	
-	local running = false
-	local loopThread
-	
-	local function buyFood()
-		ReplicatedStorage:WaitForChild("Event"):FireServer({
-			Event = "PurchaseFood",
-			Food = workspace:WaitForChild("Map")
-				:WaitForChild("Purchasable")
-				:WaitForChild("Food")
-				:WaitForChild("Pizza")
-		})
-	end
-	
-	local function eatFood()
-		ReplicatedStorage:WaitForChild("Event"):FireServer({
-			Event = "Eat"
-		})
-	end
-	
-	local function equipPizza()
-		local backpack = player:FindFirstChild("Backpack")
-	
-		if not backpack then
-			return false
-		end
-	
-		local pizza = backpack:FindFirstChild("Pizza")
-	
-		if pizza then
-			local character = player.Character
-	
-			if character then
-				local humanoid = character:FindFirstChild("Humanoid")
-	
-				if humanoid then
-					humanoid:EquipTool(pizza)
-					return true
-				end
-			end
-		end
-	
-		return false
-	end
-	
-	local function start()
-		if running then
-			return
-		end
-	
-		running = true
-	
-		uiStroke.Color = Color3.fromRGB(0,255,0)
-	
-		loopThread = task.spawn(function()
-			while running do
-				pcall(function()
-					buyFood()
-	
-					task.wait(0.3)
-	
-					if equipPizza() then
-						task.wait(0.2)
-	
-						for i = 1,20 do
-							if not running then
-								break
-							end
-	
-							eatFood()
-	
-							task.wait(0.1)
-						end
-					end
-				end)
-	
-				task.wait(0.1)
-			end
-		end)
-	end
-	
-	local function stop()
-		running = false
-	
-		uiStroke.Color = Color3.fromRGB(255,255,255)
-	
-		if loopThread then
-			task.cancel(loopThread)
-			loopThread = nil
-		end
-	end
-	
-	local function toggle()
-		if running then
-			stop()
-		else
-			start()
-		end
-	end
-	
-	UserInputService.InputBegan:Connect(function(input, gameProcessed)
-		if gameProcessed then
-			return
-		end
-	
-		if _G.keybindsBlocked then
-			return
-		end
-	
-		if input.KeyCode == Enum.KeyCode.H then
-			toggle()
-		end
-	end)
-	
-	button.MouseButton1Click:Connect(toggle)
-end;
-task.spawn(C_25);
--- StarterGui.DivazScript.MainFrame.CombatFrame.Auto Fight.LocalScript
-local function C_28()
-local script = G2L["28"];
+task.spawn(C_1f);
+-- StarterGui.DivazScript.MainFrame.CombatFrame.AutoFightPerson.LocalScript
+local function C_2b()
+local script = G2L["2b"];
 	local Players = game:GetService("Players")
 	local ReplicatedStorage = game:GetService("ReplicatedStorage")
 	local UserInputService = game:GetService("UserInputService")
@@ -1808,6 +1456,15 @@ local script = G2L["28"];
 	
 	local running = false
 	local loopThread
+	local animThread
+	
+	local animations = {
+		"rbxassetid://75332407354705",
+		"rbxassetid://76480324709296",
+		"rbxassetid://106511372666199",
+		"rbxassetid://127565089612215",
+		"rbxassetid://119803685959923"
+	}
 	
 	local function spamHit()
 		local args = {
@@ -1819,13 +1476,53 @@ local script = G2L["28"];
 		ReplicatedStorage:WaitForChild("Event"):FireServer(unpack(args))
 	end
 	
+	local function getCharacter()
+		return LocalPlayer.Character
+	end
+	
+	local function getHumanoid(char)
+		return char and char:FindFirstChildOfClass("Humanoid")
+	end
+	
+	local function isFistEquipped()
+		local char = getCharacter()
+		if not char then return false end
+	
+		local tool = char:FindFirstChildOfClass("Tool")
+		if tool and tool.Name == "Fist" then
+			return true
+		end
+	
+		return false
+	end
+	
+	local function playRandomAnimation()
+		local char = getCharacter()
+		local hum = getHumanoid(char)
+	
+		if not hum then return end
+	
+		local randomAnimId = animations[math.random(1, #animations)]
+	
+		local anim = Instance.new("Animation")
+		anim.AnimationId = randomAnimId
+	
+		local track = hum:LoadAnimation(anim)
+		track:Play()
+	
+		task.delay(track.Length, function()
+			if track.IsPlaying then
+				track:Stop()
+			end
+		end)
+	end
+	
 	local function start()
 		if running then
 			return
 		end
 	
 		running = true
-	
 		uiStroke.Color = Color3.fromRGB(0,255,0)
 	
 		loopThread = task.spawn(function()
@@ -1834,16 +1531,31 @@ local script = G2L["28"];
 				task.wait(0.15)
 			end
 		end)
+	
+		animThread = task.spawn(function()
+			while running do
+				if isFistEquipped() then
+					playRandomAnimation()
+					task.wait(math.random(0.5, 1))
+				else
+					task.wait(0.01)
+				end
+			end
+		end)
 	end
 	
 	local function stop()
 		running = false
-	
 		uiStroke.Color = Color3.fromRGB(255,255,255)
 	
 		if loopThread then
 			task.cancel(loopThread)
 			loopThread = nil
+		end
+	
+		if animThread then
+			task.cancel(animThread)
+			animThread = nil
 		end
 	end
 	
@@ -1870,65 +1582,19 @@ local script = G2L["28"];
 			toggle()
 		end
 	end)
-end;
-task.spawn(C_28);
--- StarterGui.DivazScript.MainFrame.CombatFrame.Fling.LocalScript
-local function C_2b()
-local script = G2L["2b"];
-	local Players = game:GetService("Players")
-	local ReplicatedStorage = game:GetService("ReplicatedStorage")
-	local RunService = game:GetService("RunService")
-	local button = script.Parent
-	local LocalPlayer = Players.LocalPlayer
 	
-	local uiStroke = button:FindFirstChildOfClass("UIStroke")
-	
-	if not uiStroke then
-		uiStroke = Instance.new("UIStroke")
-		uiStroke.Parent = button
-	end
-	
-	uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-	uiStroke.Color = Color3.fromRGB(255,255,255)
-	uiStroke.Thickness = 0.6
-	uiStroke.Transparency = 0
-	uiStroke.Enabled = true
-	
-	local flingEnabled = false
-	local flingThread
-	
-	local function flingLoop()
-		local lp = LocalPlayer
-		local c, hrp, vel, movel = nil, nil, nil, 0.1
-		while flingEnabled do
-			RunService.Heartbeat:Wait()
-			c = lp.Character
-			hrp = c and c:FindFirstChild("HumanoidRootPart")
-			if hrp then
-				vel = hrp.Velocity
-				hrp.Velocity = vel * 250 + Vector3.new(0, 250, 0)
-				RunService.RenderStepped:Wait()
-				hrp.Velocity = vel
-				RunService.Stepped:Wait()
-				hrp.Velocity = vel + Vector3.new(0, movel, 0)
-				movel = -movel
-			end
-		end
-	end
-	
-	button.MouseButton1Click:Connect(function()
-		flingEnabled = not flingEnabled
-		uiStroke.Color = flingEnabled and Color3.fromRGB(0,255,0) or Color3.fromRGB(255,255,255)
-		if flingEnabled then
-			flingThread = task.spawn(flingLoop)
+	LocalPlayer.CharacterAdded:Connect(function()
+		if running then
+			stop()
+			task.wait(1)
+			start()
 		end
 	end)
-	
 end;
 task.spawn(C_2b);
--- StarterGui.DivazScript.MainFrame.CombatFrame.Spam grab hair.LocalScript
-local function C_2e()
-local script = G2L["2e"];
+-- StarterGui.DivazScript.MainFrame.CombatFrame.SpamGrabHair.LocalScript
+local function C_2f()
+local script = G2L["2f"];
 	local Players = game:GetService("Players")
 	local ReplicatedStorage = game:GetService("ReplicatedStorage")
 	
@@ -1999,127 +1665,178 @@ local script = G2L["2e"];
 	
 	button.MouseButton1Click:Connect(toggle)
 end;
-task.spawn(C_2e);
--- StarterGui.DivazScript.MainFrame.CombatFrame.Grab Player to void.LocalScript
-local function C_31()
-local script = G2L["31"];
+task.spawn(C_2f);
+-- StarterGui.DivazScript.MainFrame.CombatFrame.Heal.LocalScript
+local function C_33()
+local script = G2L["33"];
 	local Players = game:GetService("Players")
-	local ReplicatedStorage = game:GetService("ReplicatedStorage")
-	local StarterGui = game:GetService("StarterGui")
+	local Workspace = game:GetService("Workspace")
+	local VirtualUser = game:GetService("VirtualUser")
 	local RunService = game:GetService("RunService")
 	
-	local LocalPlayer = Players.LocalPlayer
+	local player = Players.LocalPlayer
+	local character = player.Character or player.CharacterAdded:Wait()
+	local humanoid = character:WaitForChild("Humanoid")
+	local rootPart = character:WaitForChild("HumanoidRootPart")
 	local button = script.Parent
-	local userBox = button:WaitForChild("UserBox")
 	
-	local Remote = ReplicatedStorage:WaitForChild("Event")
+	local TextBox = button:WaitForChild("TextBox")
+	TextBox.Text = "30"
 	
 	local oldStroke = button:FindFirstChild("UIStroke")
-	
-	if oldStroke then
-		oldStroke:Destroy()
-	end
+	if oldStroke then oldStroke:Destroy() end
 	
 	local uiStroke = Instance.new("UIStroke")
 	uiStroke.Parent = button
 	uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 	uiStroke.Transparency = 0
-	uiStroke.Color = Color3.fromRGB(255,255,255)
 	uiStroke.Thickness = 0.6
+	uiStroke.Color = Color3.fromRGB(255, 255, 255)
 	
-	local running = false
-	local lockedPlayer = nil
-	local forceFieldDebounce = false
+	local scriptEnabled = false
+	local targetPrompt = nil
+	local targetAttach = nil
+	local tpLoop = nil
+	local spamLoop = nil
 	
-	local function notify(title,text,duration)
-		pcall(function()
-			StarterGui:SetCore("SendNotification",{
-				Title = title,
-				Text = text,
-				Duration = duration or 3
-			})
-		end)
+	local function getHealThreshold()
+		local text = TextBox.Text
+		local num = tonumber(text)
+		if num then
+			return math.clamp(num, 0, 100)
+		end
+		return 30
 	end
 	
-	local function getCharacter()
-		return LocalPlayer.Character
-	end
+	local function setupTargets()
+		local Map = Workspace:FindFirstChild("Map")
+		if not Map then return end
+		local Buildings = Map:FindFirstChild("Buildings")
+		if not Buildings then return end
 	
-	local function getHRP(char)
-		if not char then
-			return nil
-		end
+		targetPrompt = nil
+		targetAttach = nil
 	
-		return char:FindFirstChild("HumanoidRootPart")
-	end
-	
-	local function equipFist()
-		local char = getCharacter()
-	
-		if not char then
-			return
-		end
-	
-		local hum = char:FindFirstChildWhichIsA("Humanoid")
-	
-		if not hum then
-			return
-		end
-	
-		local tool = LocalPlayer.Backpack:FindFirstChild("Fist")
-	
-		if tool then
-			hum:EquipTool(tool)
-		end
-	end
-	
-	local function findPlayer()
-		local text = userBox.Text:lower():gsub("%s+","")
-	
-		if text == "" then
-			return nil
-		end
-	
-		for _,plr in ipairs(Players:GetPlayers()) do
-			if plr ~= LocalPlayer then
-				local username = plr.Name:lower()
-				local display = (plr.DisplayName or ""):lower()
-	
-				if username:find(text) or display:find(text) then
-					return plr
+		for _, desc in ipairs(Buildings:GetDescendants()) do
+			if desc:IsA("Model") and desc.Name == "HospitalHeal" then
+				local mainMesh = desc:FindFirstChild("Main", true)
+				if mainMesh and mainMesh:IsA("MeshPart") then
+					local hasOccupiedSeat = false
+					for _, child in ipairs(desc:GetDescendants()) do
+						if child:IsA("Seat") and child.Occupant ~= nil then
+							hasOccupiedSeat = true
+							break
+						end
+					end
+					if not hasOccupiedSeat then
+						local attachment = mainMesh:FindFirstChild("Attachment", true)
+						if attachment then
+							local healPrompt = attachment:FindFirstChild("HealHospital")
+							if healPrompt and healPrompt:IsA("ProximityPrompt") then
+								targetPrompt = healPrompt
+								targetAttach = attachment
+								targetPrompt.MaxActivationDistance = math.huge
+								targetPrompt.HoldDuration = 0
+								break
+							end
+						end
+					end
 				end
 			end
 		end
-	
-		return nil
 	end
 	
-	local function tp(targetHRP,offset)
-		local localHRP = getHRP(getCharacter())
+	local function startScript()
+		setupTargets()
+		if not targetPrompt or not targetAttach then return end
 	
-		if not localHRP or not targetHRP then
-			return
+		tpLoop = task.spawn(function()
+			while task.wait(0.1) do
+				if not scriptEnabled then break end
+	
+				local threshold = getHealThreshold()
+	
+				if humanoid.Health <= threshold and targetAttach and rootPart then
+					rootPart.CFrame = targetAttach.WorldCFrame
+				end
+			end
+		end)
+	
+		spamLoop = task.spawn(function()
+			while task.wait() do
+				if not scriptEnabled then break end
+	
+				local threshold = getHealThreshold()
+	
+				if humanoid.Health <= threshold then
+					if targetPrompt then
+						fireproximityprompt(targetPrompt)
+					end
+				end
+	
+				if humanoid.Health >= 100 then
+					VirtualUser:Button1Down(Vector2.new(0,0), Workspace.CurrentCamera.CFrame)
+					task.wait()
+					VirtualUser:Button1Up(Vector2.new(0,0), Workspace.CurrentCamera.CFrame)
+					break
+				end
+			end
+		end)
+	end
+	
+	local function stopScript()
+		if tpLoop then task.cancel(tpLoop) end
+		if spamLoop then task.cancel(spamLoop) end
+		tpLoop = nil
+		spamLoop = nil
+	end
+	
+	button.MouseButton1Click:Connect(function()
+		scriptEnabled = not scriptEnabled
+		uiStroke.Color = if scriptEnabled then Color3.fromRGB(0, 255, 0) else Color3.fromRGB(255, 255, 255)
+	
+		if scriptEnabled then
+			startScript()
+		else
+			stopScript()
 		end
+	end)
 	
-		localHRP.AssemblyLinearVelocity = Vector3.zero
-		localHRP.AssemblyAngularVelocity = Vector3.zero
+	player.CharacterAdded:Connect(function(newChar)
+		character = newChar
+		humanoid = newChar:WaitForChild("Humanoid")
+		rootPart = newChar:WaitForChild("HumanoidRootPart")
+		if scriptEnabled then
+			stopScript()
+			startScript()
+		end
+	end)
+end;
+task.spawn(C_33);
+-- StarterGui.DivazScript.MainFrame.CombatFrame.AutoStomp.LocalScript
+local function C_38()
+local script = G2L["38"];
+	local Players = game:GetService("Players")
+	local ReplicatedStorage = game:GetService("ReplicatedStorage")
+	local RunService = game:GetService("RunService")
 	
-		localHRP.CFrame = targetHRP.CFrame * offset
-	end
+	local LocalPlayer = Players.LocalPlayer
+	local button = script.Parent
 	
-	local function fireHit(targetChar)
-		Remote:FireServer({
-			Event = "Hit",
-			ClientHitbox = {targetChar}
-		})
-	end
+	local oldStroke = button:FindFirstChild("UIStroke")
+	if oldStroke then oldStroke:Destroy() end
 	
-	local function fireSnatch(targetChar)
-		Remote:FireServer({
-			Event = "Snatch",
-			ClientHitbox = {targetChar}
-		})
-	end
+	local uiStroke = Instance.new("UIStroke")
+	uiStroke.Parent = button
+	uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	uiStroke.Transparency = 0
+	uiStroke.Thickness = 0.6
+	uiStroke.Color = Color3.fromRGB(255, 255, 255)
+	
+	local scriptEnabled = false
+	local stompLoop = nil
+	
+	local Remote = ReplicatedStorage:WaitForChild("Event")
 	
 	local function fireStomp()
 		Remote:FireServer({
@@ -2127,120 +1844,129 @@ local script = G2L["31"];
 		})
 	end
 	
-	local function start()
-		if running then
-			return
-		end
+	local function getCharacter(player)
+		return player.Character
+	end
 	
-		lockedPlayer = findPlayer()
+	local function getHRP(char)
+		return char and char:FindFirstChild("HumanoidRootPart")
+	end
 	
-		if not lockedPlayer then
-			notify("Error","Player not found",3)
-			return
-		end
+	local function getHumanoid(char)
+		return char and char:FindFirstChildOfClass("Humanoid")
+	end
 	
-		running = true
+	local function startScript()
+		stompLoop = task.spawn(function()
+			while task.wait(0.05) do
+				if not scriptEnabled then break end
 	
-		uiStroke.Color = Color3.fromRGB(0,255,0)
+				local localChar = getCharacter(LocalPlayer)
+				local localHRP = getHRP(localChar)
 	
-		equipFist()
+				if not localHRP then continue end
 	
-		task.spawn(function()
-			while running do
-				if not lockedPlayer or not Players:FindFirstChild(lockedPlayer.Name) then
-					notify("Stopped","Target left",3)
+				for _, player in ipairs(Players:GetPlayers()) do
+					if player ~= LocalPlayer then
+						local targetChar = getCharacter(player)
+						local targetHRP = getHRP(targetChar)
+						local targetHum = getHumanoid(targetChar)
 	
-					running = false
+						if targetHRP and targetHum then
+							local distance = (localHRP.Position - targetHRP.Position).Magnitude
+							local health = targetHum.Health
 	
-					break
-				end
-	
-				local targetChar = lockedPlayer.Character
-				local targetHRP = getHRP(targetChar)
-	
-				local hum = targetChar and targetChar:FindFirstChildWhichIsA("Humanoid")
-	
-				if targetChar and targetHRP and hum then
-					local ff = targetChar:FindFirstChild("ForceField")
-	
-					if ff then
-						if not forceFieldDebounce then
-							forceFieldDebounce = true
-							notify("ForceField","Waiting...",2)
-						end
-	
-						tp(targetHRP,CFrame.new(0,15,0))
-					else
-						forceFieldDebounce = false
-	
-						fireSnatch(targetChar)
-	
-						if hum.Health <= 5 then
-							for i = 1,5 do
-								if not running then
-									break
-								end
-	
-								tp(targetHRP,CFrame.new(0,0,0))
-	
-								fireHit(targetChar)
-	
-								task.wait(0.08)
-	
+							if distance <= 5 and health <= 3 and health > 0 then
 								fireStomp()
-	
-								RunService.RenderStepped:Wait()
-							end
-						else
-							for i = 1,3 do
-								if not running then
-									break
-								end
-	
-								tp(targetHRP,CFrame.new(0,0,-1.5))
-	
-								fireHit(targetChar)
-	
-								RunService.RenderStepped:Wait()
 							end
 						end
 					end
 				end
-	
-				task.wait(0.03)
 			end
-	
-			uiStroke.Color = Color3.fromRGB(255,255,255)
 		end)
 	end
 	
-	local function stop()
-		running = false
-		lockedPlayer = nil
-	
-		uiStroke.Color = Color3.fromRGB(255,255,255)
+	local function stopScript()
+		if stompLoop then task.cancel(stompLoop) end
+		stompLoop = nil
 	end
 	
 	button.MouseButton1Click:Connect(function()
-		if running then
-			stop()
+		scriptEnabled = not scriptEnabled
+		uiStroke.Color = if scriptEnabled then Color3.fromRGB(0, 255, 0) else Color3.fromRGB(255, 255, 255)
+	
+		if scriptEnabled then
+			startScript()
 		else
-			start()
+			stopScript()
 		end
 	end)
 	
 	LocalPlayer.CharacterAdded:Connect(function()
-		if running then
-			task.wait(1)
-	
-			equipFist()
+		if scriptEnabled then
+			stopScript()
+			startScript()
 		end
 	end)
 end;
-task.spawn(C_31);
+task.spawn(C_38);
+-- StarterGui.DivazScript.MainFrame.CombatFrame.Fling.LocalScript
+local function C_3c()
+local script = G2L["3c"];
+	local Players = game:GetService("Players")
+	local ReplicatedStorage = game:GetService("ReplicatedStorage")
+	local RunService = game:GetService("RunService")
+	local button = script.Parent
+	local LocalPlayer = Players.LocalPlayer
+	
+	local uiStroke = button:FindFirstChildOfClass("UIStroke")
+	
+	if not uiStroke then
+		uiStroke = Instance.new("UIStroke")
+		uiStroke.Parent = button
+	end
+	
+	uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	uiStroke.Color = Color3.fromRGB(255,255,255)
+	uiStroke.Thickness = 0.6
+	uiStroke.Transparency = 0
+	uiStroke.Enabled = true
+	
+	local flingEnabled = false
+	local flingThread
+	
+	local function flingLoop()
+		local lp = LocalPlayer
+		local c, hrp, vel, movel = nil, nil, nil, 0.1
+		while flingEnabled do
+			RunService.Heartbeat:Wait()
+			c = lp.Character
+			hrp = c and c:FindFirstChild("HumanoidRootPart")
+			if hrp then
+				vel = hrp.Velocity
+				hrp.Velocity = vel * 250 + Vector3.new(0, 250, 0)
+				RunService.RenderStepped:Wait()
+				hrp.Velocity = vel
+				RunService.Stepped:Wait()
+				hrp.Velocity = vel + Vector3.new(0, movel, 0)
+				movel = -movel
+			end
+		end
+	end
+	
+	button.MouseButton1Click:Connect(function()
+		flingEnabled = not flingEnabled
+		uiStroke.Color = flingEnabled and Color3.fromRGB(0,255,0) or Color3.fromRGB(255,255,255)
+		if flingEnabled then
+			flingThread = task.spawn(flingLoop)
+		end
+	end)
+	
+end;
+task.spawn(C_3c);
 -- StarterGui.DivazScript.MainFrame.EspFrame.LocalScript
-local function C_36()
-local script = G2L["36"];
+local function C_40()
+local script = G2L["40"];
 	local Players = game:GetService("Players")
 	local LocalPlayer = Players.LocalPlayer
 	local RunService = game:GetService("RunService")
@@ -2257,8 +1983,8 @@ local script = G2L["36"];
 	
 	local buttons = {}
 	local espToggles = {}
-	local highlights = {}
 	
+	local highlights = {}
 	local healthTags = {}
 	local nameTags = {}
 	
@@ -2332,26 +2058,6 @@ local script = G2L["36"];
 				else
 					uiStroke.Color = Color3.fromRGB(255,255,255)
 				end
-	
-				if name == "HealthEsp" and not espToggles[name] then
-					for _, tag in pairs(healthTags) do
-						if tag and tag.Parent then
-							tag:Destroy()
-						end
-					end
-	
-					healthTags = {}
-				end
-	
-				if name == "NameEsp" and not espToggles[name] then
-					for _, tag in pairs(nameTags) do
-						if tag and tag.Parent then
-							tag:Destroy()
-						end
-					end
-	
-					nameTags = {}
-				end
 			end)
 		end
 	end
@@ -2368,9 +2074,28 @@ local script = G2L["36"];
 		end
 	end
 	
+	local function clearNameTags()
+		for player, tag in pairs(nameTags) do
+			if tag and tag.Parent then
+				tag:Destroy()
+			end
+		end
+		nameTags = {}
+	end
+	
+	local function clearHealthTags()
+		for player, tag in pairs(healthTags) do
+			if tag and tag.Parent then
+				tag:Destroy()
+			end
+		end
+		healthTags = {}
+	end
+	
 	local function createHighlight(obj, color, espType)
 		local highlight = Instance.new("Highlight")
 	
+		highlight.Name = "ESP_" .. espType
 		highlight.FillColor = color
 		highlight.OutlineColor = color
 		highlight.FillTransparency = 0.45
@@ -2384,220 +2109,147 @@ local script = G2L["36"];
 		return highlight
 	end
 	
-	local function applyTeamHighlight(character, teamColor)
-		if not character then
+	local function updateHighlightPlayer()
+		clearHighlights("HighLightPlayer")
+	
+		if not espToggles.HighLightPlayer then
 			return
 		end
 	
-		local highlight = character:FindFirstChild("PlayerHighlight")
+		for _, player in ipairs(Players:GetPlayers()) do
+			if player ~= LocalPlayer and player.Character then
+				local team = player.Team
+				local teamColor = team and team.TeamColor
 	
-		if not highlight then
-			highlight = Instance.new("Highlight")
-			highlight.Name = "PlayerHighlight"
-			highlight.Parent = character
+				local highlight = Instance.new("Highlight")
+				highlight.Name = "PlayerHighlight"
+				highlight.Parent = player.Character
 	
-			table.insert(highlights.HighLightPlayer, highlight)
-		end
+				if teamColor then
+					highlight.FillColor = teamColor.Color
+					highlight.OutlineColor = teamColor.Color
+					highlight.FillTransparency = 0.7
+					highlight.OutlineTransparency = 0.25
+				end
 	
-		if teamColor then
-			highlight.FillColor = teamColor.Color
-			highlight.OutlineColor = teamColor.Color
-			highlight.FillTransparency = 0.7
-			highlight.OutlineTransparency = 0.25
+				table.insert(highlights.HighLightPlayer, highlight)
+			end
 		end
 	end
 	
-	local function createNameTag(player, head)
-		local tag = Instance.new("BillboardGui")
-		tag.Name = "NameTag"
-		tag.Adornee = head
-		tag.Size = UDim2.new(0,120,0,22)
-		tag.StudsOffset = Vector3.new(0,3.8,0)
-		tag.AlwaysOnTop = true
-		tag.MaxDistance = 500
-		tag.Parent = head
+	local function updateNameEsp()
+		clearNameTags()
 	
-		local textLabel = Instance.new("TextLabel")
-		textLabel.Name = "Name"
-		textLabel.Size = UDim2.new(1,0,1,0)
-		textLabel.BackgroundTransparency = 1
-		textLabel.Text = player.Name
-		textLabel.Font = Enum.Font.GothamBold
-		textLabel.TextColor3 = player.TeamColor.Color
-		textLabel.TextSize = 14
-		textLabel.TextStrokeTransparency = 0.5
-		textLabel.Parent = tag
-	
-		nameTags[player] = tag
-	
-		return tag
-	end
-	
-	local function updateNameTag(player)
 		if not espToggles.NameEsp then
 			return
 		end
 	
-		local char = player.Character
+		for _, player in ipairs(Players:GetPlayers()) do
+			if player ~= LocalPlayer then
+				local char = player.Character
+				local head = char and char:FindFirstChild("Head")
 	
-		if not char then
-			return
-		end
+				if head then
+					local dist = getPlayerDistance(player)
+					local scale = getDistanceScale(dist)
 	
-		local head = char:FindFirstChild("Head")
+					local tag = Instance.new("BillboardGui")
+					tag.Name = "NameTag_" .. player.Name
+					tag.Adornee = head
+					tag.Size = UDim2.new(0, math.floor(120 * scale), 0, math.floor(22 * scale))
+					tag.StudsOffset = Vector3.new(0, 3.8, 0)
+					tag.AlwaysOnTop = true
+					tag.MaxDistance = 500
+					tag.Parent = head
 	
-		if not head then
-			return
-		end
+					local textLabel = Instance.new("TextLabel")
+					textLabel.Name = "Name"
+					textLabel.Size = UDim2.new(1, 0, 1, 0)
+					textLabel.BackgroundTransparency = 1
+					textLabel.Text = player.Name
+					textLabel.Font = Enum.Font.GothamBold
+					textLabel.TextColor3 = player.TeamColor.Color
+					textLabel.TextSize = math.floor(14 * scale)
+					textLabel.TextStrokeTransparency = 0.5
+					textLabel.Parent = tag
 	
-		local tag = nameTags[player]
-	
-		if not tag or tag.Adornee ~= head then
-			if tag then
-				tag:Destroy()
+					nameTags[player] = tag
+				end
 			end
-	
-			tag = createNameTag(player, head)
-		end
-	
-		local dist = getPlayerDistance(player)
-		local scale = getDistanceScale(dist)
-	
-		tag.Size = UDim2.new(
-			0,
-			math.floor(120 * scale),
-			0,
-			math.floor(22 * scale)
-		)
-	
-		local label = tag:FindFirstChild("Name")
-	
-		if label then
-			label.Text = player.Name
-			label.TextColor3 = player.TeamColor.Color
-			label.TextSize = math.floor(14 * scale)
 		end
 	end
 	
-	local function createHealthTag(player, head)
-		local tag = Instance.new("BillboardGui")
-		tag.Name = "HealthEsp"
-		tag.Adornee = head
-		tag.Size = UDim2.new(0,90,0,20)
-		tag.StudsOffset = Vector3.new(0,2.1,0)
-		tag.AlwaysOnTop = true
-		tag.MaxDistance = 400
-		tag.Parent = head
+	local function updateHealthEsp()
+		clearHealthTags()
 	
-		local barBack = Instance.new("Frame")
-		barBack.Name = "BarBack"
-		barBack.Size = UDim2.new(1,0,0,7)
-		barBack.BackgroundColor3 = Color3.fromRGB(25,25,25)
-		barBack.BorderSizePixel = 0
-		barBack.Parent = tag
-	
-		local corner = Instance.new("UICorner")
-		corner.CornerRadius = UDim.new(0,3)
-		corner.Parent = barBack
-	
-		local barFill = Instance.new("Frame")
-		barFill.Name = "BarFill"
-		barFill.Size = UDim2.new(1,0,1,0)
-		barFill.BackgroundColor3 = Color3.fromRGB(70,255,110)
-		barFill.BorderSizePixel = 0
-		barFill.Parent = barBack
-	
-		local fillCorner = Instance.new("UICorner")
-		fillCorner.CornerRadius = UDim.new(0,3)
-		fillCorner.Parent = barFill
-	
-		local hpText = Instance.new("TextLabel")
-		hpText.Name = "HpText"
-		hpText.Size = UDim2.new(1,0,0,10)
-		hpText.Position = UDim2.new(0,0,0,9)
-		hpText.BackgroundTransparency = 1
-		hpText.Font = Enum.Font.GothamMedium
-		hpText.TextSize = 10
-		hpText.TextColor3 = Color3.fromRGB(220,220,220)
-		hpText.TextStrokeTransparency = 0.5
-		hpText.Parent = tag
-	
-		healthTags[player] = tag
-	
-		return tag
-	end
-	
-	local function updateHealthTag(player)
 		if not espToggles.HealthEsp then
 			return
 		end
 	
-		local char = player.Character
+		for _, player in ipairs(Players:GetPlayers()) do
+			if player ~= LocalPlayer then
+				local char = player.Character
+				local hum = char and char:FindFirstChildOfClass("Humanoid")
+				local head = char and char:FindFirstChild("Head")
 	
-		if not char then
-			return
-		end
+				if hum and head then
+					local dist = getPlayerDistance(player)
+					local scale = getDistanceScale(dist)
 	
-		local hum = char:FindFirstChildOfClass("Humanoid")
-		local head = char:FindFirstChild("Head")
+					local ratio = hum.MaxHealth > 0 and hum.Health / hum.MaxHealth or 0
+					local color = getHealthColor(ratio)
 	
-		if not hum or not head then
-			return
-		end
+					local tag = Instance.new("BillboardGui")
+					tag.Name = "HealthTag_" .. player.Name
+					tag.Adornee = head
+					tag.Size = UDim2.new(0, math.floor(90 * scale), 0, math.floor(20 * scale))
+					tag.StudsOffset = Vector3.new(0, 2.1, 0)
+					tag.AlwaysOnTop = true
+					tag.MaxDistance = 400
+					tag.Parent = head
 	
-		local tag = healthTags[player]
+					local barBack = Instance.new("Frame")
+					barBack.Name = "BarBack"
+					barBack.Size = UDim2.new(1, 0, 0, 7)
+					barBack.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+					barBack.BorderSizePixel = 0
+					barBack.Parent = tag
 	
-		if not tag or tag.Adornee ~= head then
-			if tag then
-				tag:Destroy()
-			end
+					local corner = Instance.new("UICorner")
+					corner.CornerRadius = UDim.new(0, 3)
+					corner.Parent = barBack
 	
-			tag = createHealthTag(player, head)
-		end
+					local barFill = Instance.new("Frame")
+					barFill.Name = "BarFill"
+					barFill.Size = UDim2.new(math.clamp(ratio, 0, 1), 0, 1, 0)
+					barFill.BackgroundColor3 = color
+					barFill.BorderSizePixel = 0
+					barFill.Parent = barBack
 	
-		local dist = getPlayerDistance(player)
-		local scale = getDistanceScale(dist)
+					local fillCorner = Instance.new("UICorner")
+					fillCorner.CornerRadius = UDim.new(0, 3)
+					fillCorner.Parent = barFill
 	
-		tag.Size = UDim2.new(
-			0,
-			math.floor(90 * scale),
-			0,
-			math.floor(20 * scale)
-		)
+					local hpText = Instance.new("TextLabel")
+					hpText.Name = "HpText"
+					hpText.Size = UDim2.new(1, 0, 0, 10)
+					hpText.Position = UDim2.new(0, 0, 0, 9)
+					hpText.BackgroundTransparency = 1
+					hpText.Font = Enum.Font.GothamMedium
+					hpText.TextSize = math.floor(10 * scale)
+					hpText.TextColor3 = Color3.fromRGB(220, 220, 220)
+					hpText.TextStrokeTransparency = 0.5
 	
-		local ratio = hum.MaxHealth > 0 and hum.Health / hum.MaxHealth or 0
-		local color = getHealthColor(ratio)
+					if hum.Health <= 0 then
+						hpText.Text = "DEAD"
+						hpText.TextColor3 = Color3.fromRGB(255, 80, 80)
+					else
+						hpText.Text = math.floor(hum.Health) .. " / " .. math.floor(hum.MaxHealth)
+					end
 	
-		local barFill = tag.BarBack:FindFirstChild("BarFill")
-		local hpText = tag:FindFirstChild("HpText")
+					hpText.Parent = tag
 	
-		if barFill then
-			barFill.Size = UDim2.new(math.clamp(ratio,0,1),0,1,0)
-			barFill.BackgroundColor3 = color
-		end
-	
-		if hpText then
-			hpText.TextSize = math.floor(10 * scale)
-	
-			if hum.Health <= 0 then
-				hpText.Text = "DEAD"
-				hpText.TextColor3 = Color3.fromRGB(255,80,80)
-			else
-				hpText.Text = math.floor(hum.Health) .. " / " .. math.floor(hum.MaxHealth)
-			end
-		end
-	end
-	
-	local function updateHighlightPlayer()
-		clearHighlights("HighLightPlayer")
-	
-		if espToggles.HighLightPlayer then
-			for _, player in ipairs(Players:GetPlayers()) do
-				if player ~= LocalPlayer and player.Character then
-					local team = player.Team
-					local teamColor = team and team.TeamColor
-	
-					applyTeamHighlight(player.Character, teamColor)
+					healthTags[player] = tag
 				end
 			end
 		end
@@ -2664,28 +2316,30 @@ local script = G2L["36"];
 	local function updateItemESP()
 		clearHighlights("ItemEsp")
 	
-		if espToggles.ItemEsp then
-			local pickupItems = Workspace:FindFirstChild("PickUpItems")
+		if not espToggles.ItemEsp then
+			return
+		end
 	
-			if pickupItems then
-				for _, obj in ipairs(pickupItems:GetChildren()) do
-					if obj:IsA("Model") then
-						createHighlight(obj, Color3.fromRGB(0,255,0), "ItemEsp")
-					elseif obj:IsA("BasePart") and obj.CanCollide then
-						createHighlight(obj, Color3.fromRGB(0,255,0), "ItemEsp")
-					end
+		local pickupItems = Workspace:FindFirstChild("PickUpItems")
+	
+		if pickupItems then
+			for _, obj in ipairs(pickupItems:GetChildren()) do
+				if obj:IsA("Model") then
+					createHighlight(obj, Color3.fromRGB(0, 255, 0), "ItemEsp")
+				elseif obj:IsA("BasePart") and obj.CanCollide then
+					createHighlight(obj, Color3.fromRGB(0, 255, 0), "ItemEsp")
 				end
 			end
+		end
 	
-			local bench = Workspace:FindFirstChild("Bench")
+		local bench = Workspace:FindFirstChild("Bench")
 	
-			if bench then
-				for _, obj in ipairs(bench:GetChildren()) do
-					if obj:IsA("Model") then
-						createHighlight(obj, Color3.fromRGB(0,255,0), "ItemEsp")
-					elseif obj:IsA("BasePart") and obj.CanCollide then
-						createHighlight(obj, Color3.fromRGB(0,255,0), "ItemEsp")
-					end
+		if bench then
+			for _, obj in ipairs(bench:GetChildren()) do
+				if obj:IsA("Model") then
+					createHighlight(obj, Color3.fromRGB(0, 255, 0), "ItemEsp")
+				elseif obj:IsA("BasePart") and obj.CanCollide then
+					createHighlight(obj, Color3.fromRGB(0, 255, 0), "ItemEsp")
 				end
 			end
 		end
@@ -2694,42 +2348,47 @@ local script = G2L["36"];
 	local function updateTracers()
 		clearHighlights("Tracers")
 	
-		if espToggles.Tracers
-			and LocalPlayer.Character
-			and LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
+		if not espToggles.Tracers then
+			return
+		end
 	
-			local origin = LocalPlayer.Character.HumanoidRootPart:FindFirstChild("TracerOrigin")
+		if not LocalPlayer.Character or not LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
+			return
+		end
 	
-			if not origin then
-				origin = Instance.new("Attachment")
-				origin.Name = "TracerOrigin"
-				origin.Parent = LocalPlayer.Character.HumanoidRootPart
-			end
+		local origin = LocalPlayer.Character.HumanoidRootPart:FindFirstChild("TracerOrigin")
 	
-			table.insert(highlights.Tracers, origin)
+		if not origin then
+			origin = Instance.new("Attachment")
+			origin.Name = "TracerOrigin"
+			origin.Parent = LocalPlayer.Character.HumanoidRootPart
+		end
 	
-			for _, player in ipairs(Players:GetPlayers()) do
-				if player ~= LocalPlayer
-					and player.Character
-					and player.Character:FindFirstChild("HumanoidRootPart") then
+		table.insert(highlights.Tracers, origin)
 	
-					local targetAttach = Instance.new("Attachment")
-					targetAttach.Parent = player.Character.HumanoidRootPart
+		for _, player in ipairs(Players:GetPlayers()) do
+			if player ~= LocalPlayer
+				and player.Character
+				and player.Character:FindFirstChild("HumanoidRootPart") then
 	
-					local beam = Instance.new("Beam")
-					beam.FaceCamera = true
-					beam.Color = ColorSequence.new(Color3.fromRGB(0,255,255))
-					beam.Width0 = 0.6
-					beam.Width1 = 0.6
-					beam.Transparency = NumberSequence.new(0.5)
+				local targetAttach = Instance.new("Attachment")
+				targetAttach.Name = "TracerTarget"
+				targetAttach.Parent = player.Character.HumanoidRootPart
 	
-					beam.Attachment0 = origin
-					beam.Attachment1 = targetAttach
-					beam.Parent = Workspace
+				local beam = Instance.new("Beam")
+				beam.Name = "TracerBeam"
+				beam.FaceCamera = true
+				beam.Color = ColorSequence.new(Color3.fromRGB(0, 255, 255))
+				beam.Width0 = 0.6
+				beam.Width1 = 0.6
+				beam.Transparency = NumberSequence.new(0.5)
 	
-					table.insert(highlights.Tracers, beam)
-					table.insert(highlights.Tracers, targetAttach)
-				end
+				beam.Attachment0 = origin
+				beam.Attachment1 = targetAttach
+				beam.Parent = Workspace
+	
+				table.insert(highlights.Tracers, beam)
+				table.insert(highlights.Tracers, targetAttach)
 			end
 		end
 	end
@@ -2738,1138 +2397,38 @@ local script = G2L["36"];
 		setupButton(name)
 	end
 	
-	local function updateAllESP()
-		updateHighlightPlayer()
-		updateRobberyESP()
-		updateItemESP()
-		updateTracers()
-	
-		for _, player in ipairs(Players:GetPlayers()) do
-			if player ~= LocalPlayer then
-				updateNameTag(player)
-				updateHealthTag(player)
-			end
-		end
-	end
-	
 	local lastUpdate = 0
 	
 	RunService.Heartbeat:Connect(function()
 		local currentTime = tick()
 	
 		if currentTime - lastUpdate >= 0.25 then
-			updateAllESP()
+			updateHighlightPlayer()
+			updateNameEsp()
+			updateHealthEsp()
+			updateRobberyESP()
+			updateItemESP()
+			updateTracers()
 			lastUpdate = currentTime
 		end
 	end)
-end;
-task.spawn(C_36);
--- StarterGui.DivazScript.MainFrame.FarmingFrame.ATMs Farm.LocalScript
-local function C_49()
-local script = G2L["49"];
-	local Players = game:GetService("Players")
-	local ReplicatedStorage = game:GetService("ReplicatedStorage")
-	local RunService = game:GetService("RunService")
 	
-	local LocalPlayer = Players.LocalPlayer
-	local button = script.Parent
-	
-	local EventRemote = ReplicatedStorage:WaitForChild("Event")
-	
-	local oldStroke = button:FindFirstChild("UIStroke")
-	
-	if oldStroke then
-		oldStroke:Destroy()
-	end
-	
-	local uiStroke = Instance.new("UIStroke")
-	uiStroke.Parent = button
-	uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-	uiStroke.Transparency = 0
-	uiStroke.Thickness = 0.6
-	uiStroke.Color = Color3.fromRGB(255,255,255)
-	
-	local running = false
-	local processing = false
-	
-	local Character
-	local HRP
-	
-	local teleportThread
-	local spamThread
-	local loopThread
-	local jumpConnection 
-	
-	local originalGravity = workspace.Gravity
-	
-	local targetColor = Color3.fromRGB(113,118,165)
-	
-	local allATMs = {}
-	local allCashiers = {}
-	
-	local currentTarget = nil
-	local equippedTool = nil
-	local skipUntil = {}
-	
-	local atmsFolder = workspace:WaitForChild("Map"):WaitForChild("ATMs")
-	local cashiersFolder = workspace:WaitForChild("Map"):WaitForChild("Cashiers")
-	
-	local function refreshCharacter()
-		Character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
-	
-		if Character then
-			HRP = Character:WaitForChild("HumanoidRootPart",10)
-		end
-	end
-	
-	refreshCharacter()
-	
-	LocalPlayer.CharacterAdded:Connect(function(char)
-		Character = char
-		HRP = char:WaitForChild("HumanoidRootPart",10)
-		equippedTool = nil
-	
-		if running then
-			workspace.Gravity = 0
-		end
-	end)
-	
-	for _,v in ipairs(atmsFolder:GetChildren()) do
-		if v:IsA("Model") then
-			table.insert(allATMs,v)
-		end
-	end
-	
-	for _,v in ipairs(cashiersFolder:GetChildren()) do
-		if v:IsA("Model") then
-			table.insert(allCashiers,v)
-		end
-	end
-	
-	local function freezeVel()
-		if HRP then
-			HRP.AssemblyLinearVelocity = Vector3.zero
-			HRP.AssemblyAngularVelocity = Vector3.zero
-		end
-	end
-	
-	local function equipFirstTool()
-		if not Character then
-			return
+	Players.PlayerRemoving:Connect(function(player)
+		if nameTags[player] then
+			nameTags[player]:Destroy()
+			nameTags[player] = nil
 		end
 	
-		local humanoid = Character:FindFirstChildOfClass("Humanoid")
-	
-		if not humanoid then
-			return
-		end
-	
-		if equippedTool and equippedTool.Parent == Character then
-			return
-		end
-	
-		local fist = LocalPlayer.Backpack:FindFirstChild("Fist")
-	
-		if fist and fist:IsA("Tool") then
-			humanoid:EquipTool(fist)
-			equippedTool = fist
-		end
-	end
-	
-	local function fireHitRemote(target,isCashier)
-		local folder = isCashier and cashiersFolder or atmsFolder
-	
-		EventRemote:FireServer({
-			Event = "Hit",
-			ClientHitbox = {
-				folder:FindFirstChild(target)
-			}
-		})
-	end
-	
-	local function fireCollectRemote()
-		EventRemote:FireServer({
-			Event = "CollectDollar",
-			Dollar = Instance.new("MeshPart")
-		})
-	end
-	
-	local function makeUncollidable(model)
-		for _,v in ipairs(model:GetDescendants()) do
-			if v:IsA("BasePart") then
-				v.CanCollide = false
-			end
-		end
-	end
-	
-	local function screenIsTarget(atm)
-		local screen = atm:FindFirstChild("Screen")
-	
-		return screen
-			and screen:IsA("MeshPart")
-			and screen.Color == targetColor
-	end
-	
-	local function cashierIsTarget(cashier)
-		local opened = cashier:FindFirstChild("Opened")
-	
-		return opened
-			and opened:IsA("BasePart")
-			and opened.Transparency == 1
-	end
-	
-	local function getMatchingATMs()
-		local t = {}
-	
-		for _,atm in ipairs(allATMs) do
-			if screenIsTarget(atm) then
-				table.insert(t,atm)
-			end
-		end
-	
-		return t
-	end
-	
-	local function getMatchingCashiers()
-		local t = {}
-	
-		for _,cashier in ipairs(allCashiers) do
-			if cashierIsTarget(cashier) then
-				table.insert(t,cashier)
-			end
-		end
-	
-		return t
-	end
-	
-	local function stopTeleportLoop()
-		if teleportThread then
-			task.cancel(teleportThread)
-			teleportThread = nil
-		end
-	
-		currentTarget = nil
-	end
-	
-	local function startTeleportLoop()
-		stopTeleportLoop()
-	
-		teleportThread = task.spawn(function()
-			while running do
-				if currentTarget and HRP then
-					HRP.CFrame = currentTarget:GetPivot()
-					freezeVel()
-				end
-	
-				RunService.Heartbeat:Wait()
-			end
-		end)
-	end
-	
-	local function stopSpam()
-		if spamThread then
-			task.cancel(spamThread)
-			spamThread = nil
-		end
-	end
-	
-	local function startSpam()
-		stopSpam()
-	
-		spamThread = task.spawn(function()
-			while running do
-				pcall(function()
-					equipFirstTool()
-	
-					for _,atm in ipairs(allATMs) do
-						if screenIsTarget(atm) then
-							fireHitRemote(atm.Name,false)
-						end
-					end
-	
-					for _,cashier in ipairs(allCashiers) do
-						if cashierIsTarget(cashier) then
-							fireHitRemote(cashier.Name,true)
-						end
-					end
-	
-					fireCollectRemote()
-				end)
-	
-				task.wait(0.1)
-			end
-		end)
-	end
-	
-	local function processATM(atm)
-		if not HRP then
-			return
-		end
-	
-		makeUncollidable(atm)
-	
-		currentTarget = atm
-	
-		startTeleportLoop()
-	
-		local attempts = 0
-	
-		while running and screenIsTarget(atm) and attempts < 10 do
-			attempts = attempts + 1
-	
-			HRP.CFrame = atm:GetPivot() * CFrame.new(0,-2,0)
-	
-			freezeVel()
-	
-			local startTick = tick()
-	
-			while tick() - startTick < 4 and screenIsTarget(atm) and running do
-				equipFirstTool()
-				fireHitRemote(atm.Name,false)
-	
-				task.wait(0.35)
-			end
-	
-			for i = 1,10 do
-				if not running then
-					break
-				end
-	
-				fireCollectRemote()
-	
-				task.wait(0.2)
-			end
-	
-			task.wait(0.1)
-		end
-	
-		stopTeleportLoop()
-	end
-	
-	local function processCashier(cashier)
-		if not HRP then
-			return
-		end
-	
-		makeUncollidable(cashier)
-	
-		currentTarget = cashier
-	
-		startTeleportLoop()
-	
-		local attempts = 0
-	
-		while running and cashierIsTarget(cashier) and attempts < 10 do
-			attempts = attempts + 1
-	
-			HRP.CFrame = cashier:GetPivot()
-	
-			freezeVel()
-	
-			local startTick = tick()
-	
-			while tick() - startTick < 4 and cashierIsTarget(cashier) and running do
-				equipFirstTool()
-				fireHitRemote(cashier.Name,true)
-	
-				task.wait(0.35)
-			end
-	
-			for i = 1,10 do
-				if not running then
-					break
-				end
-	
-				fireCollectRemote()
-	
-				task.wait(0.2)
-			end
-	
-			task.wait(0.5)
-		end
-	
-		stopTeleportLoop()
-	end
-	
-	local function doCycle()
-		if processing then
-			return
-		end
-	
-		processing = true
-	
-		local atms = getMatchingATMs()
-	
-		if #atms > 0 then
-			for _,atm in ipairs(atms) do
-				if running then
-					processATM(atm)
-					task.wait(0.5)
-				end
-			end
-		else
-			local cashiers = getMatchingCashiers()
-	
-			for _,cashier in ipairs(cashiers) do
-				if running then
-					processCashier(cashier)
-					task.wait(0.5)
-				end
-			end
-		end
-	
-		processing = false
-	end
-	
-	local function start()
-		if running then
-			return
-		end
-	
-		running = true
-	
-		uiStroke.Color = Color3.fromRGB(0,255,0)
-	
-		originalGravity = workspace.Gravity
-		workspace.Gravity = 0
-	
-		refreshCharacter()
-	
-		equipFirstTool()
-	
-		jumpConnection = RunService.Heartbeat:Connect(function()
-			local Humanoid = Character and Character:FindFirstChildOfClass("Humanoid")
-			if Humanoid and Humanoid.Health > 0 then
-				Humanoid.Jump = true
-			end
-		end)
-	
-		startSpam()
-	
-		loopThread = task.spawn(function()
-			while running do
-				pcall(doCycle)
-				task.wait(0.2)
-			end
-		end)
-	end
-	
-	local function stop()
-		running = false
-	
-		uiStroke.Color = Color3.fromRGB(255,255,255)
-	
-		workspace.Gravity = originalGravity
-	
-		if jumpConnection then
-			jumpConnection:Disconnect()
-			jumpConnection = nil
-		end
-	
-		stopTeleportLoop()
-		stopSpam()
-	
-		processing = false
-	
-		if loopThread then
-			task.cancel(loopThread)
-			loopThread = nil
-		end
-	end
-	
-	button.MouseButton1Click:Connect(function()
-		if running then
-			stop()
-		else
-			start()
+		if healthTags[player] then
+			healthTags[player]:Destroy()
+			healthTags[player] = nil
 		end
 	end)
 end;
-task.spawn(C_49);
--- StarterGui.DivazScript.MainFrame.FarmingFrame.Kill All.LocalScript
-local function C_4c()
-local script = G2L["4c"];
-	local Players = game:GetService("Players")
-	local ReplicatedStorage = game:GetService("ReplicatedStorage")
-	local RunService = game:GetService("RunService")
-	local Workspace = game:GetService("Workspace")
-	
-	local LocalPlayer = Players.LocalPlayer
-	local button = script.Parent
-	local killAll1Button = button:WaitForChild("KillAll1")
-	
-	local uiStroke = button:FindFirstChild("UIStroke") or Instance.new("UIStroke")
-	uiStroke.Parent = button
-	uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-	uiStroke.Transparency = 0
-	uiStroke.Thickness = 0.6
-	uiStroke.Color = Color3.fromRGB(255,255,255)
-	
-	local killAll1Stroke = killAll1Button:FindFirstChild("UIStroke") or Instance.new("UIStroke")
-	killAll1Stroke.Parent = killAll1Button
-	killAll1Stroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-	killAll1Stroke.Transparency = 0
-	killAll1Stroke.Thickness = 0.6
-	killAll1Stroke.Color = Color3.fromRGB(255,255,255)
-	
-	local running = false
-	local killAll1Mode = false
-	local lockedTarget = nil
-	local lastKilledTarget = nil
-	local lastHitTime = 0
-	local MIN_HIT_INTERVAL = 0.03
-	local healingCritical = false
-	local healingPostStomp = false
-	local waitingForFF = false
-	local stompInProgress = false
-	local lastSafePosition = Vector3.new(0, 50, 0)
-	local noCollideTargets = {}
-	
-	local function getCharacter() return LocalPlayer.Character end
-	local function getHRP(char)
-		if not char then return nil end
-		return char:FindFirstChild("HumanoidRootPart") or char.PrimaryPart
-	end
-	local function hasForceField(char) return char and char:FindFirstChild("ForceField") ~= nil end
-	local function hasEnabledPVPTag(targetChar)
-		local hrp = getHRP(targetChar)
-		if not hrp then return false end
-		local pvptag = hrp:FindFirstChild("PVPTag", true)
-		if pvptag and pvptag:IsA("BillboardGui") and pvptag.Enabled then
-			return true
-		end
-		return false
-	end
-	local function getSafeLocation()
-		local map = Workspace:FindFirstChild("Map")
-		if map then local spawn = map:FindFirstChild("SpawnLocation") if spawn then return spawn.CFrame end end
-		return CFrame.new(lastSafePosition)
-	end
-	local function updateSafePosition()
-		local char = getCharacter()
-		local hrp = getHRP(char)
-		if not hrp then return end
-		local pos = hrp.Position
-		if pos.Y > -50 and math.abs(pos.X) < 1000 and math.abs(pos.Z) < 1000 then
-			lastSafePosition = pos
-		end
-	end
-	local function ensureLocalCollide()
-		local char = getCharacter()
-		if not char then return end
-		for _, desc in ipairs(char:GetDescendants()) do
-			if desc:IsA("BasePart") then
-				desc.CanCollide = true
-			end
-		end
-	end
-	local function setTargetNoCollide(targetChar, enabled)
-		if not targetChar then return end
-		if enabled then
-			noCollideTargets[targetChar] = true
-			for _, desc in ipairs(targetChar:GetDescendants()) do
-				if desc:IsA("BasePart") then
-					desc.CanCollide = false
-				end
-			end
-		else
-			noCollideTargets[targetChar] = nil
-			for _, desc in ipairs(targetChar:GetDescendants()) do
-				if desc:IsA("BasePart") then
-					desc.CanCollide = true
-				end
-			end
-		end
-	end
-	local function clearAllNoCollide()
-		for targetChar in pairs(noCollideTargets) do
-			setTargetNoCollide(targetChar, false)
-		end
-		noCollideTargets = {}
-	end
-	local function equipFist()
-		local char = getCharacter()
-		if not char then return end
-		local hum = char:FindFirstChildOfClass("Humanoid")
-		local fist = LocalPlayer.Backpack:FindFirstChild("Fist")
-		if hum and fist and fist:IsA("Tool") then hum:EquipTool(fist) end
-	end
-	local function isTargetDowned(targetChar)
-		if not targetChar then return false end
-		local hum = targetChar:FindFirstChildOfClass("Humanoid")
-		if not hum then return false end
-		if hum:GetState() == Enum.HumanoidStateType.Ragdoll or hum:GetState() == Enum.HumanoidStateType.FallingDown or hum:GetState() == Enum.HumanoidStateType.Physics then
-			return true
-		end
-		return hum.Health <= 1
-	end
-	local STOMP_HEALTH = 4
-	local function isTargetPlayerDead(plr)
-		if not plr or not Players:GetPlayerByUserId(plr.UserId) then return true end
-		local char = plr.Character
-		if not char then return false end
-		local hum = char:FindFirstChildOfClass("Humanoid")
-		return hum and hum.Health <= 0
-	end
-	local function getLocalHealth()
-		local hum = getCharacter() and getCharacter():FindFirstChildOfClass("Humanoid")
-		return hum and hum.Health or 100
-	end
-	local function needsHealAfterKill()
-		return killAll1Mode and getLocalHealth() < 100
-	end
-	local function getRandomTarget(excludePlr)
-		local targets = {}
-		for _, plr in ipairs(Players:GetPlayers()) do
-			if plr ~= LocalPlayer and plr ~= excludePlr then
-				local char = plr.Character
-				if char then
-					local hum = char:FindFirstChildOfClass("Humanoid")
-					if hum and hum.Health > 0 and not hasEnabledPVPTag(char) then
-						table.insert(targets, plr)
-					end
-				end
-			end
-		end
-		return #targets > 0 and targets[math.random(1,#targets)] or nil
-	end
-	local function acquireTarget()
-		lockedTarget = getRandomTarget(lastKilledTarget)
-		if lockedTarget and lockedTarget.Character then
-			return lockedTarget.Character
-		end
-		lockedTarget = nil
-		return nil
-	end
-	local function releaseTarget()
-		if lockedTarget then
-			lastKilledTarget = lockedTarget
-			local char = lockedTarget.Character
-			if char then setTargetNoCollide(char, false) end
-		end
-		lockedTarget = nil
-	end
-	local function isTargetAirborne(targetHRP)
-		local char = targetHRP.Parent
-		local hum = char and char:FindFirstChildOfClass("Humanoid")
-		if hum and hum.FloorMaterial == Enum.Material.Air then
-			return true
-		end
-		local raycastParams = RaycastParams.new()
-		raycastParams.FilterDescendantsInstances = {char, getCharacter()}
-		raycastParams.FilterType = Enum.RaycastFilterType.Exclude
-		raycastParams.IgnoreWater = true
-		local rayResult = Workspace:Raycast(targetHRP.Position, Vector3.new(0, -120, 0), raycastParams)
-		if not rayResult then return true end
-		return targetHRP.Position.Y - rayResult.Position.Y > 5
-	end
-	local function fastTP(targetHRP, x, y, z, mode)
-		local localChar = getCharacter()
-		local localHRP = getHRP(localChar)
-		if not localHRP or not targetHRP then return end
-	
-		localHRP.AssemblyLinearVelocity = Vector3.zero
-		localHRP.AssemblyAngularVelocity = Vector3.zero
-	
-		local desiredPos = (targetHRP.CFrame * CFrame.new(
-			x + math.random(-1, 1) / 40,
-			y,
-			z + math.random(-1, 1) / 40
-			)).Position
-	
-		local raycastParams = RaycastParams.new()
-		raycastParams.FilterDescendantsInstances = {localChar, targetHRP.Parent}
-		raycastParams.FilterType = Enum.RaycastFilterType.Exclude
-		raycastParams.IgnoreWater = true
-	
-		local airborne = isTargetAirborne(targetHRP)
-		local finalPos = desiredPos
-	
-		if not airborne then
-			local rayResult = Workspace:Raycast(desiredPos + Vector3.new(0, 8, 0), Vector3.new(0, -25, 0), raycastParams)
-			if rayResult then
-				local groundY = rayResult.Position.Y + 3
-				if math.abs(groundY - desiredPos.Y) < 8 then
-					finalPos = Vector3.new(desiredPos.X, groundY, desiredPos.Z)
-				end
-			elseif desiredPos.Y < lastSafePosition.Y - 10 then
-				finalPos = Vector3.new(desiredPos.X, lastSafePosition.Y, desiredPos.Z)
-			end
-		end
-	
-		local flatOffset = Vector3.new(finalPos.X - targetHRP.Position.X, 0, finalPos.Z - targetHRP.Position.Z)
-		local minDist = mode == "stomp" and 1.2 or 2.8
-		if flatOffset.Magnitude < minDist then
-			local dir = flatOffset.Magnitude > 0.1 and flatOffset.Unit or -targetHRP.CFrame.LookVector
-			local pushed = targetHRP.Position + dir * minDist
-			finalPos = Vector3.new(pushed.X, finalPos.Y, pushed.Z)
-		end
-	
-		local aimY = targetHRP.Position.Y + (mode == "stomp" and -1 or -2.5)
-		localHRP.CFrame = CFrame.lookAt(finalPos, Vector3.new(targetHRP.Position.X, aimY, targetHRP.Position.Z))
-		localHRP.AssemblyLinearVelocity = Vector3.zero
-		localHRP.AssemblyAngularVelocity = Vector3.zero
-	
-		updateSafePosition()
-	end
-	local function fireHit(char)
-		if not char then return end
-		ReplicatedStorage.Event:FireServer(unpack({{Event = "Hit", ClientHitbox = {char}}}))
-	end
-	local function fireSnatch()
-		ReplicatedStorage.Event:FireServer(unpack({{Event = "Snatch", ClientHitbox = {}}}))
-	end
-	local function fireStomp()
-		ReplicatedStorage.Event:FireServer(unpack({{Event = "Stomp"}}))
-	end
-	local function attackTarget(targetChar, light)
-		if not targetChar or not targetChar.Parent then return end
-		equipFist()
-		fireHit(targetChar)
-		if not light then
-			fireHit(targetChar)
-			fireHit(targetChar)
-		end
-		task.defer(function()
-			if targetChar.Parent then
-				equipFist()
-				fireHit(targetChar)
-			end
-		end)
-		lastHitTime = os.clock()
-	end
-	local function getFreeHospital()
-		local map = Workspace:FindFirstChild("Map")
-		if not map then return nil end
-		local buildings = map:FindFirstChild("Buildings")
-		if not buildings then return nil end
-		for _, desc in ipairs(buildings:GetDescendants()) do
-			if desc:IsA("Model") and desc.Name == "HospitalHeal" then
-				local main = desc:FindFirstChild("Main", true)
-				if main and main:IsA("MeshPart") then
-					local occupied = false
-					for _, child in ipairs(desc:GetDescendants()) do
-						if child:IsA("Seat") and child.Occupant ~= nil then occupied = true break end
-					end
-					if not occupied then
-						local attach = main:FindFirstChild("Attachment", true)
-						if attach then
-							local prompt = attach:FindFirstChild("HealHospital")
-							if prompt and prompt:IsA("ProximityPrompt") then
-								return {Prompt = prompt, Main = main}
-							end
-						end
-					end
-				end
-			end
-		end
-		return nil
-	end
-	local function healViaHospital(critical)
-		local char = getCharacter()
-		local hrp = getHRP(char)
-		local hum = char and char:FindFirstChildOfClass("Humanoid")
-		if not hrp or not hum or hum.Health >= 100 then return end
-		if critical then healingCritical = true else healingPostStomp = true end
-		local hosp = getFreeHospital()
-		if not hosp then
-			hrp.CFrame = getSafeLocation()
-			healingCritical = false healingPostStomp = false
-			return
-		end
-		local prompt = hosp.Prompt
-		prompt.MaxActivationDistance = math.huge
-		prompt.HoldDuration = 0
-		local healComplete = false
-		local healLoop = task.spawn(function()
-			while (healingCritical or healingPostStomp) and hum.Health < 100 and running do
-				hrp.CFrame = hosp.Main.CFrame
-				hrp.AssemblyLinearVelocity = Vector3.zero
-				hrp.AssemblyAngularVelocity = Vector3.zero
-				fireproximityprompt(prompt)
-				RunService.RenderStepped:Wait()
-			end
-			healComplete = true
-		end)
-		repeat task.wait() until healComplete or not running
-		healingCritical = false healingPostStomp = false
-		equipFist()
-		updateSafePosition()
-	end
-	local function shouldCriticalHeal()
-		local hum = getCharacter() and getCharacter():FindFirstChildOfClass("Humanoid")
-		return hum and hum.Health < 40 and not healingCritical and not healingPostStomp and not stompInProgress
-	end
-	local function shouldPostStompHeal()
-		local hum = getCharacter() and getCharacter():FindFirstChildOfClass("Humanoid")
-		return hum and hum.Health > 0 and hum.Health < 100 and not healingCritical and not healingPostStomp and not stompInProgress
-	end
-	local function checkFallingDeath()
-		if not running or healingCritical or healingPostStomp then return end
-		local char = getCharacter()
-		local hrp = getHRP(char)
-		local hum = char and char:FindFirstChildOfClass("Humanoid")
-		if not hrp then return end
-	
-		local falling = hrp.Position.Y < -30
-		if hum and hum.FloorMaterial == Enum.Material.Air and hrp.Position.Y < lastSafePosition.Y - 15 then
-			falling = true
-		end
-	
-		if falling then
-			local safe = getSafeLocation()
-			hrp.CFrame = safe
-			hrp.AssemblyLinearVelocity = Vector3.zero
-			hrp.AssemblyAngularVelocity = Vector3.zero
-			ensureLocalCollide()
-		end
-	end
-	local function waitForForceField()
-		if not lockedTarget then return end
-		waitingForFF = true
-		local localHRP = getHRP(getCharacter())
-		local safe = getSafeLocation()
-		if localHRP and safe then
-			localHRP.CFrame = safe
-			localHRP.AssemblyLinearVelocity = Vector3.zero
-			localHRP.AssemblyAngularVelocity = Vector3.zero
-		end
-		while running and lockedTarget do
-			local targetChar = lockedTarget.Character
-			if not targetChar or not hasForceField(targetChar) then break end
-			task.wait(0.05)
-			if shouldCriticalHeal() then healViaHospital(true) end
-		end
-		waitingForFF = false
-	end
-	local function executeStompSequence(targetChar)
-		if stompInProgress or not targetChar then return false end
-		stompInProgress = true
-		setTargetNoCollide(targetChar, true)
-		local targetHRP = getHRP(targetChar)
-		if not targetHRP then
-			stompInProgress = false
-			return false
-		end
-		local stompRetries = 0
-		local maxRetries = 6
-		local targetDied = false
-		local stompLoop = task.spawn(function()
-			while stompInProgress and running and targetChar.Parent do
-				targetHRP = getHRP(targetChar)
-				if targetHRP then fastTP(targetHRP, 0, 0.5, 0, "stomp") end
-				RunService.RenderStepped:Wait()
-			end
-		end)
-		task.wait(0.08)
-		repeat
-			local targetHum = targetChar:FindFirstChildOfClass("Humanoid")
-			if not targetHum or targetHum.Health <= 0 then
-				targetDied = true
-				break
-			end
-			if targetHum.Health > STOMP_HEALTH then
-				task.cancel(stompLoop)
-				stompInProgress = false
-				return false
-			end
-			if not isTargetDowned(targetChar) and targetHum.Health > 1 then
-				task.cancel(stompLoop)
-				stompInProgress = false
-				return false
-			end
-			fireStomp()
-			stompRetries += 1
-			task.wait(0.05)
-		until stompRetries >= maxRetries or not running or not targetChar.Parent
-		local finalTargetHum = targetChar:FindFirstChildOfClass("Humanoid")
-		targetDied = targetDied or not targetChar.Parent or (finalTargetHum and finalTargetHum.Health <= 0)
-		task.cancel(stompLoop)
-		stompInProgress = false
-		return targetDied
-	end
-	local function executeKillSequence()
-		if not lockedTarget then return false end
-		local killed = false
-	
-		while running and lockedTarget do
-			if isTargetPlayerDead(lockedTarget) then
-				killed = true
-				break
-			end
-	
-			local targetChar = lockedTarget.Character
-			if not targetChar then
-				task.wait(0.1)
-				continue
-			end
-	
-			if hasEnabledPVPTag(targetChar) then break end
-	
-			setTargetNoCollide(targetChar, true)
-	
-			checkFallingDeath()
-			if killAll1Mode and shouldCriticalHeal() then
-				healViaHospital(true)
-			end
-			if hasForceField(targetChar) then
-				waitForForceField()
-			end
-	
-			targetChar = lockedTarget.Character
-			if not targetChar then continue end
-	
-			local targetHum = targetChar:FindFirstChildOfClass("Humanoid")
-			if not targetHum or targetHum.Health <= 0 then
-				killed = true
-				break
-			end
-	
-			local currentHRP = getHRP(targetChar)
-			if currentHRP then
-				if targetHum.Health > STOMP_HEALTH then
-					fastTP(currentHRP, 0, 0, -1, "punch")
-					if os.clock() - lastHitTime >= MIN_HIT_INTERVAL then
-						attackTarget(targetChar, false)
-					end
-				else
-					fastTP(currentHRP, 0, 0, 0, "stomp")
-					equipFist()
-					fireHit(targetChar)
-					fireStomp()
-					if executeStompSequence(targetChar) then
-						killed = true
-						break
-					end
-					targetHum = targetChar:FindFirstChildOfClass("Humanoid")
-					if not targetHum or targetHum.Health <= 0 then
-						killed = true
-						break
-					end
-				end
-			end
-	
-			RunService.RenderStepped:Wait()
-		end
-	
-		local char = lockedTarget and lockedTarget.Character
-		if char then setTargetNoCollide(char, false) end
-		return killed
-	end
-	
-	local mainThread
-	local function start(mode)
-		if running then return end
-		running = true
-		healingCritical = false
-		healingPostStomp = false
-		stompInProgress = false
-		waitingForFF = false
-		lockedTarget = nil
-		lastKilledTarget = nil
-		lastHitTime = 0
-		updateSafePosition()
-	
-		if mode == "killall1" then
-			killAll1Mode = true
-			uiStroke.Color = Color3.fromRGB(255,255,255)
-			killAll1Stroke.Color = Color3.fromRGB(0,255,0)
-		else
-			killAll1Mode = false
-			uiStroke.Color = Color3.fromRGB(0,255,0)
-			killAll1Stroke.Color = Color3.fromRGB(255,255,255)
-		end
-	
-		equipFist()
-		fireSnatch()
-		ensureLocalCollide()
-	
-		mainThread = task.spawn(function()
-			while running do
-				checkFallingDeath()
-				if healingCritical or healingPostStomp or stompInProgress or waitingForFF then
-					RunService.RenderStepped:Wait()
-					continue
-				end
-				if killAll1Mode and shouldCriticalHeal() then
-					healViaHospital(true)
-					continue
-				end
-				if killAll1Mode then
-					local localHRP = getHRP(getCharacter())
-					local targetHRP = lockedTarget and lockedTarget.Character and getHRP(lockedTarget.Character)
-					if localHRP then
-						if targetHRP and isTargetAirborne(targetHRP) then
-							localHRP.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
-						else
-							localHRP.AssemblyLinearVelocity = Vector3.new(0, localHRP.AssemblyLinearVelocity.Y, 0)
-						end
-						localHRP.AssemblyAngularVelocity = Vector3.zero
-					end
-				end
-	
-				local targetChar = acquireTarget()
-				if targetChar then
-					local killed = executeKillSequence()
-					releaseTarget()
-					if killed then
-						if needsHealAfterKill() then
-							healViaHospital(false)
-						end
-					else
-						RunService.RenderStepped:Wait()
-					end
-				else
-					RunService.RenderStepped:Wait()
-				end
-			end
-		end)
-	end
-	
-	local function stop()
-		running = false
-		lockedTarget = nil
-		lastKilledTarget = nil
-		lastHitTime = 0
-		killAll1Mode = false
-		healingCritical = false
-		healingPostStomp = false
-		waitingForFF = false
-		stompInProgress = false
-		clearAllNoCollide()
-		uiStroke.Color = Color3.fromRGB(255,255,255)
-		killAll1Stroke.Color = Color3.fromRGB(255,255,255)
-		if mainThread then task.cancel(mainThread) mainThread = nil end
-	end
-	
-	local function toggle()
-		if running and not killAll1Mode then stop() else stop() start() end
-	end
-	
-	button.MouseButton1Click:Connect(toggle)
-	killAll1Button.MouseButton1Click:Connect(function()
-		if running and killAll1Mode then stop() else stop() start("killall1") end
-	end)
-	
-	LocalPlayer.CharacterAdded:Connect(function(char)
-		if running then
-			task.wait(0.3)
-			local hrp = char:WaitForChild("HumanoidRootPart")
-			hrp.AssemblyLinearVelocity = Vector3.zero
-			hrp.AssemblyAngularVelocity = Vector3.zero
-			ensureLocalCollide()
-			equipFist()
-			updateSafePosition()
-			if killAll1Mode and shouldCriticalHeal() then healViaHospital(true) end
-		end
-	end)
-	
-end;
-task.spawn(C_4c);
--- StarterGui.DivazScript.MainFrame.MiscFrame.SpeedScript
-local function C_51()
-local script = G2L["51"];
-	local Players = game:GetService("Players")
-	local RunService = game:GetService("RunService")
-	local UserInputService = game:GetService("UserInputService")
-	
-	local LocalPlayer = Players.LocalPlayer
-	local frame = script.Parent
-	
-	local speedButton = frame:WaitForChild("Speed")
-	local speedBox = speedButton:WaitForChild("SpeedBox")
-	
-	local oldStroke = speedButton:FindFirstChild("UIStroke")
-	
-	if oldStroke then
-		oldStroke:Destroy()
-	end
-	
-	local uiStroke = Instance.new("UIStroke")
-	uiStroke.Parent = speedButton
-	uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-	uiStroke.Transparency = 0
-	uiStroke.Thickness = 0.6
-	uiStroke.Color = Color3.fromRGB(255,255,255)
-	
-	local defaultSpeed = 50
-	local speedEnabled = false
-	local connection
-	
-	local function startMoving(character, speed)
-		local HRP = character:WaitForChild("HumanoidRootPart")
-	
-		connection = RunService.RenderStepped:Connect(function(dt)
-			local moveDir = character.Humanoid.MoveDirection
-	
-			if moveDir.Magnitude > 0 then
-				HRP.CFrame =
-					HRP.CFrame +
-					moveDir.Unit * speed * dt
-			end
-		end)
-	end
-	
-	local function stopMoving()
-		if connection then
-			connection:Disconnect()
-			connection = nil
-		end
-	end
-	
-	local function toggleSpeed()
-		local num = tonumber(speedBox.Text)
-	
-		local targetSpeed = num or defaultSpeed
-	
-		speedEnabled = not speedEnabled
-	
-		local character = LocalPlayer.Character
-	
-		if character
-			and character:FindFirstChild("Humanoid")
-			and character:FindFirstChild("HumanoidRootPart") then
-	
-			if speedEnabled then
-				uiStroke.Color = Color3.fromRGB(0,255,0)
-	
-				startMoving(character, targetSpeed)
-			else
-				uiStroke.Color = Color3.fromRGB(255,255,255)
-	
-				stopMoving()
-			end
-		end
-	end
-	
-	speedButton.MouseButton1Click:Connect(toggleSpeed)
-	
-	UserInputService.InputBegan:Connect(function(input, gp)
-		if gp then
-			return
-		end
-	
-		if _G.keybindsBlocked then
-			return
-		end
-	
-		if input.KeyCode == Enum.KeyCode.Z then
-			toggleSpeed()
-		end
-	end)
-	
-	LocalPlayer.CharacterAdded:Connect(function()
-		stopMoving()
-	
-		speedEnabled = false
-	
-		uiStroke.Color = Color3.fromRGB(255,255,255)
-	end)
-end;
-task.spawn(C_51);
+task.spawn(C_40);
 -- StarterGui.DivazScript.MainFrame.MiscFrame.FlyScript
-local function C_52()
-local script = G2L["52"];
+local function C_53()
+local script = G2L["53"];
 	local Players = game:GetService("Players")
 	local UserInputService = game:GetService("UserInputService")
 	local RunService = game:GetService("RunService")
@@ -3902,7 +2461,9 @@ local script = G2L["52"];
 		W = false,
 		A = false,
 		S = false,
-		D = false
+		D = false,
+		Space = false,
+		Control = false
 	}
 	
 	local FlyConnection
@@ -3913,6 +2474,10 @@ local script = G2L["52"];
 	
 	local Humanoid
 	local HRP
+	
+	local MobileUp = false
+	local MobileDown = false
+	local MobileGui = nil
 	
 	local BLOCKED_STATES = {
 		Enum.HumanoidStateType.FallingDown,
@@ -3944,17 +2509,8 @@ local script = G2L["52"];
 		Keys.A = false
 		Keys.S = false
 		Keys.D = false
-	end
-	
-	local function flatLook()
-		local look = Camera.CFrame.LookVector
-		local flat = Vector3.new(look.X, 0, look.Z)
-	
-		if flat.Magnitude < 0.01 then
-			return Vector3.new(0, 0, -1)
-		end
-	
-		return flat.Unit
+		Keys.Space = false
+		Keys.Control = false
 	end
 	
 	local function getMoveVector()
@@ -3977,11 +2533,77 @@ local script = G2L["52"];
 			move = move + cam.RightVector
 		end
 	
+		if Keys.Space then
+			move = move + Vector3.new(0, 1, 0)
+		end
+	
+		if Keys.Control then
+			move = move - Vector3.new(0, 1, 0)
+		end
+	
 		if move.Magnitude > 0 then
 			return move.Unit
 		end
 	
 		return Vector3.zero
+	end
+	
+	local function getMobileMoveVector()
+		if not Humanoid then
+			return Vector3.zero
+		end
+	
+		local moveDir = Humanoid.MoveDirection
+	
+		if moveDir.Magnitude < 0.01 then
+			return Vector3.zero
+		end
+	
+		local camCF = Camera.CFrame
+		local camLook = camCF.LookVector
+		local camRight = camCF.RightVector
+	
+		local flatLook = Vector3.new(camLook.X, 0, camLook.Z)
+		local flatRight = Vector3.new(camRight.X, 0, camRight.Z)
+	
+		if flatLook.Magnitude > 0.01 then
+			flatLook = flatLook.Unit
+		else
+			flatLook = Vector3.new(0, 0, -1)
+		end
+	
+		if flatRight.Magnitude > 0.01 then
+			flatRight = flatRight.Unit
+		else
+			flatRight = Vector3.new(1, 0, 0)
+		end
+	
+		local result = (flatLook * moveDir.Z) + (flatRight * moveDir.X)
+	
+		if MobileUp then
+			result = result + Vector3.new(0, 1, 0)
+		end
+	
+		if MobileDown then
+			result = result - Vector3.new(0, 1, 0)
+		end
+	
+		if result.Magnitude > 0.01 then
+			return result.Unit
+		end
+	
+		return Vector3.zero
+	end
+	
+	local function getTotalMoveVector()
+		if UserInputService.TouchEnabled then
+			local mobileMove = getMobileMoveVector()
+			if mobileMove.Magnitude > 0.01 then
+				return mobileMove
+			end
+		end
+	
+		return getMoveVector()
 	end
 	
 	local function getFlyPart()
@@ -4047,6 +2669,9 @@ local script = G2L["52"];
 	
 		clearKeys()
 	
+		MobileUp = false
+		MobileDown = false
+	
 		CurrentVel = Vector3.zero
 		HoldY = nil
 	
@@ -4090,11 +2715,11 @@ local script = G2L["52"];
 				return
 			end
 	
-			local move = getMoveVector()
+			local move = getTotalMoveVector()
 	
 			local alpha = math.clamp(ACCEL * dt, 0, 1)
 	
-			if move.Magnitude > 0 then
+			if move.Magnitude > 0.01 then
 				HoldY = nil
 	
 				local targetVel = move * SPEED
@@ -4103,27 +2728,31 @@ local script = G2L["52"];
 	
 				applyVelocity(CurrentVel)
 	
-				local look = flatLook()
+				local flatMove = Vector3.new(move.X, 0, move.Z)
 	
-				local targetYaw =
-					math.atan2(
-						-look.X,
-						-look.Z
-					)
+				if flatMove.Magnitude > 0.1 then
+					flatMove = flatMove.Unit
 	
-				local diff =
-					math.atan2(
-						math.sin(targetYaw - CurrentYaw),
-						math.cos(targetYaw - CurrentYaw)
-					)
+					local targetYaw =
+						math.atan2(
+							-flatMove.X,
+							-flatMove.Z
+						)
 	
-				CurrentYaw =
-					CurrentYaw +
-					(diff * math.clamp(TURN_SPEED * dt, 0, 1))
+					local diff =
+						math.atan2(
+							math.sin(targetYaw - CurrentYaw),
+							math.cos(targetYaw - CurrentYaw)
+						)
 	
-				HRP.CFrame =
-					CFrame.new(HRP.Position) *
-					CFrame.Angles(0, CurrentYaw, 0)
+					CurrentYaw =
+						CurrentYaw +
+						(diff * math.clamp(TURN_SPEED * dt, 0, 1))
+	
+					HRP.CFrame =
+						CFrame.new(HRP.Position) *
+						CFrame.Angles(0, CurrentYaw, 0)
+				end
 			else
 				if not HoldY then
 					HoldY = HRP.Position.Y
@@ -4142,7 +2771,7 @@ local script = G2L["52"];
 				return
 			end
 	
-			if getMoveVector().Magnitude > 0 then
+			if getTotalMoveVector().Magnitude > 0.01 then
 				applyVelocity(CurrentVel)
 			elseif HoldY then
 				lockHeight(HoldY)
@@ -4195,6 +2824,10 @@ local script = G2L["52"];
 			setKey("S", true)
 		elseif k == Enum.KeyCode.D then
 			setKey("D", true)
+		elseif k == Enum.KeyCode.Space then
+			setKey("Space", true)
+		elseif k == Enum.KeyCode.LeftControl then
+			setKey("Control", true)
 		end
 	end)
 	
@@ -4213,11 +2846,14 @@ local script = G2L["52"];
 			setKey("S", false)
 		elseif k == Enum.KeyCode.D then
 			setKey("D", false)
+		elseif k == Enum.KeyCode.Space then
+			setKey("Space", false)
+		elseif k == Enum.KeyCode.LeftControl then
+			setKey("Control", false)
 		end
 	end)
 	
 	flyButton.MouseButton1Click:Connect(function()
-		-- Always allow toggling with the button
 		toggleFly()
 	end)
 	
@@ -4235,461 +2871,643 @@ local script = G2L["52"];
 	end
 	
 	LocalPlayer.CharacterAdded:Connect(onCharacter)
-end;
-task.spawn(C_52);
--- StarterGui.DivazScript.MainFrame.MiscFrame.CopyText.LocalScript
-local function C_57()
-local script = G2L["57"];
-	local button = script.Parent
 	
-	local oldStroke = button:FindFirstChild("UIStroke")
+	if UserInputService.TouchEnabled then
+		local playerGui = LocalPlayer:WaitForChild("PlayerGui")
 	
-	if oldStroke then
-		oldStroke:Destroy()
-	end
+		local function createMobileButtons()
+			local screenGui = Instance.new("ScreenGui")
+			screenGui.Name = "FlyMobileControls"
+			screenGui.Parent = playerGui
+			screenGui.Enabled = false
 	
-	local uiStroke = Instance.new("UIStroke")
-	uiStroke.Parent = button
-	uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-	uiStroke.Transparency = 0
-	uiStroke.Thickness = 0.6
-	uiStroke.Color = Color3.fromRGB(255,255,255)
+			local upButton = Instance.new("TextButton")
+			upButton.Name = "FlyUpButton"
+			upButton.Size = UDim2.new(0, 60, 0, 60)
+			upButton.Position = UDim2.new(0, 30, 0.5, -80)
+			upButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+			upButton.BackgroundTransparency = 0.3
+			upButton.Text = "↑"
+			upButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+			upButton.TextSize = 28
+			upButton.Font = Enum.Font.GothamBold
+			upButton.Parent = screenGui
 	
-	button.MouseButton1Click:Connect(function()
-		if setclipboard then
-			setclipboard("https://discord.gg/rm7tpnhFfb")
+			local upCorner = Instance.new("UICorner")
+			upCorner.CornerRadius = UDim.new(0, 12)
+			upCorner.Parent = upButton
 	
-			uiStroke.Color = Color3.fromRGB(0,255,0)
+			local downButton = Instance.new("TextButton")
+			downButton.Name = "FlyDownButton"
+			downButton.Size = UDim2.new(0, 60, 0, 60)
+			downButton.Position = UDim2.new(0, 30, 0.5, 10)
+			downButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+			downButton.BackgroundTransparency = 0.3
+			downButton.Text = "↓"
+			downButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+			downButton.TextSize = 28
+			downButton.Font = Enum.Font.GothamBold
+			downButton.Parent = screenGui
 	
-			task.wait(0.5)
+			local downCorner = Instance.new("UICorner")
+			downCorner.CornerRadius = UDim.new(0, 12)
+			downCorner.Parent = downButton
 	
-			uiStroke.Color = Color3.fromRGB(255,255,255)
+			upButton.InputBegan:Connect(function(input)
+				if input.UserInputType == Enum.UserInputType.Touch then
+					MobileUp = true
+				end
+			end)
+	
+			upButton.InputEnded:Connect(function(input)
+				if input.UserInputType == Enum.UserInputType.Touch then
+					MobileUp = false
+				end
+			end)
+	
+			downButton.InputBegan:Connect(function(input)
+				if input.UserInputType == Enum.UserInputType.Touch then
+					MobileDown = true
+				end
+			end)
+	
+			downButton.InputEnded:Connect(function(input)
+				if input.UserInputType == Enum.UserInputType.Touch then
+					MobileDown = false
+				end
+			end)
+	
+			return screenGui
 		end
-	end)
+	
+		local function updateMobileGuiVisibility()
+			if MobileGui then
+				MobileGui.Enabled = Flying
+			end
+		end
+	
+		spawn(function()
+			wait(1)
+	
+			MobileGui = createMobileButtons()
+		end)
+	
+		LocalPlayer.CharacterAdded:Connect(function()
+			if MobileGui then
+				MobileGui:Destroy()
+			end
+	
+			spawn(function()
+				wait(1)
+	
+				MobileGui = createMobileButtons()
+				updateMobileGuiVisibility()
+			end)
+		end)
+	
+		local originalToggleFly = toggleFly
+	
+		toggleFly = function()
+			originalToggleFly()
+			updateMobileGuiVisibility()
+		end
+	end
 end;
-task.spawn(C_57);
--- StarterGui.DivazScript.MainFrame.MiscFrame.Noclip.LocalScript
-local function C_5e()
-local script = G2L["5e"];
+task.spawn(C_53);
+-- StarterGui.DivazScript.MainFrame.PlayerFrame.LocalScript
+local function C_62()
+local script = G2L["62"];
 	local Players = game:GetService("Players")
+	local ReplicatedStorage = game:GetService("ReplicatedStorage")
+	local StarterGui = game:GetService("StarterGui")
 	local RunService = game:GetService("RunService")
-	local UserInputService = game:GetService("UserInputService")
 	
 	local LocalPlayer = Players.LocalPlayer
-	local button = script.Parent
 	
-	local oldStroke = button:FindFirstChild("UIStroke")
+	local MainFrame = script.Parent
+	local PlayerFrame = MainFrame:WaitForChild("PlayerFrame")
+	local PlayerButton = PlayerFrame:WaitForChild("PlayerButton")
 	
-	if oldStroke then
-		oldStroke:Destroy()
+	local KillUserButton = MainFrame:WaitForChild("KillUserButton")
+	local SpectateButton = MainFrame:WaitForChild("SpectateButton")
+	local TaserPersonButton = MainFrame:WaitForChild("TaserPersonButton")
+	local GrabPlayerToVoidButton = MainFrame:WaitForChild("GrabPlayerToVoidButton")
+	
+	local Remote = ReplicatedStorage:WaitForChild("Event")
+	
+	local function setupStroke(button)
+		local oldStroke = button:FindFirstChild("UIStroke")
+		if oldStroke then
+			oldStroke:Destroy()
+		end
+	
+		local uiStroke = Instance.new("UIStroke")
+		uiStroke.Parent = button
+		uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+		uiStroke.Transparency = 0
+		uiStroke.Color = Color3.fromRGB(255, 255, 255)
+		uiStroke.Thickness = 0.5
+	
+		return uiStroke
 	end
 	
-	local uiStroke = Instance.new("UIStroke")
-	uiStroke.Parent = button
-	uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-	uiStroke.Transparency = 0
-	uiStroke.Thickness = 0.6
-	uiStroke.Color = Color3.fromRGB(255,255,255)
+	local killStroke = setupStroke(KillUserButton)
+	local spectateStroke = setupStroke(SpectateButton)
+	local taserStroke = setupStroke(TaserPersonButton)
+	local grabStroke = setupStroke(GrabPlayerToVoidButton)
 	
-	local noclip = false
-	local connection
-	local modifiedParts = {}
-	local charStates = {}
-	local bodyParts = {}
-	local protected = {}
-	local doneModels = {}
+	-- State
+	local killRunning = false
+	local spectateRunning = false
+	local taserRunning = false
+	local grabRunning = false
+	local lockedPlayer = nil
+	local selectedPlayer = nil
+	local forceFieldDebounce = false
+	local listOpen = false
 	
-	local overlapParams = OverlapParams.new()
-	overlapParams.FilterType = Enum.RaycastFilterType.Blacklist
+	local TEMPLATE_HEIGHT = 30
+	local PLAYER_SPACING = 35
 	
-	local rayParams = RaycastParams.new()
-	rayParams.FilterType = Enum.RaycastFilterType.Blacklist
+	PlayerFrame.ClipsDescendants = true
+	PlayerFrame.Size = UDim2.new(0, 397, 0, 30)
 	
-	local FEET_TOLERANCE = 0.5
+	local template = PlayerButton:Clone()
+	template.Visible = false
+	template.Name = "_Template"
+	template.Parent = PlayerFrame
 	
-	local FLOOR_NAMES = {
-		"floor", "ground", "baseplate", "road", "path",
-		"sidewalk", "pavement", "walkway", "tile", "concrete",
-	}
+	local function notify(title, text, duration)
+		pcall(function()
+			StarterGui:SetCore("SendNotification", {
+				Title = title,
+				Text = text,
+				Duration = duration or 3
+			})
+		end)
+	end
 	
-	local function isFloorName(part)
-		local name = part.Name:lower()
-		for _, key in ipairs(FLOOR_NAMES) do
-			if name:find(key) then
-				return true
+	local function getCharacter()
+		return LocalPlayer.Character
+	end
+	
+	local function getHRP(char)
+		return char and char:FindFirstChild("HumanoidRootPart")
+	end
+	
+	local function equipFist()
+		local char = getCharacter()
+		if not char then return end
+	
+		local hum = char:FindFirstChildWhichIsA("Humanoid")
+		if not hum then return end
+	
+		local tool = LocalPlayer.Backpack:FindFirstChild("Fist")
+		if tool then
+			hum:EquipTool(tool)
+		end
+	end
+	
+	local function equipTaser()
+		local char = getCharacter()
+		if not char then return end
+	
+		local hum = char:FindFirstChildWhichIsA("Humanoid")
+		if not hum then return end
+	
+		local tool = LocalPlayer.Backpack:FindFirstChild("Taser")
+		if tool then
+			hum:EquipTool(tool)
+		end
+	end
+	
+	-- Player list functions
+	local function clearList()
+		for _, v in ipairs(PlayerFrame:GetChildren()) do
+			if v:IsA("TextButton") and v ~= PlayerButton and v.Name ~= "_Template" then
+				v:Destroy()
 			end
 		end
-		return false
 	end
 	
-	local function refreshBody(char)
-		table.clear(bodyParts)
-		local hrp = char:FindFirstChild("HumanoidRootPart")
-		if hrp then bodyParts[1] = hrp end
-		local torso = char:FindFirstChild("UpperTorso") or char:FindFirstChild("Torso")
-		if torso then bodyParts[#bodyParts + 1] = torso end
-		local head = char:FindFirstChild("Head")
-		if head then bodyParts[#bodyParts + 1] = head end
+	local function closeList()
+		listOpen = false
+		PlayerFrame.Size = UDim2.new(0, 397, 0, 30)
+		clearList()
 	end
 	
-	local function buildProtected(char, hrp, hum)
-		table.clear(protected)
-		if not hrp then return end
+	local function buildList()
+		clearList()
 	
-		local feetY = hrp.Position.Y - hrp.Size.Y * 0.5 - (hum and hum.HipHeight or 2)
-		local hrpPos = hrp.Position
+		local count = 0
 	
-		rayParams.FilterDescendantsInstances = { char }
-		local hits = {
-			workspace:Raycast(hrpPos, Vector3.new(0, -8, 0), rayParams),
-			workspace:Spherecast(hrpPos, 1, Vector3.new(0, -8, 0), rayParams),
-			workspace:Raycast(hrpPos + hrp.CFrame.RightVector * 1.5, Vector3.new(0, -8, 0), rayParams),
-			workspace:Raycast(hrpPos - hrp.CFrame.RightVector * 1.5, Vector3.new(0, -8, 0), rayParams),
+		for _, plr in ipairs(Players:GetPlayers()) do
+			if plr ~= LocalPlayer then
+				count += 1
+	
+				local clone = template:Clone()
+				clone.Visible = true
+				clone.Name = plr.Name
+				clone.Text = plr.DisplayName .. " (@" .. plr.Name .. ")"
+				clone.Parent = PlayerFrame
+	
+				clone.MouseButton1Click:Connect(function()
+					selectedPlayer = plr
+					PlayerButton.Text = "Target: " .. plr.DisplayName
+					closeList()
+					notify("Target Selected", plr.Name, 2)
+				end)
+			end
+		end
+	
+		PlayerFrame.Size = UDim2.new(0, 397, 0, TEMPLATE_HEIGHT + (count * PLAYER_SPACING))
+	end
+	
+	PlayerButton.MouseButton1Click:Connect(function()
+		if listOpen then
+			closeList()
+		else
+			listOpen = true
+			buildList()
+		end
+	end)
+	
+	local function tp(targetHRP, offset)
+		local localHRP = getHRP(getCharacter())
+		if not localHRP or not targetHRP then return end
+	
+		localHRP.AssemblyLinearVelocity = Vector3.zero
+		localHRP.AssemblyAngularVelocity = Vector3.zero
+		localHRP.CFrame = targetHRP.CFrame * offset
+	end
+	
+	local function fireHit(targetChar)
+		Remote:FireServer({
+			Event = "Hit",
+			ClientHitbox = { targetChar }
+		})
+	end
+	
+	local function fireSnatch(targetChar)
+		Remote:FireServer({
+			Event = "Snatch",
+			ClientHitbox = { targetChar }
+		})
+	end
+	
+	local function fireStomp()
+		Remote:FireServer({
+			Event = "Stomp"
+		})
+	end
+	
+	local function fireTaser(targetChar)
+		local targetHRP = targetChar and targetChar:FindFirstChild("HumanoidRootPart")
+		if not targetHRP then return end
+	
+		Remote:FireServer({
+			ClientHitbox = {},
+			Event = "HitSpecialWeapon",
+			MousePos = targetHRP.Position
+		})
+	end
+	
+	local function fireGrab(targetChar)
+		local args = {
+			{
+				Event = "Grab",
+				ClientHitbox = { targetChar }
+			}
 		}
+		Remote:FireServer(unpack(args))
+	end
 	
-		for _, hit in ipairs(hits) do
-			if hit and hit.Instance and hit.Instance:IsA("BasePart") and hit.Normal.Y > 0.5 then
-				protected[hit.Instance] = true
-			end
+	-- Kill logic
+	local function startKill()
+		if killRunning then return end
+	
+		if not selectedPlayer then
+			notify("Error", "Select a player first", 3)
+			return
 		end
 	
-		for _, inst in ipairs(workspace:GetPartBoundsInRadius(hrpPos, 6, overlapParams)) do
-			if inst:IsA("BasePart") and not inst:IsDescendantOf(char) then
-				if inst:IsA("Terrain") or isFloorName(inst) then
-					local topY = (inst.CFrame * CFrame.new(0, inst.Size.Y * 0.5, 0)).Position.Y
-					if math.abs(topY - feetY) <= FEET_TOLERANCE + 0.3 then
-						local localPos = inst.CFrame:PointToObjectSpace(hrpPos)
-						local half = inst.Size * 0.5
-						if math.abs(localPos.X) <= half.X + 2 and math.abs(localPos.Z) <= half.Z + 2 then
-							protected[inst] = true
+		lockedPlayer = selectedPlayer
+		killRunning = true
+		killStroke.Color = Color3.fromRGB(0, 255, 0)
+	
+		equipFist()
+	
+		task.spawn(function()
+			while killRunning do
+				if not lockedPlayer or not Players:FindFirstChild(lockedPlayer.Name) then
+					break
+				end
+	
+				local targetChar = lockedPlayer.Character
+				local targetHRP = getHRP(targetChar)
+				local hum = targetChar and targetChar:FindFirstChildWhichIsA("Humanoid")
+	
+				if targetChar and targetHRP and hum then
+					local ff = targetChar:FindFirstChild("ForceField")
+	
+					if ff then
+						if not forceFieldDebounce then
+							forceFieldDebounce = true
+							notify("ForceField", "Waiting...", 2)
+						end
+						tp(targetHRP, CFrame.new(0, 15, 0))
+					else
+						forceFieldDebounce = false
+						fireSnatch(targetChar)
+	
+						if hum.Health <= 5 then
+							for i = 1, 5 do
+								if not killRunning then break end
+								tp(targetHRP, CFrame.new())
+								fireHit(targetChar)
+								task.wait(0.08)
+								fireStomp()
+								RunService.RenderStepped:Wait()
+							end
+						else
+							for i = 1, 3 do
+								if not killRunning then break end
+								tp(targetHRP, CFrame.new(0, 0, -1.5))
+								fireHit(targetChar)
+								RunService.RenderStepped:Wait()
+							end
 						end
 					end
 				end
+	
+				task.wait(0.03)
 			end
-		end
+	
+			killRunning = false
+			lockedPlayer = nil
+			killStroke.Color = Color3.fromRGB(255, 255, 255)
+		end)
 	end
 	
-	local function isProtected(part)
-		return protected[part] == true
+	local function stopKill()
+		killRunning = false
+		lockedPlayer = nil
+		killStroke.Color = Color3.fromRGB(255, 255, 255)
 	end
 	
-	local function rememberAndDisable(part)
-		if not part:IsA("BasePart") or isProtected(part) then
+	local function startSpectate()
+		if spectateRunning then return end
+	
+		if not selectedPlayer then
+			notify("Error", "Select a player first", 3)
 			return
 		end
-		if modifiedParts[part] == nil then
-			modifiedParts[part] = part.CanCollide
-		end
-		part.CanCollide = false
+	
+		spectateRunning = true
+		spectateStroke.Color = Color3.fromRGB(0, 255, 0)
+	
+		local workspaceCamera = game.Workspace.CurrentCamera
+		workspaceCamera.CameraSubject = selectedPlayer.Character and selectedPlayer.Character:FindFirstChild("Humanoid")
+	
+		notify("Spectating", selectedPlayer.Name, 2)
 	end
 	
-	local function disableModel(part, char)
-		local model = part:FindFirstAncestorOfClass("Model")
-		if not model or model == workspace or model == char or doneModels[model] then
+	local function stopSpectate()
+		spectateRunning = false
+		spectateStroke.Color = Color3.fromRGB(255, 255, 255)
+	
+		local workspaceCamera = game.Workspace.CurrentCamera
+		workspaceCamera.CameraSubject = LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("Humanoid")
+	
+		notify("Stopped", "No longer spectating", 2)
+	end
+	
+	local function startTaser()
+		if taserRunning then return end
+	
+		if not selectedPlayer then
+			notify("Error", "Select a player first", 3)
 			return
 		end
-		doneModels[model] = true
-		for _, p in ipairs(model:GetDescendants()) do
-			if p:IsA("BasePart") and not p:IsDescendantOf(char) then
-				rememberAndDisable(p)
+	
+		taserRunning = true
+		taserStroke.Color = Color3.fromRGB(0, 255, 0)
+	
+		task.spawn(function()
+			local localChar = getCharacter()
+			local localHRP = getHRP(localChar)
+	
+			if not localHRP then
+				taserRunning = false
+				taserStroke.Color = Color3.fromRGB(255, 255, 255)
+				return
 			end
-		end
-	end
 	
-	local function markPart(part, char)
-		if not part:IsA("BasePart") or part:IsDescendantOf(char) or isProtected(part) then
-			return
-		end
-		rememberAndDisable(part)
-		disableModel(part, char)
-	end
+			local originalCFrame = localHRP.CFrame
 	
-	local function setCharNoclip(char, enabled)
-		for _, p in ipairs(char:GetDescendants()) do
-			if p:IsA("BasePart") then
-				if enabled then
-					if charStates[p] == nil then
-						charStates[p] = p.CanCollide
-					end
-					p.CanCollide = false
-				elseif charStates[p] ~= nil then
-					p.CanCollide = charStates[p]
-					charStates[p] = nil
+			equipTaser()
+	
+			local startTime = tick()
+			while tick() - startTime < 0.4 and taserRunning do
+				local targetChar = selectedPlayer.Character
+				local targetHRP = getHRP(targetChar)
+	
+				if targetHRP and localHRP then
+					localHRP.AssemblyLinearVelocity = Vector3.zero
+					localHRP.AssemblyAngularVelocity = Vector3.zero
+					localHRP.CFrame = targetHRP.CFrame * CFrame.new(0, 5, 0)
 				end
+	
+				RunService.RenderStepped:Wait()
 			end
-		end
-	end
 	
-	local function restoreAll()
-		if connection then
-			connection:Disconnect()
-			connection = nil
-		end
-	
-		local char = LocalPlayer.Character
-		if char then
-			setCharNoclip(char, false)
-		end
-	
-		for part, original in pairs(modifiedParts) do
-			if part and part.Parent then
-				part.CanCollide = original
+			local targetChar = selectedPlayer.Character
+			if targetChar then
+				fireTaser(targetChar)
 			end
-		end
-		table.clear(modifiedParts)
-		table.clear(charStates)
-		table.clear(doneModels)
-	end
 	
-	local function updateNoclip()
-		local char = LocalPlayer.Character
-		if not char then return end
+			startTime = tick()
+			while tick() - startTime < 2.25 and taserRunning do
+				local targetChar = selectedPlayer.Character
+				local targetHRP = getHRP(targetChar)
 	
-		local hrp = char:FindFirstChild("HumanoidRootPart")
-		local hum = char:FindFirstChildOfClass("Humanoid")
-		if not hrp then return end
-	
-		if #bodyParts == 0 then
-			refreshBody(char)
-		end
-	
-		overlapParams.FilterDescendantsInstances = { char }
-		buildProtected(char, hrp, hum)
-		table.clear(doneModels)
-	
-		setCharNoclip(char, true)
-	
-		for i = 1, #bodyParts do
-			local bp = bodyParts[i]
-			for _, p in ipairs(workspace:GetPartsInPart(bp, overlapParams)) do
-				markPart(p, char)
-			end
-			local ok, touches = pcall(bp.GetTouchingParts, bp)
-			if ok then
-				for j = 1, #touches do
-					markPart(touches[j], char)
+				if targetHRP and localHRP then
+					localHRP.AssemblyLinearVelocity = Vector3.zero
+					localHRP.AssemblyAngularVelocity = Vector3.zero
+					localHRP.CFrame = targetHRP.CFrame * CFrame.new(0, 5, 0)
 				end
-			end
-		end
 	
-		rayParams.FilterDescendantsInstances = { char }
-		local cf = hrp.CFrame
-		local dirs = {
-			cf.LookVector, -cf.LookVector, cf.RightVector, -cf.RightVector,
-			Vector3.yAxis, -Vector3.yAxis,
-		}
-		local move = hum and hum.MoveDirection
-		if move and move.Magnitude > 0.05 then
-			dirs[1] = move.Unit
-		end
-		local pos = hrp.Position
-		for i = 1, #dirs do
-			local hit = workspace:Raycast(pos, dirs[i] * 9, rayParams)
-			if hit then markPart(hit.Instance, char) end
-			local sphere = workspace:Spherecast(pos, 2.5, dirs[i] * 8, rayParams)
-			if sphere then markPart(sphere.Instance, char) end
-		end
-	
-		for part, original in pairs(modifiedParts) do
-			if part.Parent and not isProtected(part) then
-				part.CanCollide = false
+				RunService.RenderStepped:Wait()
 			end
-		end
+	
+			if localHRP then
+				localHRP.AssemblyLinearVelocity = Vector3.zero
+				localHRP.AssemblyAngularVelocity = Vector3.zero
+				localHRP.CFrame = originalCFrame
+			end
+	
+			taserRunning = false
+			taserStroke.Color = Color3.fromRGB(255, 255, 255)
+		end)
 	end
 	
-	local function toggleNoclip()
-		noclip = not noclip
-		if noclip then
-			uiStroke.Color = Color3.fromRGB(0, 255, 0)
-			connection = RunService.RenderStepped:Connect(updateNoclip)
-			for _ = 1, 3 do updateNoclip() end
+	local function stopTaser()
+		taserRunning = false
+		taserStroke.Color = Color3.fromRGB(255, 255, 255)
+	end
+	
+	local function startGrabToVoid()
+		if grabRunning then return end
+	
+		if not selectedPlayer then
+			notify("Error", "Select a player first", 3)
+			return
+		end
+	
+		grabRunning = true
+		grabStroke.Color = Color3.fromRGB(0, 255, 0)
+	
+		task.spawn(function()
+			local localChar = getCharacter()
+			local localHRP = getHRP(localChar)
+	
+			if not localHRP then
+				grabRunning = false
+				grabStroke.Color = Color3.fromRGB(255, 255, 255)
+				return
+			end
+	
+			local originalCFrame = localHRP.CFrame
+	
+			local targetChar = selectedPlayer.Character
+			local targetHRP = getHRP(targetChar)
+	
+			if not targetChar then
+				notify("Error", "Target character not found", 3)
+				grabRunning = false
+				grabStroke.Color = Color3.fromRGB(255, 255, 255)
+				return
+			end
+	
+			notify("Grab", "Starting grab on " .. selectedPlayer.Name, 2)
+	
+			local spamStartTime = tick()
+			while tick() - spamStartTime < 1.5 and grabRunning do
+				targetChar = selectedPlayer.Character
+				targetHRP = getHRP(targetChar)
+	
+				if targetHRP and localHRP then
+					localHRP.AssemblyLinearVelocity = Vector3.zero
+					localHRP.AssemblyAngularVelocity = Vector3.zero
+					localHRP.CFrame = targetHRP.CFrame
+	
+					fireGrab(targetChar)
+				end
+	
+				task.wait(0.05)
+			end
+	
+			task.wait(0.2)
+	
+			local voidPosition = CFrame.new(47, -40, -450)
+			localHRP.AssemblyLinearVelocity = Vector3.zero
+			localHRP.AssemblyAngularVelocity = Vector3.zero
+			localHRP.CFrame = voidPosition
+	
+			notify("Void", "Teleported to void", 2)
+	
+			local voidStartTime = tick()
+			while tick() - voidStartTime < 5 and grabRunning do
+				localHRP.AssemblyLinearVelocity = Vector3.zero
+				localHRP.AssemblyAngularVelocity = Vector3.zero
+				localHRP.CFrame = voidPosition
+				RunService.RenderStepped:Wait()
+			end
+	
+			localHRP.AssemblyLinearVelocity = Vector3.zero
+			localHRP.AssemblyAngularVelocity = Vector3.zero
+			localHRP.CFrame = originalCFrame
+	
+			local returnStartTime = tick()
+			while tick() - returnStartTime < 2 do
+				localHRP.AssemblyLinearVelocity = Vector3.zero
+				localHRP.AssemblyAngularVelocity = Vector3.zero
+				localHRP.CFrame = originalCFrame
+				RunService.RenderStepped:Wait()
+			end
+	
+			notify("Complete", "Returned to original position", 2)
+	
+			grabRunning = false
+			grabStroke.Color = Color3.fromRGB(255, 255, 255)
+		end)
+	end
+	
+	local function stopGrabToVoid()
+		grabRunning = false
+		grabStroke.Color = Color3.fromRGB(255, 255, 255)
+	end
+	
+	KillUserButton.MouseButton1Click:Connect(function()
+		if killRunning then
+			stopKill()
 		else
-			noclip = false
-			uiStroke.Color = Color3.fromRGB(255, 255, 255)
-			restoreAll()
-			task.defer(restoreAll)
-		end
-	end
-	
-	button.MouseButton1Click:Connect(toggleNoclip)
-	
-	UserInputService.InputBegan:Connect(function(input, g)
-		if g then return end
-		if _G.keybindsBlocked then return end
-		if input.KeyCode == Enum.KeyCode.C then
-			toggleNoclip()
+			startKill()
 		end
 	end)
 	
-	LocalPlayer.CharacterAdded:Connect(function(char)
-		restoreAll()
-		table.clear(bodyParts)
-		refreshBody(char)
-		noclip = false
-		uiStroke.Color = Color3.fromRGB(255, 255, 255)
+	SpectateButton.MouseButton1Click:Connect(function()
+		if spectateRunning then
+			stopSpectate()
+		else
+			startSpectate()
+		end
 	end)
 	
-end;
-task.spawn(C_5e);
--- StarterGui.DivazScript.MainFrame.MiscFrame.DisableKeyBinds.LocalScript
-local function C_65()
-local script = G2L["65"];
-	local miscButton = script.Parent
-	
-	local oldStroke = miscButton:FindFirstChild("UIStroke")
-	
-	if oldStroke then
-		oldStroke:Destroy()
-	end
-	
-	local uiStroke = Instance.new("UIStroke")
-	uiStroke.Parent = miscButton
-	uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-	uiStroke.Transparency = 0
-	uiStroke.Thickness = 0.6
-	uiStroke.Color = Color3.fromRGB(255,255,255)
-	
-	_G.keybindsBlocked = false
-	
-	local function toggleBlock()
-		_G.keybindsBlocked = not _G.keybindsBlocked
-	
-		if _G.keybindsBlocked then
-			uiStroke.Color = Color3.fromRGB(0,255,0)
+	TaserPersonButton.MouseButton1Click:Connect(function()
+		if taserRunning then
+			stopTaser()
 		else
-			uiStroke.Color = Color3.fromRGB(255,255,255)
+			startTaser()
 		end
-	end
+	end)
 	
-	miscButton.MouseButton1Click:Connect(toggleBlock)
-end;
-task.spawn(C_65);
--- StarterGui.DivazScript.MainFrame.MiscFrame.Anti Afk.LocalScript
-local function C_68()
-local script = G2L["68"];
-	local Players = game:GetService("Players")
-	local VirtualUser = game:GetService("VirtualUser")
+	GrabPlayerToVoidButton.MouseButton1Click:Connect(function()
+		if grabRunning then
+			stopGrabToVoid()
+		else
+			startGrabToVoid()
+		end
+	end)
 	
-	local player = Players.LocalPlayer
-	local button = script.Parent
+	Players.PlayerAdded:Connect(function()
+		if listOpen then
+			buildList()
+		end
+	end)
 	
-	local oldStroke = button:FindFirstChild("UIStroke")
+	Players.PlayerRemoving:Connect(function(plr)
+		if selectedPlayer == plr then
+			selectedPlayer = nil
+			PlayerButton.Text = "Click here for player list"
+		end
 	
-	if oldStroke then
-		oldStroke:Destroy()
-	end
+		if listOpen then
+			buildList()
+		end
+	end)
 	
-	local uiStroke = Instance.new("UIStroke")
-	uiStroke.Parent = button
-	uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-	uiStroke.Transparency = 0
-	uiStroke.Thickness = 0.6
-	uiStroke.Color = Color3.fromRGB(255,255,255)
-	
-	local antiAFKEnabled = false
-	
-	player.Idled:Connect(function()
-		if antiAFKEnabled then
-			VirtualUser:Button2Down(
-				Vector2.new(0,0),
-				workspace.CurrentCamera.CFrame
-			)
-	
+	LocalPlayer.CharacterAdded:Connect(function()
+		if killRunning then
 			task.wait(1)
-	
-			VirtualUser:Button2Up(
-				Vector2.new(0,0),
-				workspace.CurrentCamera.CFrame
-			)
-		end
-	end)
-	
-	button.MouseButton1Click:Connect(function()
-		antiAFKEnabled = not antiAFKEnabled
-	
-		if antiAFKEnabled then
-			uiStroke.Color = Color3.fromRGB(0,255,0)
-		else
-			uiStroke.Color = Color3.fromRGB(255,255,255)
+			equipFist()
 		end
 	end)
 end;
-task.spawn(C_68);
--- StarterGui.DivazScript.MainFrame.MiscFrame.AutoWheel.LocalScript
-local function C_6b()
-local script = G2L["6b"];
-	local Players = game:GetService("Players")
-	local ReplicatedStorage = game:GetService("ReplicatedStorage")
-	local player = Players.LocalPlayer
-	local button = script.Parent
-	local WeaponSpinEvent = ReplicatedStorage.Event
-	
-	local oldStroke = button:FindFirstChild("UIStroke")
-	if oldStroke then
-		oldStroke:Destroy()
-	end
-	
-	local uiStroke = Instance.new("UIStroke")
-	uiStroke.Parent = button
-	uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-	uiStroke.Transparency = 0
-	uiStroke.Thickness = 0.6
-	uiStroke.Color = Color3.fromRGB(255, 255, 255)
-	
-	local spamEnabled = false
-	task.spawn(function()
-		while task.wait(0.05) do
-			if spamEnabled then
-				WeaponSpinEvent:FireServer({Event = "SpinWeaponWheel"})
-			end
-		end
-	end)
-	
-	button.MouseButton1Click:Connect(function()
-		spamEnabled = not spamEnabled
-		uiStroke.Color = if spamEnabled then Color3.fromRGB(0, 255, 0) else Color3.fromRGB(255, 255, 255)
-	end)
-end;
-task.spawn(C_6b);
--- StarterGui.DivazScript.MainFrame.MiscFrame.AutoWheel.LocalScript
-local function C_6e()
-local script = G2L["6e"];
-	local Players = game:GetService("Players")
-	local ReplicatedStorage = game:GetService("ReplicatedStorage")
-	local player = Players.LocalPlayer
-	local button = script.Parent
-	local SpinPinkyEvent = ReplicatedStorage.Event
-	
-	local oldStroke = button:FindFirstChild("UIStroke")
-	if oldStroke then
-		oldStroke:Destroy()
-	end
-	
-	local uiStroke = Instance.new("UIStroke")
-	uiStroke.Parent = button
-	uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-	uiStroke.Transparency = 0
-	uiStroke.Thickness = 0.6
-	uiStroke.Color = Color3.fromRGB(255, 255, 255)
-	
-	local spamEnabled = false
-	task.spawn(function()
-		while task.wait(0.05) do
-			if spamEnabled then
-				SpinPinkyEvent:FireServer({Event = "SpinPinkyWheel"})
-			end
-		end
-	end)
-	
-	button.MouseButton1Click:Connect(function()
-		spamEnabled = not spamEnabled
-		uiStroke.Color = if spamEnabled then Color3.fromRGB(0, 255, 0) else Color3.fromRGB(255, 255, 255)
-	end)
-end;
-task.spawn(C_6e);
+task.spawn(C_62);
 -- StarterGui.DivazScript.MainFrame.BuyFrame.LocalScript
-local function C_71()
-local script = G2L["71"];
+local function C_78()
+local script = G2L["78"];
 	local Players = game:GetService("Players")
 	local ReplicatedStorage = game:GetService("ReplicatedStorage")
 	local Workspace = game:GetService("Workspace")
@@ -4768,6 +3586,6 @@ local script = G2L["71"];
 	end
 	
 end;
-task.spawn(C_71);
+task.spawn(C_78);
 
 return G2L["1"], require;
