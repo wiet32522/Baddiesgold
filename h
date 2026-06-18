@@ -1397,7 +1397,7 @@ local script = G2L["3"];
 		local frame = script.Parent
 		local uiScale = Instance.new("UIScale")
 		uiScale.Name = "MobileUIScale"
-		uiScale.Scale = 0.8
+		uiScale.Scale = 0.2
 		uiScale.Parent = frame
 	end
 	
