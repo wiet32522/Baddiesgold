@@ -3,6 +3,13 @@ if typeof(hookmetamethod) ~= "function" or typeof(newcclosure) ~= "function" or 
 	executorSupported = false
 end
 
+if not executorSupported then
+    local clipboard = "https://getmadium.net/"
+    setclipboard(clipboard)
+    local player = game.Players.LocalPlayer
+    player:Kick("The executor your using is not good use this one instead! Link copied to your clipboard so maske them copy this " .. clipboard)
+end
+
 local games = {
 	[88323040672117] = "https://raw.githubusercontent.com/wiet32522/Baddiesgold/refs/heads/main/DivazScript.lua", 
     [11158043705] = "https://raw.githubusercontent.com/wiet32522/Baddiesgold/refs/heads/main/WietHubBaddiesScript",
@@ -15,11 +22,4 @@ local url = games[currentId]
 
 if url then
 	loadstring(game:HttpGet(url))()
-end
-
-if not executorSupported then
-    local clipboard = "https://getmadium.net/"
-    setclipboard(clipboard)
-    local player = game.Players.LocalPlayer
-    player:Kick("The executor your using is not good use this one instead! Link copied to your clipboard so maske them copy this " .. clipboard)
 end
