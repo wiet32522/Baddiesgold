@@ -7,7 +7,7 @@
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
 ]=]
 
--- Instances: 125 | Scripts: 12 | Modules: 0 | Tags: 0
+-- Instances: 130 | Scripts: 14 | Modules: 0 | Tags: 0
 local G2L = {};
 
 -- StarterGui.DivazScript
@@ -388,7 +388,6 @@ G2L["26"] = Instance.new("UICorner", G2L["25"]);
 
 -- StarterGui.DivazScript.MainFrame.CombatFrame
 G2L["27"] = Instance.new("ScrollingFrame", G2L["4"]);
-G2L["27"]["Visible"] = false;
 G2L["27"]["Active"] = true;
 G2L["27"]["BorderSizePixel"] = 0;
 G2L["27"]["TopImage"] = [[]];
@@ -454,7 +453,7 @@ G2L["2d"]["Text"] = [[Auto Fight With Animations (More Legit)]];
 G2L["2d"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
 
 
--- StarterGui.DivazScript.MainFrame.CombatFrame.SpamGrabHair
+-- StarterGui.DivazScript.MainFrame.CombatFrame.AutoStomp
 G2L["2e"] = Instance.new("TextButton", G2L["27"]);
 G2L["2e"]["BorderSizePixel"] = 0;
 G2L["2e"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
@@ -462,26 +461,26 @@ G2L["2e"]["TextSize"] = 14;
 G2L["2e"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
 G2L["2e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["2e"]["Size"] = UDim2.new(0, 397, 0, 33);
-G2L["2e"]["Name"] = [[SpamGrabHair]];
+G2L["2e"]["Name"] = [[AutoStomp]];
 G2L["2e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["2e"]["Text"] = [[]];
 G2L["2e"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
 
 
--- StarterGui.DivazScript.MainFrame.CombatFrame.SpamGrabHair.LocalScript
+-- StarterGui.DivazScript.MainFrame.CombatFrame.AutoStomp.LocalScript
 G2L["2f"] = Instance.new("LocalScript", G2L["2e"]);
 
 
 
--- StarterGui.DivazScript.MainFrame.CombatFrame.SpamGrabHair.UICorner
+-- StarterGui.DivazScript.MainFrame.CombatFrame.AutoStomp.UICorner
 G2L["30"] = Instance.new("UICorner", G2L["2e"]);
 
 
 
--- StarterGui.DivazScript.MainFrame.CombatFrame.SpamGrabHair.TextLabel
+-- StarterGui.DivazScript.MainFrame.CombatFrame.AutoStomp.TextLabel
 G2L["31"] = Instance.new("TextLabel", G2L["2e"]);
 G2L["31"]["BorderSizePixel"] = 0;
-G2L["31"]["TextSize"] = 16;
+G2L["31"]["TextSize"] = 15;
 G2L["31"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["31"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["31"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
@@ -489,11 +488,11 @@ G2L["31"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["31"]["BackgroundTransparency"] = 1;
 G2L["31"]["Size"] = UDim2.new(0, 385, 0, 33);
 G2L["31"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["31"]["Text"] = [[Spam Grab Hair]];
+G2L["31"]["Text"] = [[Auto Stomp]];
 G2L["31"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
 
 
--- StarterGui.DivazScript.MainFrame.CombatFrame.Heal
+-- StarterGui.DivazScript.MainFrame.CombatFrame.AutoFight
 G2L["32"] = Instance.new("TextButton", G2L["27"]);
 G2L["32"]["BorderSizePixel"] = 0;
 G2L["32"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
@@ -501,26 +500,26 @@ G2L["32"]["TextSize"] = 14;
 G2L["32"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
 G2L["32"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["32"]["Size"] = UDim2.new(0, 397, 0, 33);
-G2L["32"]["Name"] = [[Heal]];
+G2L["32"]["Name"] = [[AutoFight]];
 G2L["32"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["32"]["Text"] = [[]];
 G2L["32"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
 
 
--- StarterGui.DivazScript.MainFrame.CombatFrame.Heal.LocalScript
+-- StarterGui.DivazScript.MainFrame.CombatFrame.AutoFight.LocalScript
 G2L["33"] = Instance.new("LocalScript", G2L["32"]);
 
 
 
--- StarterGui.DivazScript.MainFrame.CombatFrame.Heal.UICorner
+-- StarterGui.DivazScript.MainFrame.CombatFrame.AutoFight.UICorner
 G2L["34"] = Instance.new("UICorner", G2L["32"]);
 
 
 
--- StarterGui.DivazScript.MainFrame.CombatFrame.Heal.TextLabel
+-- StarterGui.DivazScript.MainFrame.CombatFrame.AutoFight.TextLabel
 G2L["35"] = Instance.new("TextLabel", G2L["32"]);
 G2L["35"]["BorderSizePixel"] = 0;
-G2L["35"]["TextSize"] = 15;
+G2L["35"]["TextSize"] = 16;
 G2L["35"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["35"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["35"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
@@ -528,376 +527,368 @@ G2L["35"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["35"]["BackgroundTransparency"] = 1;
 G2L["35"]["Size"] = UDim2.new(0, 385, 0, 33);
 G2L["35"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["35"]["Text"] = [[Tp To Hospital Bed Under costum health]];
+G2L["35"]["Text"] = [[Auto Fight]];
 G2L["35"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
 
 
--- StarterGui.DivazScript.MainFrame.CombatFrame.Heal.TextBox
-G2L["36"] = Instance.new("TextBox", G2L["32"]);
+-- StarterGui.DivazScript.MainFrame.CombatFrame.SpamGrabHair
+G2L["36"] = Instance.new("TextButton", G2L["27"]);
 G2L["36"]["BorderSizePixel"] = 0;
-G2L["36"]["TextSize"] = 20;
-G2L["36"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["36"]["BackgroundColor3"] = Color3.fromRGB(18, 24, 35);
+G2L["36"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["36"]["TextSize"] = 14;
+G2L["36"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
 G2L["36"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["36"]["Size"] = UDim2.new(0, 146, 0, 21);
-G2L["36"]["Position"] = UDim2.new(0.57683, 0, 0.18182, 0);
+G2L["36"]["Size"] = UDim2.new(0, 397, 0, 33);
+G2L["36"]["Name"] = [[SpamGrabHair]];
 G2L["36"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["36"]["Text"] = [[30 HP]];
+G2L["36"]["Text"] = [[]];
+G2L["36"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
 
 
--- StarterGui.DivazScript.MainFrame.CombatFrame.AutoStomp
-G2L["37"] = Instance.new("TextButton", G2L["27"]);
-G2L["37"]["BorderSizePixel"] = 0;
-G2L["37"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["37"]["TextSize"] = 14;
-G2L["37"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
-G2L["37"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["37"]["Size"] = UDim2.new(0, 397, 0, 33);
-G2L["37"]["Name"] = [[AutoStomp]];
-G2L["37"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["37"]["Text"] = [[]];
-G2L["37"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
-
-
--- StarterGui.DivazScript.MainFrame.CombatFrame.AutoStomp.LocalScript
-G2L["38"] = Instance.new("LocalScript", G2L["37"]);
+-- StarterGui.DivazScript.MainFrame.CombatFrame.SpamGrabHair.LocalScript
+G2L["37"] = Instance.new("LocalScript", G2L["36"]);
 
 
 
--- StarterGui.DivazScript.MainFrame.CombatFrame.AutoStomp.UICorner
-G2L["39"] = Instance.new("UICorner", G2L["37"]);
+-- StarterGui.DivazScript.MainFrame.CombatFrame.SpamGrabHair.UICorner
+G2L["38"] = Instance.new("UICorner", G2L["36"]);
 
 
 
--- StarterGui.DivazScript.MainFrame.CombatFrame.AutoStomp.TextLabel
-G2L["3a"] = Instance.new("TextLabel", G2L["37"]);
+-- StarterGui.DivazScript.MainFrame.CombatFrame.SpamGrabHair.TextLabel
+G2L["39"] = Instance.new("TextLabel", G2L["36"]);
+G2L["39"]["BorderSizePixel"] = 0;
+G2L["39"]["TextSize"] = 16;
+G2L["39"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["39"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["39"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["39"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["39"]["BackgroundTransparency"] = 1;
+G2L["39"]["Size"] = UDim2.new(0, 385, 0, 33);
+G2L["39"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["39"]["Text"] = [[Spam Grab Hair]];
+G2L["39"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
+
+
+-- StarterGui.DivazScript.MainFrame.CombatFrame.Heal
+G2L["3a"] = Instance.new("TextButton", G2L["27"]);
 G2L["3a"]["BorderSizePixel"] = 0;
-G2L["3a"]["TextSize"] = 15;
-G2L["3a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["3a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3a"]["TextSize"] = 14;
+G2L["3a"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
 G2L["3a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["3a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["3a"]["BackgroundTransparency"] = 1;
-G2L["3a"]["Size"] = UDim2.new(0, 385, 0, 33);
+G2L["3a"]["Size"] = UDim2.new(0, 397, 0, 33);
+G2L["3a"]["Name"] = [[Heal]];
 G2L["3a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3a"]["Text"] = [[Auto Stomp]];
-G2L["3a"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
+G2L["3a"]["Text"] = [[]];
+G2L["3a"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
+
+
+-- StarterGui.DivazScript.MainFrame.CombatFrame.Heal.LocalScript
+G2L["3b"] = Instance.new("LocalScript", G2L["3a"]);
+
+
+
+-- StarterGui.DivazScript.MainFrame.CombatFrame.Heal.UICorner
+G2L["3c"] = Instance.new("UICorner", G2L["3a"]);
+
+
+
+-- StarterGui.DivazScript.MainFrame.CombatFrame.Heal.TextLabel
+G2L["3d"] = Instance.new("TextLabel", G2L["3a"]);
+G2L["3d"]["BorderSizePixel"] = 0;
+G2L["3d"]["TextSize"] = 15;
+G2L["3d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["3d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3d"]["BackgroundTransparency"] = 1;
+G2L["3d"]["Size"] = UDim2.new(0, 385, 0, 33);
+G2L["3d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3d"]["Text"] = [[Tp To Hospital Bed Under costum health]];
+G2L["3d"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
+
+
+-- StarterGui.DivazScript.MainFrame.CombatFrame.Heal.TextBox
+G2L["3e"] = Instance.new("TextBox", G2L["3a"]);
+G2L["3e"]["BorderSizePixel"] = 0;
+G2L["3e"]["TextSize"] = 20;
+G2L["3e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3e"]["BackgroundColor3"] = Color3.fromRGB(18, 24, 35);
+G2L["3e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3e"]["Size"] = UDim2.new(0, 146, 0, 21);
+G2L["3e"]["Position"] = UDim2.new(0.57683, 0, 0.18182, 0);
+G2L["3e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3e"]["Text"] = [[30 HP]];
 
 
 -- StarterGui.DivazScript.MainFrame.CombatFrame.Fling
-G2L["3b"] = Instance.new("TextButton", G2L["27"]);
-G2L["3b"]["BorderSizePixel"] = 0;
-G2L["3b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3b"]["TextSize"] = 14;
-G2L["3b"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
-G2L["3b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["3b"]["Size"] = UDim2.new(0, 397, 0, 33);
-G2L["3b"]["Name"] = [[Fling]];
-G2L["3b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3b"]["Text"] = [[]];
-G2L["3b"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
+G2L["3f"] = Instance.new("TextButton", G2L["27"]);
+G2L["3f"]["BorderSizePixel"] = 0;
+G2L["3f"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3f"]["TextSize"] = 14;
+G2L["3f"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
+G2L["3f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3f"]["Size"] = UDim2.new(0, 397, 0, 33);
+G2L["3f"]["Name"] = [[Fling]];
+G2L["3f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3f"]["Text"] = [[]];
+G2L["3f"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
 
 
 -- StarterGui.DivazScript.MainFrame.CombatFrame.Fling.LocalScript
-G2L["3c"] = Instance.new("LocalScript", G2L["3b"]);
-
-
-
--- StarterGui.DivazScript.MainFrame.CombatFrame.Fling.UICorner
-G2L["3d"] = Instance.new("UICorner", G2L["3b"]);
-
-
-
--- StarterGui.DivazScript.MainFrame.CombatFrame.Fling.TextLabel
-G2L["3e"] = Instance.new("TextLabel", G2L["3b"]);
-G2L["3e"]["BorderSizePixel"] = 0;
-G2L["3e"]["TextSize"] = 15;
-G2L["3e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["3e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["3e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["3e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["3e"]["BackgroundTransparency"] = 1;
-G2L["3e"]["Size"] = UDim2.new(0, 385, 0, 33);
-G2L["3e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3e"]["Text"] = [[Fling]];
-G2L["3e"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
-
-
--- StarterGui.DivazScript.MainFrame.EspFrame
-G2L["3f"] = Instance.new("ScrollingFrame", G2L["4"]);
-G2L["3f"]["Visible"] = false;
-G2L["3f"]["Active"] = true;
-G2L["3f"]["BorderSizePixel"] = 0;
-G2L["3f"]["TopImage"] = [[]];
-G2L["3f"]["MidImage"] = [[]];
-G2L["3f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["3f"]["Name"] = [[EspFrame]];
-G2L["3f"]["BottomImage"] = [[]];
-G2L["3f"]["Size"] = UDim2.new(0, 415, 0, 509);
-G2L["3f"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3f"]["Position"] = UDim2.new(0.28501, 0, 0.10435, 0);
-G2L["3f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3f"]["BackgroundTransparency"] = 1;
-
-
--- StarterGui.DivazScript.MainFrame.EspFrame.LocalScript
 G2L["40"] = Instance.new("LocalScript", G2L["3f"]);
 
 
 
+-- StarterGui.DivazScript.MainFrame.CombatFrame.Fling.UICorner
+G2L["41"] = Instance.new("UICorner", G2L["3f"]);
+
+
+
+-- StarterGui.DivazScript.MainFrame.CombatFrame.Fling.TextLabel
+G2L["42"] = Instance.new("TextLabel", G2L["3f"]);
+G2L["42"]["BorderSizePixel"] = 0;
+G2L["42"]["TextSize"] = 15;
+G2L["42"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["42"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["42"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["42"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["42"]["BackgroundTransparency"] = 1;
+G2L["42"]["Size"] = UDim2.new(0, 385, 0, 33);
+G2L["42"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["42"]["Text"] = [[Fling]];
+G2L["42"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
+
+
+-- StarterGui.DivazScript.MainFrame.EspFrame
+G2L["43"] = Instance.new("ScrollingFrame", G2L["4"]);
+G2L["43"]["Visible"] = false;
+G2L["43"]["Active"] = true;
+G2L["43"]["BorderSizePixel"] = 0;
+G2L["43"]["TopImage"] = [[]];
+G2L["43"]["MidImage"] = [[]];
+G2L["43"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["43"]["Name"] = [[EspFrame]];
+G2L["43"]["BottomImage"] = [[]];
+G2L["43"]["Size"] = UDim2.new(0, 415, 0, 509);
+G2L["43"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["43"]["Position"] = UDim2.new(0.28501, 0, 0.10435, 0);
+G2L["43"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["43"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.DivazScript.MainFrame.EspFrame.LocalScript
+G2L["44"] = Instance.new("LocalScript", G2L["43"]);
+
+
+
 -- StarterGui.DivazScript.MainFrame.EspFrame.UIPadding
-G2L["41"] = Instance.new("UIPadding", G2L["3f"]);
-G2L["41"]["PaddingTop"] = UDim.new(0.01, 0);
-G2L["41"]["PaddingLeft"] = UDim.new(0.01, 0);
+G2L["45"] = Instance.new("UIPadding", G2L["43"]);
+G2L["45"]["PaddingTop"] = UDim.new(0.01, 0);
+G2L["45"]["PaddingLeft"] = UDim.new(0.01, 0);
 
 
 -- StarterGui.DivazScript.MainFrame.EspFrame.UIListLayout
-G2L["42"] = Instance.new("UIListLayout", G2L["3f"]);
-G2L["42"]["Padding"] = UDim.new(0.007, 0);
-G2L["42"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+G2L["46"] = Instance.new("UIListLayout", G2L["43"]);
+G2L["46"]["Padding"] = UDim.new(0.007, 0);
+G2L["46"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
 
 
 -- StarterGui.DivazScript.MainFrame.EspFrame.HealthEsp
-G2L["43"] = Instance.new("TextButton", G2L["3f"]);
-G2L["43"]["BorderSizePixel"] = 0;
-G2L["43"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["43"]["TextSize"] = 14;
-G2L["43"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
-G2L["43"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["43"]["Size"] = UDim2.new(0, 397, 0, 33);
-G2L["43"]["Name"] = [[HealthEsp]];
-G2L["43"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["43"]["Text"] = [[]];
-G2L["43"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
+G2L["47"] = Instance.new("TextButton", G2L["43"]);
+G2L["47"]["BorderSizePixel"] = 0;
+G2L["47"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["47"]["TextSize"] = 14;
+G2L["47"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
+G2L["47"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["47"]["Size"] = UDim2.new(0, 397, 0, 33);
+G2L["47"]["Name"] = [[HealthEsp]];
+G2L["47"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["47"]["Text"] = [[]];
+G2L["47"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
 
 
 -- StarterGui.DivazScript.MainFrame.EspFrame.HealthEsp.UICorner
-G2L["44"] = Instance.new("UICorner", G2L["43"]);
+G2L["48"] = Instance.new("UICorner", G2L["47"]);
 
 
 
 -- StarterGui.DivazScript.MainFrame.EspFrame.HealthEsp.TextLabel
-G2L["45"] = Instance.new("TextLabel", G2L["43"]);
-G2L["45"]["BorderSizePixel"] = 0;
-G2L["45"]["TextSize"] = 16;
-G2L["45"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["45"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["45"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["45"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["45"]["BackgroundTransparency"] = 1;
-G2L["45"]["Size"] = UDim2.new(0, 385, 0, 33);
-G2L["45"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["45"]["Text"] = [[Health Esp]];
-G2L["45"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
+G2L["49"] = Instance.new("TextLabel", G2L["47"]);
+G2L["49"]["BorderSizePixel"] = 0;
+G2L["49"]["TextSize"] = 16;
+G2L["49"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["49"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["49"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["49"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["49"]["BackgroundTransparency"] = 1;
+G2L["49"]["Size"] = UDim2.new(0, 385, 0, 33);
+G2L["49"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["49"]["Text"] = [[Health Esp]];
+G2L["49"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
 
 
 -- StarterGui.DivazScript.MainFrame.EspFrame.HighLightPlayer
-G2L["46"] = Instance.new("TextButton", G2L["3f"]);
-G2L["46"]["BorderSizePixel"] = 0;
-G2L["46"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["46"]["TextSize"] = 14;
-G2L["46"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
-G2L["46"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["46"]["Size"] = UDim2.new(0, 397, 0, 33);
-G2L["46"]["Name"] = [[HighLightPlayer]];
-G2L["46"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["46"]["Text"] = [[]];
-G2L["46"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
+G2L["4a"] = Instance.new("TextButton", G2L["43"]);
+G2L["4a"]["BorderSizePixel"] = 0;
+G2L["4a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4a"]["TextSize"] = 14;
+G2L["4a"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
+G2L["4a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4a"]["Size"] = UDim2.new(0, 397, 0, 33);
+G2L["4a"]["Name"] = [[HighLightPlayer]];
+G2L["4a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4a"]["Text"] = [[]];
+G2L["4a"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
 
 
 -- StarterGui.DivazScript.MainFrame.EspFrame.HighLightPlayer.UICorner
-G2L["47"] = Instance.new("UICorner", G2L["46"]);
+G2L["4b"] = Instance.new("UICorner", G2L["4a"]);
 
 
 
 -- StarterGui.DivazScript.MainFrame.EspFrame.HighLightPlayer.TextLabel
-G2L["48"] = Instance.new("TextLabel", G2L["46"]);
-G2L["48"]["BorderSizePixel"] = 0;
-G2L["48"]["TextSize"] = 16;
-G2L["48"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["48"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["48"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["48"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["48"]["BackgroundTransparency"] = 1;
-G2L["48"]["Size"] = UDim2.new(0, 385, 0, 33);
-G2L["48"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["48"]["Text"] = [[HighLight Esp]];
-G2L["48"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
+G2L["4c"] = Instance.new("TextLabel", G2L["4a"]);
+G2L["4c"]["BorderSizePixel"] = 0;
+G2L["4c"]["TextSize"] = 16;
+G2L["4c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["4c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4c"]["BackgroundTransparency"] = 1;
+G2L["4c"]["Size"] = UDim2.new(0, 385, 0, 33);
+G2L["4c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4c"]["Text"] = [[HighLight Esp]];
+G2L["4c"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
 
 
 -- StarterGui.DivazScript.MainFrame.EspFrame.NameEsp
-G2L["49"] = Instance.new("TextButton", G2L["3f"]);
-G2L["49"]["BorderSizePixel"] = 0;
-G2L["49"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["49"]["TextSize"] = 14;
-G2L["49"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
-G2L["49"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["49"]["Size"] = UDim2.new(0, 397, 0, 33);
-G2L["49"]["Name"] = [[NameEsp]];
-G2L["49"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["49"]["Text"] = [[]];
-G2L["49"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
+G2L["4d"] = Instance.new("TextButton", G2L["43"]);
+G2L["4d"]["BorderSizePixel"] = 0;
+G2L["4d"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4d"]["TextSize"] = 14;
+G2L["4d"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
+G2L["4d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4d"]["Size"] = UDim2.new(0, 397, 0, 33);
+G2L["4d"]["Name"] = [[NameEsp]];
+G2L["4d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4d"]["Text"] = [[]];
+G2L["4d"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
 
 
 -- StarterGui.DivazScript.MainFrame.EspFrame.NameEsp.UICorner
-G2L["4a"] = Instance.new("UICorner", G2L["49"]);
+G2L["4e"] = Instance.new("UICorner", G2L["4d"]);
 
 
 
 -- StarterGui.DivazScript.MainFrame.EspFrame.NameEsp.TextLabel
-G2L["4b"] = Instance.new("TextLabel", G2L["49"]);
-G2L["4b"]["BorderSizePixel"] = 0;
-G2L["4b"]["TextSize"] = 16;
-G2L["4b"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["4b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["4b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["4b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["4b"]["BackgroundTransparency"] = 1;
-G2L["4b"]["Size"] = UDim2.new(0, 385, 0, 33);
-G2L["4b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4b"]["Text"] = [[Name Esp]];
-G2L["4b"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
+G2L["4f"] = Instance.new("TextLabel", G2L["4d"]);
+G2L["4f"]["BorderSizePixel"] = 0;
+G2L["4f"]["TextSize"] = 16;
+G2L["4f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["4f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4f"]["BackgroundTransparency"] = 1;
+G2L["4f"]["Size"] = UDim2.new(0, 385, 0, 33);
+G2L["4f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4f"]["Text"] = [[Name Esp]];
+G2L["4f"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
 
 
 -- StarterGui.DivazScript.MainFrame.EspFrame.RobberyEsp
-G2L["4c"] = Instance.new("TextButton", G2L["3f"]);
-G2L["4c"]["BorderSizePixel"] = 0;
-G2L["4c"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4c"]["TextSize"] = 14;
-G2L["4c"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
-G2L["4c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["4c"]["Size"] = UDim2.new(0, 397, 0, 33);
-G2L["4c"]["Name"] = [[RobberyEsp]];
-G2L["4c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4c"]["Text"] = [[]];
-G2L["4c"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
+G2L["50"] = Instance.new("TextButton", G2L["43"]);
+G2L["50"]["BorderSizePixel"] = 0;
+G2L["50"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["50"]["TextSize"] = 14;
+G2L["50"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
+G2L["50"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["50"]["Size"] = UDim2.new(0, 397, 0, 33);
+G2L["50"]["Name"] = [[RobberyEsp]];
+G2L["50"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["50"]["Text"] = [[]];
+G2L["50"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
 
 
 -- StarterGui.DivazScript.MainFrame.EspFrame.RobberyEsp.UICorner
-G2L["4d"] = Instance.new("UICorner", G2L["4c"]);
+G2L["51"] = Instance.new("UICorner", G2L["50"]);
 
 
 
 -- StarterGui.DivazScript.MainFrame.EspFrame.RobberyEsp.TextLabel
-G2L["4e"] = Instance.new("TextLabel", G2L["4c"]);
-G2L["4e"]["BorderSizePixel"] = 0;
-G2L["4e"]["TextSize"] = 16;
-G2L["4e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["4e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["4e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["4e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["4e"]["BackgroundTransparency"] = 1;
-G2L["4e"]["Size"] = UDim2.new(0, 385, 0, 33);
-G2L["4e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4e"]["Text"] = [[Robbery Esp]];
-G2L["4e"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
+G2L["52"] = Instance.new("TextLabel", G2L["50"]);
+G2L["52"]["BorderSizePixel"] = 0;
+G2L["52"]["TextSize"] = 16;
+G2L["52"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["52"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["52"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["52"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["52"]["BackgroundTransparency"] = 1;
+G2L["52"]["Size"] = UDim2.new(0, 385, 0, 33);
+G2L["52"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["52"]["Text"] = [[Robbery Esp]];
+G2L["52"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
 
 
 -- StarterGui.DivazScript.MainFrame.EspFrame.Tracers
-G2L["4f"] = Instance.new("TextButton", G2L["3f"]);
-G2L["4f"]["BorderSizePixel"] = 0;
-G2L["4f"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4f"]["TextSize"] = 14;
-G2L["4f"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
-G2L["4f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["4f"]["Size"] = UDim2.new(0, 397, 0, 33);
-G2L["4f"]["Name"] = [[Tracers]];
-G2L["4f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4f"]["Text"] = [[]];
-G2L["4f"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
+G2L["53"] = Instance.new("TextButton", G2L["43"]);
+G2L["53"]["BorderSizePixel"] = 0;
+G2L["53"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["53"]["TextSize"] = 14;
+G2L["53"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
+G2L["53"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["53"]["Size"] = UDim2.new(0, 397, 0, 33);
+G2L["53"]["Name"] = [[Tracers]];
+G2L["53"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["53"]["Text"] = [[]];
+G2L["53"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
 
 
 -- StarterGui.DivazScript.MainFrame.EspFrame.Tracers.UICorner
-G2L["50"] = Instance.new("UICorner", G2L["4f"]);
+G2L["54"] = Instance.new("UICorner", G2L["53"]);
 
 
 
 -- StarterGui.DivazScript.MainFrame.EspFrame.Tracers.TextLabel
-G2L["51"] = Instance.new("TextLabel", G2L["4f"]);
-G2L["51"]["BorderSizePixel"] = 0;
-G2L["51"]["TextSize"] = 16;
-G2L["51"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["51"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["51"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["51"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["51"]["BackgroundTransparency"] = 1;
-G2L["51"]["Size"] = UDim2.new(0, 385, 0, 33);
-G2L["51"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["51"]["Text"] = [[Tracers]];
-G2L["51"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
+G2L["55"] = Instance.new("TextLabel", G2L["53"]);
+G2L["55"]["BorderSizePixel"] = 0;
+G2L["55"]["TextSize"] = 16;
+G2L["55"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["55"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["55"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["55"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["55"]["BackgroundTransparency"] = 1;
+G2L["55"]["Size"] = UDim2.new(0, 385, 0, 33);
+G2L["55"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["55"]["Text"] = [[Tracers]];
+G2L["55"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
 
 
 -- StarterGui.DivazScript.MainFrame.MiscFrame
-G2L["52"] = Instance.new("ScrollingFrame", G2L["4"]);
-G2L["52"]["Active"] = true;
-G2L["52"]["BorderSizePixel"] = 0;
-G2L["52"]["TopImage"] = [[]];
-G2L["52"]["MidImage"] = [[]];
-G2L["52"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["52"]["Name"] = [[MiscFrame]];
-G2L["52"]["BottomImage"] = [[]];
-G2L["52"]["Size"] = UDim2.new(0, 415, 0, 509);
-G2L["52"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["52"]["Position"] = UDim2.new(0.28501, 0, 0.10435, 0);
-G2L["52"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["52"]["BackgroundTransparency"] = 1;
+G2L["56"] = Instance.new("ScrollingFrame", G2L["4"]);
+G2L["56"]["Visible"] = false;
+G2L["56"]["Active"] = true;
+G2L["56"]["BorderSizePixel"] = 0;
+G2L["56"]["TopImage"] = [[]];
+G2L["56"]["MidImage"] = [[]];
+G2L["56"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["56"]["Name"] = [[MiscFrame]];
+G2L["56"]["BottomImage"] = [[]];
+G2L["56"]["Size"] = UDim2.new(0, 415, 0, 509);
+G2L["56"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["56"]["Position"] = UDim2.new(0.28501, 0, 0.10435, 0);
+G2L["56"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["56"]["BackgroundTransparency"] = 1;
 
 
 -- StarterGui.DivazScript.MainFrame.MiscFrame.FlyScript
-G2L["53"] = Instance.new("LocalScript", G2L["52"]);
-G2L["53"]["Name"] = [[FlyScript]];
+G2L["57"] = Instance.new("LocalScript", G2L["56"]);
+G2L["57"]["Name"] = [[FlyScript]];
 
 
 -- StarterGui.DivazScript.MainFrame.MiscFrame.Fly
-G2L["54"] = Instance.new("TextButton", G2L["52"]);
-G2L["54"]["BorderSizePixel"] = 0;
-G2L["54"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["54"]["TextSize"] = 14;
-G2L["54"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
-G2L["54"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["54"]["Size"] = UDim2.new(0, 397, 0, 33);
-G2L["54"]["Name"] = [[Fly]];
-G2L["54"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["54"]["Text"] = [[]];
-G2L["54"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
-
-
--- StarterGui.DivazScript.MainFrame.MiscFrame.Fly.UICorner
-G2L["55"] = Instance.new("UICorner", G2L["54"]);
-
-
-
--- StarterGui.DivazScript.MainFrame.MiscFrame.Fly.TextLabel
-G2L["56"] = Instance.new("TextLabel", G2L["54"]);
-G2L["56"]["BorderSizePixel"] = 0;
-G2L["56"]["TextSize"] = 15;
-G2L["56"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["56"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["56"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["56"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["56"]["BackgroundTransparency"] = 1;
-G2L["56"]["Size"] = UDim2.new(0, 385, 0, 33);
-G2L["56"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["56"]["Text"] = [[Fly]];
-G2L["56"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
-
-
--- StarterGui.DivazScript.MainFrame.MiscFrame.Fly.FlySpeedBox
-G2L["57"] = Instance.new("TextBox", G2L["54"]);
-G2L["57"]["Name"] = [[FlySpeedBox]];
-G2L["57"]["BorderSizePixel"] = 0;
-G2L["57"]["TextSize"] = 20;
-G2L["57"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["57"]["BackgroundColor3"] = Color3.fromRGB(18, 24, 35);
-G2L["57"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["57"]["Size"] = UDim2.new(0, 146, 0, 21);
-G2L["57"]["Position"] = UDim2.new(0.57683, 0, 0.18182, 0);
-G2L["57"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["57"]["Text"] = [[speed 50]];
-
-
--- StarterGui.DivazScript.MainFrame.MiscFrame.Fly
-G2L["58"] = Instance.new("TextButton", G2L["52"]);
+G2L["58"] = Instance.new("TextButton", G2L["56"]);
 G2L["58"]["BorderSizePixel"] = 0;
 G2L["58"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["58"]["TextSize"] = 14;
@@ -944,319 +935,372 @@ G2L["5b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["5b"]["Text"] = [[speed 50]];
 
 
+-- StarterGui.DivazScript.MainFrame.MiscFrame.Fly
+G2L["5c"] = Instance.new("TextButton", G2L["56"]);
+G2L["5c"]["BorderSizePixel"] = 0;
+G2L["5c"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5c"]["TextSize"] = 14;
+G2L["5c"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
+G2L["5c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["5c"]["Size"] = UDim2.new(0, 397, 0, 33);
+G2L["5c"]["Name"] = [[Fly]];
+G2L["5c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5c"]["Text"] = [[]];
+G2L["5c"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
+
+
+-- StarterGui.DivazScript.MainFrame.MiscFrame.Fly.UICorner
+G2L["5d"] = Instance.new("UICorner", G2L["5c"]);
+
+
+
+-- StarterGui.DivazScript.MainFrame.MiscFrame.Fly.TextLabel
+G2L["5e"] = Instance.new("TextLabel", G2L["5c"]);
+G2L["5e"]["BorderSizePixel"] = 0;
+G2L["5e"]["TextSize"] = 15;
+G2L["5e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["5e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["5e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5e"]["BackgroundTransparency"] = 1;
+G2L["5e"]["Size"] = UDim2.new(0, 385, 0, 33);
+G2L["5e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5e"]["Text"] = [[Fly]];
+G2L["5e"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
+
+
+-- StarterGui.DivazScript.MainFrame.MiscFrame.Fly.FlySpeedBox
+G2L["5f"] = Instance.new("TextBox", G2L["5c"]);
+G2L["5f"]["Name"] = [[FlySpeedBox]];
+G2L["5f"]["BorderSizePixel"] = 0;
+G2L["5f"]["TextSize"] = 20;
+G2L["5f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5f"]["BackgroundColor3"] = Color3.fromRGB(18, 24, 35);
+G2L["5f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["5f"]["Size"] = UDim2.new(0, 146, 0, 21);
+G2L["5f"]["Position"] = UDim2.new(0.57683, 0, 0.18182, 0);
+G2L["5f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5f"]["Text"] = [[speed 50]];
+
+
 -- StarterGui.DivazScript.MainFrame.MiscFrame.UIPadding
-G2L["5c"] = Instance.new("UIPadding", G2L["52"]);
-G2L["5c"]["PaddingTop"] = UDim.new(0.01, 0);
-G2L["5c"]["PaddingLeft"] = UDim.new(0.01, 0);
+G2L["60"] = Instance.new("UIPadding", G2L["56"]);
+G2L["60"]["PaddingTop"] = UDim.new(0.01, 0);
+G2L["60"]["PaddingLeft"] = UDim.new(0.01, 0);
 
 
 -- StarterGui.DivazScript.MainFrame.MiscFrame.UIListLayout
-G2L["5d"] = Instance.new("UIListLayout", G2L["52"]);
-G2L["5d"]["Padding"] = UDim.new(0.007, 0);
-G2L["5d"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+G2L["61"] = Instance.new("UIListLayout", G2L["56"]);
+G2L["61"]["Padding"] = UDim.new(0.007, 0);
+G2L["61"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
 
 
 -- StarterGui.DivazScript.MainFrame.FarmingFrame
-G2L["5e"] = Instance.new("ScrollingFrame", G2L["4"]);
-G2L["5e"]["Visible"] = false;
-G2L["5e"]["Active"] = true;
-G2L["5e"]["BorderSizePixel"] = 0;
-G2L["5e"]["TopImage"] = [[]];
-G2L["5e"]["MidImage"] = [[]];
-G2L["5e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["5e"]["Name"] = [[FarmingFrame]];
-G2L["5e"]["BottomImage"] = [[]];
-G2L["5e"]["Size"] = UDim2.new(0, 415, 0, 509);
-G2L["5e"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["5e"]["Position"] = UDim2.new(0.28501, 0, 0.10435, 0);
-G2L["5e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["5e"]["BackgroundTransparency"] = 1;
+G2L["62"] = Instance.new("ScrollingFrame", G2L["4"]);
+G2L["62"]["Visible"] = false;
+G2L["62"]["Active"] = true;
+G2L["62"]["BorderSizePixel"] = 0;
+G2L["62"]["TopImage"] = [[]];
+G2L["62"]["MidImage"] = [[]];
+G2L["62"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["62"]["Name"] = [[FarmingFrame]];
+G2L["62"]["BottomImage"] = [[]];
+G2L["62"]["Size"] = UDim2.new(0, 415, 0, 509);
+G2L["62"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["62"]["Position"] = UDim2.new(0.28501, 0, 0.10435, 0);
+G2L["62"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["62"]["BackgroundTransparency"] = 1;
 
 
 -- StarterGui.DivazScript.MainFrame.FarmingFrame.UIPadding
-G2L["5f"] = Instance.new("UIPadding", G2L["5e"]);
-G2L["5f"]["PaddingTop"] = UDim.new(0.01, 0);
-G2L["5f"]["PaddingLeft"] = UDim.new(0.01, 0);
+G2L["63"] = Instance.new("UIPadding", G2L["62"]);
+G2L["63"]["PaddingTop"] = UDim.new(0.01, 0);
+G2L["63"]["PaddingLeft"] = UDim.new(0.01, 0);
 
 
 -- StarterGui.DivazScript.MainFrame.FarmingFrame.UIListLayout
-G2L["60"] = Instance.new("UIListLayout", G2L["5e"]);
-G2L["60"]["Padding"] = UDim.new(0.007, 0);
-G2L["60"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+G2L["64"] = Instance.new("UIListLayout", G2L["62"]);
+G2L["64"]["Padding"] = UDim.new(0.007, 0);
+G2L["64"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
 
 
 -- StarterGui.DivazScript.MainFrame.PlayerFrame
-G2L["61"] = Instance.new("ScrollingFrame", G2L["4"]);
-G2L["61"]["Visible"] = false;
-G2L["61"]["Active"] = true;
-G2L["61"]["BorderSizePixel"] = 0;
-G2L["61"]["TopImage"] = [[]];
-G2L["61"]["MidImage"] = [[]];
-G2L["61"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["61"]["Name"] = [[PlayerFrame]];
-G2L["61"]["BottomImage"] = [[]];
-G2L["61"]["Size"] = UDim2.new(0, 415, 0, 509);
-G2L["61"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["61"]["Position"] = UDim2.new(0.28501, 0, 0.10435, 0);
-G2L["61"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["61"]["BackgroundTransparency"] = 1;
+G2L["65"] = Instance.new("ScrollingFrame", G2L["4"]);
+G2L["65"]["Visible"] = false;
+G2L["65"]["Active"] = true;
+G2L["65"]["BorderSizePixel"] = 0;
+G2L["65"]["TopImage"] = [[]];
+G2L["65"]["MidImage"] = [[]];
+G2L["65"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["65"]["Name"] = [[PlayerFrame]];
+G2L["65"]["BottomImage"] = [[]];
+G2L["65"]["Size"] = UDim2.new(0, 415, 0, 509);
+G2L["65"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["65"]["Position"] = UDim2.new(0.28501, 0, 0.10435, 0);
+G2L["65"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["65"]["BackgroundTransparency"] = 1;
 
 
 -- StarterGui.DivazScript.MainFrame.PlayerFrame.LocalScript
-G2L["62"] = Instance.new("LocalScript", G2L["61"]);
+G2L["66"] = Instance.new("LocalScript", G2L["65"]);
 
 
 
 -- StarterGui.DivazScript.MainFrame.PlayerFrame.PlayerFrame
-G2L["63"] = Instance.new("Frame", G2L["61"]);
-G2L["63"]["BorderSizePixel"] = 0;
-G2L["63"]["BackgroundColor3"] = Color3.fromRGB(28, 32, 43);
-G2L["63"]["Size"] = UDim2.new(0, 397, 0, 32);
-G2L["63"]["Position"] = UDim2.new(0, 0, 0.04138, 0);
-G2L["63"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["63"]["Name"] = [[PlayerFrame]];
+G2L["67"] = Instance.new("Frame", G2L["65"]);
+G2L["67"]["BorderSizePixel"] = 0;
+G2L["67"]["BackgroundColor3"] = Color3.fromRGB(28, 32, 43);
+G2L["67"]["Size"] = UDim2.new(0, 397, 0, 32);
+G2L["67"]["Position"] = UDim2.new(0, 0, 0.04138, 0);
+G2L["67"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["67"]["Name"] = [[PlayerFrame]];
 
 
 -- StarterGui.DivazScript.MainFrame.PlayerFrame.PlayerFrame.UICorner
-G2L["64"] = Instance.new("UICorner", G2L["63"]);
+G2L["68"] = Instance.new("UICorner", G2L["67"]);
 
 
 
 -- StarterGui.DivazScript.MainFrame.PlayerFrame.PlayerFrame.UIStroke
-G2L["65"] = Instance.new("UIStroke", G2L["63"]);
-G2L["65"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-G2L["65"]["Color"] = Color3.fromRGB(0, 171, 255);
+G2L["69"] = Instance.new("UIStroke", G2L["67"]);
+G2L["69"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["69"]["Color"] = Color3.fromRGB(0, 171, 255);
 
 
 -- StarterGui.DivazScript.MainFrame.PlayerFrame.PlayerFrame.PlayerButton
-G2L["66"] = Instance.new("TextButton", G2L["63"]);
-G2L["66"]["BorderSizePixel"] = 0;
-G2L["66"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["66"]["TextSize"] = 14;
-G2L["66"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["66"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["66"]["Size"] = UDim2.new(0, 397, 0, 30);
-G2L["66"]["BackgroundTransparency"] = 0.95;
-G2L["66"]["Name"] = [[PlayerButton]];
-G2L["66"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["66"]["Text"] = [[Click here for player list]];
-G2L["66"]["Position"] = UDim2.new(-0.03116, 0, -0.03367, 0);
+G2L["6a"] = Instance.new("TextButton", G2L["67"]);
+G2L["6a"]["BorderSizePixel"] = 0;
+G2L["6a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6a"]["TextSize"] = 14;
+G2L["6a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["6a"]["Size"] = UDim2.new(0, 397, 0, 30);
+G2L["6a"]["BackgroundTransparency"] = 0.95;
+G2L["6a"]["Name"] = [[PlayerButton]];
+G2L["6a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6a"]["Text"] = [[Click here for player list]];
+G2L["6a"]["Position"] = UDim2.new(-0.03116, 0, -0.03367, 0);
 
 
 -- StarterGui.DivazScript.MainFrame.PlayerFrame.PlayerFrame.UIPadding
-G2L["67"] = Instance.new("UIPadding", G2L["63"]);
-G2L["67"]["PaddingTop"] = UDim.new(0.01, 0);
+G2L["6b"] = Instance.new("UIPadding", G2L["67"]);
+G2L["6b"]["PaddingTop"] = UDim.new(0.01, 0);
 
 
 -- StarterGui.DivazScript.MainFrame.PlayerFrame.PlayerFrame.UIListLayout
-G2L["68"] = Instance.new("UIListLayout", G2L["63"]);
-G2L["68"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+G2L["6c"] = Instance.new("UIListLayout", G2L["67"]);
+G2L["6c"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
 
 
 -- StarterGui.DivazScript.MainFrame.PlayerFrame.UIPadding
-G2L["69"] = Instance.new("UIPadding", G2L["61"]);
-G2L["69"]["PaddingTop"] = UDim.new(0.01, 0);
-G2L["69"]["PaddingLeft"] = UDim.new(0.01, 0);
+G2L["6d"] = Instance.new("UIPadding", G2L["65"]);
+G2L["6d"]["PaddingTop"] = UDim.new(0.01, 0);
+G2L["6d"]["PaddingLeft"] = UDim.new(0.01, 0);
 
 
 -- StarterGui.DivazScript.MainFrame.PlayerFrame.UIListLayout
-G2L["6a"] = Instance.new("UIListLayout", G2L["61"]);
-G2L["6a"]["Padding"] = UDim.new(0.007, 0);
-G2L["6a"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+G2L["6e"] = Instance.new("UIListLayout", G2L["65"]);
+G2L["6e"]["Padding"] = UDim.new(0.007, 0);
+G2L["6e"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
 
 
 -- StarterGui.DivazScript.MainFrame.PlayerFrame.SpectateButton
-G2L["6b"] = Instance.new("TextButton", G2L["61"]);
-G2L["6b"]["BorderSizePixel"] = 0;
-G2L["6b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["6b"]["TextSize"] = 14;
-G2L["6b"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
-G2L["6b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["6b"]["Size"] = UDim2.new(0, 397, 0, 33);
-G2L["6b"]["Name"] = [[SpectateButton]];
-G2L["6b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["6b"]["Text"] = [[]];
-G2L["6b"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
+G2L["6f"] = Instance.new("TextButton", G2L["65"]);
+G2L["6f"]["BorderSizePixel"] = 0;
+G2L["6f"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6f"]["TextSize"] = 14;
+G2L["6f"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
+G2L["6f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["6f"]["Size"] = UDim2.new(0, 397, 0, 33);
+G2L["6f"]["Name"] = [[SpectateButton]];
+G2L["6f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6f"]["Text"] = [[]];
+G2L["6f"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
 
 
 -- StarterGui.DivazScript.MainFrame.PlayerFrame.SpectateButton.UICorner
-G2L["6c"] = Instance.new("UICorner", G2L["6b"]);
+G2L["70"] = Instance.new("UICorner", G2L["6f"]);
 
 
 
 -- StarterGui.DivazScript.MainFrame.PlayerFrame.SpectateButton.TextLabel
-G2L["6d"] = Instance.new("TextLabel", G2L["6b"]);
-G2L["6d"]["BorderSizePixel"] = 0;
-G2L["6d"]["TextSize"] = 16;
-G2L["6d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["6d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["6d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["6d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["6d"]["BackgroundTransparency"] = 1;
-G2L["6d"]["Size"] = UDim2.new(0, 385, 0, 33);
-G2L["6d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["6d"]["Text"] = [[Spectate Person]];
-G2L["6d"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
+G2L["71"] = Instance.new("TextLabel", G2L["6f"]);
+G2L["71"]["BorderSizePixel"] = 0;
+G2L["71"]["TextSize"] = 16;
+G2L["71"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["71"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["71"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["71"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["71"]["BackgroundTransparency"] = 1;
+G2L["71"]["Size"] = UDim2.new(0, 385, 0, 33);
+G2L["71"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["71"]["Text"] = [[Spectate Person]];
+G2L["71"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
 
 
 -- StarterGui.DivazScript.MainFrame.PlayerFrame.GrabPlayerToVoidButton
-G2L["6e"] = Instance.new("TextButton", G2L["61"]);
-G2L["6e"]["BorderSizePixel"] = 0;
-G2L["6e"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["6e"]["TextSize"] = 14;
-G2L["6e"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
-G2L["6e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["6e"]["Size"] = UDim2.new(0, 397, 0, 33);
-G2L["6e"]["Name"] = [[GrabPlayerToVoidButton]];
-G2L["6e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["6e"]["Text"] = [[]];
-G2L["6e"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
+G2L["72"] = Instance.new("TextButton", G2L["65"]);
+G2L["72"]["BorderSizePixel"] = 0;
+G2L["72"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["72"]["TextSize"] = 14;
+G2L["72"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
+G2L["72"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["72"]["Size"] = UDim2.new(0, 397, 0, 33);
+G2L["72"]["Name"] = [[GrabPlayerToVoidButton]];
+G2L["72"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["72"]["Text"] = [[]];
+G2L["72"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
 
 
 -- StarterGui.DivazScript.MainFrame.PlayerFrame.GrabPlayerToVoidButton.UICorner
-G2L["6f"] = Instance.new("UICorner", G2L["6e"]);
+G2L["73"] = Instance.new("UICorner", G2L["72"]);
 
 
 
 -- StarterGui.DivazScript.MainFrame.PlayerFrame.GrabPlayerToVoidButton.TextLabel
-G2L["70"] = Instance.new("TextLabel", G2L["6e"]);
-G2L["70"]["BorderSizePixel"] = 0;
-G2L["70"]["TextSize"] = 16;
-G2L["70"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["70"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["70"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["70"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["70"]["BackgroundTransparency"] = 1;
-G2L["70"]["Size"] = UDim2.new(0, 385, 0, 33);
-G2L["70"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["70"]["Text"] = [[Grab User To Void]];
-G2L["70"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
+G2L["74"] = Instance.new("TextLabel", G2L["72"]);
+G2L["74"]["BorderSizePixel"] = 0;
+G2L["74"]["TextSize"] = 16;
+G2L["74"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["74"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["74"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["74"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["74"]["BackgroundTransparency"] = 1;
+G2L["74"]["Size"] = UDim2.new(0, 385, 0, 33);
+G2L["74"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["74"]["Text"] = [[Grab User To Void]];
+G2L["74"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
 
 
 -- StarterGui.DivazScript.MainFrame.PlayerFrame.KillUserButton
-G2L["71"] = Instance.new("TextButton", G2L["61"]);
-G2L["71"]["BorderSizePixel"] = 0;
-G2L["71"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["71"]["TextSize"] = 14;
-G2L["71"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
-G2L["71"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["71"]["Size"] = UDim2.new(0, 397, 0, 33);
-G2L["71"]["Name"] = [[KillUserButton]];
-G2L["71"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["71"]["Text"] = [[]];
-G2L["71"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
+G2L["75"] = Instance.new("TextButton", G2L["65"]);
+G2L["75"]["BorderSizePixel"] = 0;
+G2L["75"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["75"]["TextSize"] = 14;
+G2L["75"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
+G2L["75"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["75"]["Size"] = UDim2.new(0, 397, 0, 33);
+G2L["75"]["Name"] = [[KillUserButton]];
+G2L["75"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["75"]["Text"] = [[]];
+G2L["75"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
 
 
 -- StarterGui.DivazScript.MainFrame.PlayerFrame.KillUserButton.UICorner
-G2L["72"] = Instance.new("UICorner", G2L["71"]);
+G2L["76"] = Instance.new("UICorner", G2L["75"]);
 
 
 
 -- StarterGui.DivazScript.MainFrame.PlayerFrame.KillUserButton.TextLabel
-G2L["73"] = Instance.new("TextLabel", G2L["71"]);
-G2L["73"]["BorderSizePixel"] = 0;
-G2L["73"]["TextSize"] = 16;
-G2L["73"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["73"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["73"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["73"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["73"]["BackgroundTransparency"] = 1;
-G2L["73"]["Size"] = UDim2.new(0, 385, 0, 33);
-G2L["73"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["73"]["Text"] = [[Kill User]];
-G2L["73"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
+G2L["77"] = Instance.new("TextLabel", G2L["75"]);
+G2L["77"]["BorderSizePixel"] = 0;
+G2L["77"]["TextSize"] = 16;
+G2L["77"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["77"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["77"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["77"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["77"]["BackgroundTransparency"] = 1;
+G2L["77"]["Size"] = UDim2.new(0, 385, 0, 33);
+G2L["77"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["77"]["Text"] = [[Kill User]];
+G2L["77"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
 
 
 -- StarterGui.DivazScript.MainFrame.PlayerFrame.TaserPersonButton
-G2L["74"] = Instance.new("TextButton", G2L["61"]);
-G2L["74"]["BorderSizePixel"] = 0;
-G2L["74"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["74"]["TextSize"] = 14;
-G2L["74"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
-G2L["74"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["74"]["Size"] = UDim2.new(0, 397, 0, 33);
-G2L["74"]["Name"] = [[TaserPersonButton]];
-G2L["74"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["74"]["Text"] = [[]];
-G2L["74"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
+G2L["78"] = Instance.new("TextButton", G2L["65"]);
+G2L["78"]["BorderSizePixel"] = 0;
+G2L["78"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["78"]["TextSize"] = 14;
+G2L["78"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
+G2L["78"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["78"]["Size"] = UDim2.new(0, 397, 0, 33);
+G2L["78"]["Name"] = [[TaserPersonButton]];
+G2L["78"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["78"]["Text"] = [[]];
+G2L["78"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
 
 
 -- StarterGui.DivazScript.MainFrame.PlayerFrame.TaserPersonButton.UICorner
-G2L["75"] = Instance.new("UICorner", G2L["74"]);
+G2L["79"] = Instance.new("UICorner", G2L["78"]);
 
 
 
 -- StarterGui.DivazScript.MainFrame.PlayerFrame.TaserPersonButton.TextLabel
-G2L["76"] = Instance.new("TextLabel", G2L["74"]);
-G2L["76"]["BorderSizePixel"] = 0;
-G2L["76"]["TextSize"] = 16;
-G2L["76"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["76"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["76"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["76"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["76"]["BackgroundTransparency"] = 1;
-G2L["76"]["Size"] = UDim2.new(0, 385, 0, 33);
-G2L["76"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["76"]["Text"] = [[Taser Person]];
-G2L["76"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
+G2L["7a"] = Instance.new("TextLabel", G2L["78"]);
+G2L["7a"]["BorderSizePixel"] = 0;
+G2L["7a"]["TextSize"] = 16;
+G2L["7a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["7a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["7a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7a"]["BackgroundTransparency"] = 1;
+G2L["7a"]["Size"] = UDim2.new(0, 385, 0, 33);
+G2L["7a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7a"]["Text"] = [[Taser Person]];
+G2L["7a"]["Position"] = UDim2.new(0.03023, 0, 0, 0);
 
 
 -- StarterGui.DivazScript.MainFrame.BuyFrame
-G2L["77"] = Instance.new("ScrollingFrame", G2L["4"]);
-G2L["77"]["Visible"] = false;
-G2L["77"]["Active"] = true;
-G2L["77"]["BorderSizePixel"] = 0;
-G2L["77"]["TopImage"] = [[]];
-G2L["77"]["MidImage"] = [[]];
-G2L["77"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["77"]["Name"] = [[BuyFrame]];
-G2L["77"]["BottomImage"] = [[]];
-G2L["77"]["Size"] = UDim2.new(0, 415, 0, 509);
-G2L["77"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["77"]["Position"] = UDim2.new(0.28501, 0, 0.10435, 0);
-G2L["77"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["77"]["BackgroundTransparency"] = 1;
+G2L["7b"] = Instance.new("ScrollingFrame", G2L["4"]);
+G2L["7b"]["Visible"] = false;
+G2L["7b"]["Active"] = true;
+G2L["7b"]["BorderSizePixel"] = 0;
+G2L["7b"]["TopImage"] = [[]];
+G2L["7b"]["MidImage"] = [[]];
+G2L["7b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7b"]["Name"] = [[BuyFrame]];
+G2L["7b"]["BottomImage"] = [[]];
+G2L["7b"]["Size"] = UDim2.new(0, 415, 0, 509);
+G2L["7b"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7b"]["Position"] = UDim2.new(0.28501, 0, 0.10435, 0);
+G2L["7b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7b"]["BackgroundTransparency"] = 1;
 
 
 -- StarterGui.DivazScript.MainFrame.BuyFrame.LocalScript
-G2L["78"] = Instance.new("LocalScript", G2L["77"]);
+G2L["7c"] = Instance.new("LocalScript", G2L["7b"]);
 
 
 
 -- StarterGui.DivazScript.MainFrame.BuyFrame.List1
-G2L["79"] = Instance.new("TextButton", G2L["77"]);
-G2L["79"]["BorderSizePixel"] = 0;
-G2L["79"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["79"]["TextSize"] = 14;
-G2L["79"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
-G2L["79"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["79"]["Size"] = UDim2.new(0, 397, 0, 33);
-G2L["79"]["Name"] = [[List1]];
-G2L["79"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["79"]["Text"] = [[]];
-G2L["79"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
+G2L["7d"] = Instance.new("TextButton", G2L["7b"]);
+G2L["7d"]["BorderSizePixel"] = 0;
+G2L["7d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7d"]["TextSize"] = 14;
+G2L["7d"]["BackgroundColor3"] = Color3.fromRGB(31, 41, 61);
+G2L["7d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["7d"]["Size"] = UDim2.new(0, 397, 0, 33);
+G2L["7d"]["Name"] = [[List1]];
+G2L["7d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7d"]["Text"] = [[]];
+G2L["7d"]["Position"] = UDim2.new(0, 0, 0.00363, 0);
 
 
 -- StarterGui.DivazScript.MainFrame.BuyFrame.List1.UICorner
-G2L["7a"] = Instance.new("UICorner", G2L["79"]);
+G2L["7e"] = Instance.new("UICorner", G2L["7d"]);
 
 
 
 -- StarterGui.DivazScript.MainFrame.BuyFrame.UIPadding
-G2L["7b"] = Instance.new("UIPadding", G2L["77"]);
-G2L["7b"]["PaddingTop"] = UDim.new(0.01, 0);
-G2L["7b"]["PaddingLeft"] = UDim.new(0.01, 0);
+G2L["7f"] = Instance.new("UIPadding", G2L["7b"]);
+G2L["7f"]["PaddingTop"] = UDim.new(0.01, 0);
+G2L["7f"]["PaddingLeft"] = UDim.new(0.01, 0);
 
 
 -- StarterGui.DivazScript.MainFrame.BuyFrame.UIListLayout
-G2L["7c"] = Instance.new("UIListLayout", G2L["77"]);
-G2L["7c"]["Padding"] = UDim.new(0.007, 0);
-G2L["7c"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+G2L["80"] = Instance.new("UIListLayout", G2L["7b"]);
+G2L["80"]["Padding"] = UDim.new(0.007, 0);
+G2L["80"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
 
 
--- StarterGui.DivazScript.MobileUIScale
-G2L["7d"] = Instance.new("UIScale", G2L["1"]);
-G2L["7d"]["Name"] = [[MobileUIScale]];
+-- StarterGui.DivazScript.MainFrame.LocalScript
+G2L["81"] = Instance.new("LocalScript", G2L["4"]);
+
+
+
+-- StarterGui.DivazScript.MainFrame.MobileUIScale
+G2L["82"] = Instance.new("UIScale", G2L["4"]);
+G2L["82"]["Name"] = [[MobileUIScale]];
 
 
 -- StarterGui.DivazScript.GUI
@@ -1388,19 +1432,6 @@ task.spawn(C_2);
 -- StarterGui.DivazScript.Reset
 local function C_3()
 local script = G2L["3"];
-	local Players = game:GetService("Players")
-	local UserInputService = game:GetService("UserInputService")
-	
-	local player = Players.LocalPlayer
-	
-	if UserInputService.TouchEnabled then
-		local frame = script.Parent
-		local uiScale = Instance.new("UIScale")
-		uiScale.Name = "MobileUIScale"
-		uiScale.Scale = 0.2
-		uiScale.Parent = frame
-	end
-	
 	wait (3)
 	if player.Character then
 		player.Character:BreakJoints()
@@ -1592,9 +1623,195 @@ local script = G2L["2b"];
 	end)
 end;
 task.spawn(C_2b);
--- StarterGui.DivazScript.MainFrame.CombatFrame.SpamGrabHair.LocalScript
+-- StarterGui.DivazScript.MainFrame.CombatFrame.AutoStomp.LocalScript
 local function C_2f()
 local script = G2L["2f"];
+	local Players = game:GetService("Players")
+	local ReplicatedStorage = game:GetService("ReplicatedStorage")
+	local RunService = game:GetService("RunService")
+	
+	local LocalPlayer = Players.LocalPlayer
+	local button = script.Parent
+	
+	local oldStroke = button:FindFirstChild("UIStroke")
+	if oldStroke then oldStroke:Destroy() end
+	
+	local uiStroke = Instance.new("UIStroke")
+	uiStroke.Parent = button
+	uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	uiStroke.Transparency = 0
+	uiStroke.Thickness = 0.6
+	uiStroke.Color = Color3.fromRGB(255, 255, 255)
+	
+	local scriptEnabled = false
+	local stompLoop = nil
+	
+	local Remote = ReplicatedStorage:WaitForChild("Event")
+	
+	local function fireStomp()
+		Remote:FireServer({
+			Event = "Stomp"
+		})
+	end
+	
+	local function getCharacter(player)
+		return player.Character
+	end
+	
+	local function getHRP(char)
+		return char and char:FindFirstChild("HumanoidRootPart")
+	end
+	
+	local function getHumanoid(char)
+		return char and char:FindFirstChildOfClass("Humanoid")
+	end
+	
+	local function startScript()
+		stompLoop = task.spawn(function()
+			while task.wait(0.05) do
+				if not scriptEnabled then break end
+	
+				local localChar = getCharacter(LocalPlayer)
+				local localHRP = getHRP(localChar)
+	
+				if not localHRP then continue end
+	
+				for _, player in ipairs(Players:GetPlayers()) do
+					if player ~= LocalPlayer then
+						local targetChar = getCharacter(player)
+						local targetHRP = getHRP(targetChar)
+						local targetHum = getHumanoid(targetChar)
+	
+						if targetHRP and targetHum then
+							local distance = (localHRP.Position - targetHRP.Position).Magnitude
+							local health = targetHum.Health
+	
+							if distance <= 5 and health <= 3 and health > 0 then
+								fireStomp()
+							end
+						end
+					end
+				end
+			end
+		end)
+	end
+	
+	local function stopScript()
+		if stompLoop then task.cancel(stompLoop) end
+		stompLoop = nil
+	end
+	
+	button.MouseButton1Click:Connect(function()
+		scriptEnabled = not scriptEnabled
+		uiStroke.Color = if scriptEnabled then Color3.fromRGB(0, 255, 0) else Color3.fromRGB(255, 255, 255)
+	
+		if scriptEnabled then
+			startScript()
+		else
+			stopScript()
+		end
+	end)
+	
+	LocalPlayer.CharacterAdded:Connect(function()
+		if scriptEnabled then
+			stopScript()
+			startScript()
+		end
+	end)
+end;
+task.spawn(C_2f);
+-- StarterGui.DivazScript.MainFrame.CombatFrame.AutoFight.LocalScript
+local function C_33()
+local script = G2L["33"];
+	local Players = game:GetService("Players")
+	local ReplicatedStorage = game:GetService("ReplicatedStorage")
+	local UserInputService = game:GetService("UserInputService")
+	
+	local LocalPlayer = Players.LocalPlayer
+	local button = script.Parent
+	
+	local oldStroke = button:FindFirstChild("UIStroke")
+	
+	if oldStroke then
+		oldStroke:Destroy()
+	end
+	
+	local uiStroke = Instance.new("UIStroke")
+	uiStroke.Parent = button
+	uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	uiStroke.Transparency = 0
+	uiStroke.Color = Color3.fromRGB(255,255,255)
+	uiStroke.Thickness = 0.6
+	
+	local running = false
+	local loopThread
+	
+	local function spamHit()
+		local args = {
+			{
+				Event = "Hit",
+				ClientHitbox = {}
+			}
+		}
+		ReplicatedStorage:WaitForChild("Event"):FireServer(unpack(args))
+	end
+	
+	local function start()
+		if running then
+			return
+		end
+	
+		running = true
+	
+		uiStroke.Color = Color3.fromRGB(0,255,0)
+	
+		loopThread = task.spawn(function()
+			while running do
+				pcall(spamHit)
+				task.wait(0.15)
+			end
+		end)
+	end
+	
+	local function stop()
+		running = false
+	
+		uiStroke.Color = Color3.fromRGB(255,255,255)
+	
+		if loopThread then
+			task.cancel(loopThread)
+			loopThread = nil
+		end
+	end
+	
+	local function toggle()
+		if running then
+			stop()
+		else
+			start()
+		end
+	end
+	
+	button.MouseButton1Click:Connect(toggle)
+	
+	UserInputService.InputBegan:Connect(function(input, gameProcessed)
+		if gameProcessed then
+			return
+		end
+	
+		if _G.keybindsBlocked then
+			return
+		end
+	
+		if input.KeyCode == Enum.KeyCode.H then
+			toggle()
+		end
+	end)
+end;
+task.spawn(C_33);
+-- StarterGui.DivazScript.MainFrame.CombatFrame.SpamGrabHair.LocalScript
+local function C_37()
+local script = G2L["37"];
 	local Players = game:GetService("Players")
 	local ReplicatedStorage = game:GetService("ReplicatedStorage")
 	
@@ -1665,10 +1882,10 @@ local script = G2L["2f"];
 	
 	button.MouseButton1Click:Connect(toggle)
 end;
-task.spawn(C_2f);
+task.spawn(C_37);
 -- StarterGui.DivazScript.MainFrame.CombatFrame.Heal.LocalScript
-local function C_33()
-local script = G2L["33"];
+local function C_3b()
+local script = G2L["3b"];
 	local Players = game:GetService("Players")
 	local Workspace = game:GetService("Workspace")
 	local VirtualUser = game:GetService("VirtualUser")
@@ -1812,107 +2029,10 @@ local script = G2L["33"];
 		end
 	end)
 end;
-task.spawn(C_33);
--- StarterGui.DivazScript.MainFrame.CombatFrame.AutoStomp.LocalScript
-local function C_38()
-local script = G2L["38"];
-	local Players = game:GetService("Players")
-	local ReplicatedStorage = game:GetService("ReplicatedStorage")
-	local RunService = game:GetService("RunService")
-	
-	local LocalPlayer = Players.LocalPlayer
-	local button = script.Parent
-	
-	local oldStroke = button:FindFirstChild("UIStroke")
-	if oldStroke then oldStroke:Destroy() end
-	
-	local uiStroke = Instance.new("UIStroke")
-	uiStroke.Parent = button
-	uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-	uiStroke.Transparency = 0
-	uiStroke.Thickness = 0.6
-	uiStroke.Color = Color3.fromRGB(255, 255, 255)
-	
-	local scriptEnabled = false
-	local stompLoop = nil
-	
-	local Remote = ReplicatedStorage:WaitForChild("Event")
-	
-	local function fireStomp()
-		Remote:FireServer({
-			Event = "Stomp"
-		})
-	end
-	
-	local function getCharacter(player)
-		return player.Character
-	end
-	
-	local function getHRP(char)
-		return char and char:FindFirstChild("HumanoidRootPart")
-	end
-	
-	local function getHumanoid(char)
-		return char and char:FindFirstChildOfClass("Humanoid")
-	end
-	
-	local function startScript()
-		stompLoop = task.spawn(function()
-			while task.wait(0.05) do
-				if not scriptEnabled then break end
-	
-				local localChar = getCharacter(LocalPlayer)
-				local localHRP = getHRP(localChar)
-	
-				if not localHRP then continue end
-	
-				for _, player in ipairs(Players:GetPlayers()) do
-					if player ~= LocalPlayer then
-						local targetChar = getCharacter(player)
-						local targetHRP = getHRP(targetChar)
-						local targetHum = getHumanoid(targetChar)
-	
-						if targetHRP and targetHum then
-							local distance = (localHRP.Position - targetHRP.Position).Magnitude
-							local health = targetHum.Health
-	
-							if distance <= 5 and health <= 3 and health > 0 then
-								fireStomp()
-							end
-						end
-					end
-				end
-			end
-		end)
-	end
-	
-	local function stopScript()
-		if stompLoop then task.cancel(stompLoop) end
-		stompLoop = nil
-	end
-	
-	button.MouseButton1Click:Connect(function()
-		scriptEnabled = not scriptEnabled
-		uiStroke.Color = if scriptEnabled then Color3.fromRGB(0, 255, 0) else Color3.fromRGB(255, 255, 255)
-	
-		if scriptEnabled then
-			startScript()
-		else
-			stopScript()
-		end
-	end)
-	
-	LocalPlayer.CharacterAdded:Connect(function()
-		if scriptEnabled then
-			stopScript()
-			startScript()
-		end
-	end)
-end;
-task.spawn(C_38);
+task.spawn(C_3b);
 -- StarterGui.DivazScript.MainFrame.CombatFrame.Fling.LocalScript
-local function C_3c()
-local script = G2L["3c"];
+local function C_40()
+local script = G2L["40"];
 	local Players = game:GetService("Players")
 	local ReplicatedStorage = game:GetService("ReplicatedStorage")
 	local RunService = game:GetService("RunService")
@@ -1963,10 +2083,10 @@ local script = G2L["3c"];
 	end)
 	
 end;
-task.spawn(C_3c);
+task.spawn(C_40);
 -- StarterGui.DivazScript.MainFrame.EspFrame.LocalScript
-local function C_40()
-local script = G2L["40"];
+local function C_44()
+local script = G2L["44"];
 	local Players = game:GetService("Players")
 	local LocalPlayer = Players.LocalPlayer
 	local RunService = game:GetService("RunService")
@@ -2425,10 +2545,10 @@ local script = G2L["40"];
 		end
 	end)
 end;
-task.spawn(C_40);
+task.spawn(C_44);
 -- StarterGui.DivazScript.MainFrame.MiscFrame.FlyScript
-local function C_53()
-local script = G2L["53"];
+local function C_57()
+local script = G2L["57"];
 	local Players = game:GetService("Players")
 	local UserInputService = game:GetService("UserInputService")
 	local RunService = game:GetService("RunService")
@@ -2973,10 +3093,10 @@ local script = G2L["53"];
 		end
 	end
 end;
-task.spawn(C_53);
+task.spawn(C_57);
 -- StarterGui.DivazScript.MainFrame.PlayerFrame.LocalScript
-local function C_62()
-local script = G2L["62"];
+local function C_66()
+local script = G2L["66"];
 	local Players = game:GetService("Players")
 	local ReplicatedStorage = game:GetService("ReplicatedStorage")
 	local StarterGui = game:GetService("StarterGui")
@@ -3504,10 +3624,10 @@ local script = G2L["62"];
 		end
 	end)
 end;
-task.spawn(C_62);
+task.spawn(C_66);
 -- StarterGui.DivazScript.MainFrame.BuyFrame.LocalScript
-local function C_78()
-local script = G2L["78"];
+local function C_7c()
+local script = G2L["7c"];
 	local Players = game:GetService("Players")
 	local ReplicatedStorage = game:GetService("ReplicatedStorage")
 	local Workspace = game:GetService("Workspace")
@@ -3586,6 +3706,25 @@ local script = G2L["78"];
 	end
 	
 end;
-task.spawn(C_78);
+task.spawn(C_7c);
+-- StarterGui.DivazScript.MainFrame.LocalScript
+local function C_81()
+local script = G2L["81"];
+	local UserInputService = game:GetService("UserInputService")
+	local Players = game:GetService("Players")
+	
+	if not UserInputService.TouchEnabled then
+		return
+	end
+	
+	local LocalPlayer = Players.LocalPlayer
+	local frame = script.Parent
+	
+	local uiScale = Instance.new("UIScale")
+	uiScale.Name = "MobileUIScale"
+	uiScale.Scale = 0.5
+	uiScale.Parent = frame
+end;
+task.spawn(C_81);
 
 return G2L["1"], require;
