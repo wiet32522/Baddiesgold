@@ -7,7 +7,7 @@ if not executorSupported then
     local clipboard = "https://getmadium.net/"
     setclipboard(clipboard)
     local player = game.Players.LocalPlayer
-    player:Kick("The executor your using is not good use this one instead! Link copied to your clipboard so maske them copy this " .. clipboard)
+    player:Kick("The executor your using is not good use this one instead! Link copied to your clipboard" .. clipboard)
 end
 
 local games = {
