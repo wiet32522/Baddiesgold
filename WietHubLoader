@@ -10,6 +10,7 @@ if not executorSupported then
     player:Kick("The executor your using is not good use this one instead! Link copied to your clipboard" .. clipboard)
 end
 
+wait (0.25)
 local games = {
 	[88323040672117] = "https://raw.githubusercontent.com/wiet32522/Baddiesgold/refs/heads/main/DivazScript.lua", 
     [11158043705] = "https://raw.githubusercontent.com/wiet32522/Baddiesgold/refs/heads/main/WietHubBaddiesScript",
