@@ -1254,9 +1254,9 @@ G2L["7c"]["Padding"] = UDim.new(0.007, 0);
 G2L["7c"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
 
 
--- StarterGui.DivazScript.UIScale
+-- StarterGui.DivazScript.MobileUIScale
 G2L["7d"] = Instance.new("UIScale", G2L["1"]);
-
+G2L["7d"]["Name"] = [[MobileUIScale]];
 
 
 -- StarterGui.DivazScript.GUI
