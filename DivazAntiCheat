@@ -3,84 +3,127 @@ local b1 = getfenv().hookfunction or hookfunction
 local c1 = getfenv().newcclosure or function(f) return f end
 local d1 = getfenv().hookmetamethod or hookmetamethod
 local h1 = getfenv().getnamecallmethod or getnamecallmethod
+local checkcaller = getfenv().checkcaller or checkcaller or function() return false end
 
 local p = game:GetService("Players").LocalPlayer
 local R = {}
-
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local targetRemote = ReplicatedStorage:WaitForChild("Event")
+local TargetRemote = ReplicatedStorage:WaitForChild("Event")
 
 local function F(r)
-	if R[r] then return true end
-	local n = r.Name
-	if #n == 36 and string.match(n, "^%x%x%x%x%x%x%x%x%-%x%x%x%x%-%x%x%x%x%-%x%x%x%x%-%x%x%x%x%x%x%x%x%x%x%x%x$") then
-		R[r] = true
-		return true
-	end
-	return false
+    if R[r] then return true end
+    local n = r.Name
+    if #n == 36 and string.match(n, "^%x%x%x%x%x%x%x%x%-%x%x%x%x%-%x%x%x%x%-%x%x%x%x%-%x%x%x%x%x%x%x%x%x%x%x%x$") then
+        R[r] = true
+        return true
+    end
+    return false
 end
 
-local o
-o = b1(Instance.new("RemoteEvent").FireServer, function(s, ...)
-	local a = {...}
-	if F(s) then return o(s, ...) end
-	for _, v in ipairs(a) do
-		if type(v) == "string" and string.find(string.lower(v), "kick") then return end
-	end
-	return o(s, ...)
+local originalFireServer
+originalFireServer = b1(Instance.new("RemoteEvent").FireServer, function(s, ...)
+    local args = {...}
+    
+    if F(s) then return originalFireServer(s, ...) end
+    
+    -- Block Event Remote calls with ANY numeric T
+    if s == TargetRemote then
+        for _, arg in ipairs(args) do
+            if type(arg) == "table" and type(arg.T) == "number" then
+                return nil
+            end
+        end
+    end
+    -- Idk why i did this...
+    for _, v in ipairs(args) do
+        if type(v) == "string" and string.find(string.lower(v), "kick") then
+            return nil
+        end
+    end
+    
+    return originalFireServer(s, ...)
 end)
 
-local n
-n = d1(game, "__namecall", c1(function(s, ...)
-	local m = h1()
-	if s == p and (m == "Kick" or m == "kick" or m == "Destroy" or m == "destroy") then return end
-	if s == targetRemote and m == "FireServer" then
-		for _, arg in ipairs({...}) do
-			if type(arg) == "table" and (arg.T == 1 or arg.T == 2) then
-				return nil
-			end
-		end
-	end
-	return n(s, ...)
+local originalInvokeServer
+originalInvokeServer = b1(Instance.new("RemoteFunction").InvokeServer, function(s, ...)
+    local args = {...}
+    
+    if F(s) then return originalInvokeServer(s, ...) end
+    
+    if s == TargetRemote then
+        for _, arg in ipairs(args) do
+            if type(arg) == "table" and type(arg.T) == "number" then
+                return nil
+            end
+        end
+    end
+    
+    for _, v in ipairs(args) do
+        if type(v) == "string" and string.find(string.lower(v), "kick") then
+            return nil
+        end
+    end
+    
+    return originalInvokeServer(s, ...)
+end)
+
+local originalNamecall
+originalNamecall = d1(game, "__namecall", c1(function(s, ...)
+    local m = h1()
+    if s == p then
+        local lowerM = string.lower(m)
+        if lowerM == "kick" or lowerM == "destroy" then
+            return nil
+        end
+    end
+    return originalNamecall(s, ...)
 end))
 
-local k
-k = b1(p.Kick, c1(function(self, ...)
-	if not checkcaller() and self == p then return end
-	return k(self, ...)
+local originalKick = b1(p.Kick, c1(function(self, ...)
+    local ok, isExploit = pcall(checkcaller)
+    if (not ok or not isExploit) and self == p then
+        return nil
+    end
+    return originalKick(self, ...)
 end))
 
-local D
-D = b1(p.Destroy, c1(function(self, ...)
-	if not checkcaller() and self == p then return end
-	return D(self, ...)
+local originalDestroy = b1(p.Destroy, c1(function(self, ...)
+    local ok, isExploit = pcall(checkcaller)
+    if (not ok or not isExploit) and self == p then
+        return nil
+    end
+    return originalDestroy(self, ...)
 end))
 
 pcall(function()
-	for _, v in pairs(a1(true)) do
-		if type(v) == "table" then
-			pcall(function()
-				if rawget(v, "Send") and type(rawget(v, "Send")) == "function" and rawget(v, "Get") and rawget(v, "Encrypt") then
-					local s
-					s = b1(v.Send, c1(function(cmd, ...)
-						if type(cmd) == "string" then
-							local c = string.lower(cmd)
-							if c == "detected" or c == "logerror" then return end
-						end
-						return s(cmd, ...)
-					end))
-				end
-				if rawget(v, "Kill") and type(rawget(v, "Kill")) == "function" and rawget(v, "Disconnect") then
-					b1(v.Kill, c1(function(...) return end))
-					b1(v.Disconnect, c1(function(...) return end))
-				end
-			end)
-		end
-	end
+    for _, v in pairs(a1(true)) do
+        if type(v) == "table" then
+            pcall(function()
+                if rawget(v, "Send") and type(rawget(v, "Send")) == "function" and rawget(v, "Get") and rawget(v, "Encrypt") then
+                    local originalSend
+                    originalSend = b1(v.Send, c1(function(cmd, ...)
+                        if type(cmd) == "string" then
+                            local c = string.lower(cmd)
+                            if c == "detected" or c == "logerror" then
+                                return nil
+                            end
+                        end
+                        return originalSend(cmd, ...)
+                    end))
+                end
+                if rawget(v, "Kill") and type(rawget(v, "Kill")) == "function" and rawget(v, "Disconnect") then
+                    b1(v.Kill, c1(function(...) return end))
+                    b1(v.Disconnect, c1(function(...) return end))
+                end
+            end)
+        end
+    end
 end)
 
-game:GetService("StarterGui"):SetCore("SendNotification", {
-	Title = "Hooked",
-	Text = "Anti-Cheat hooked",
-	Duration = 3
-})
+pcall(function()
+    game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "Active",
+        Text = "Anti-Kick + Remote Block Loaded",
+        Duration = 2
+    })
+end)
