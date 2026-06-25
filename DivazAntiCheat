@@ -1,1 +1,43 @@
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Players = game:GetService("Players")
 
+local targetRemote = ReplicatedStorage:WaitForChild("Event")
+local LocalPlayer = Players.LocalPlayer
+getgenv().AntiKickExecuted = true
+
+local originalNamecall
+local combinedSafeHook = newcclosure(function(self, ...)
+    local ok, method = pcall(getnamecallmethod)
+    if not ok or not method then 
+        return originalNamecall(self, ...) 
+    end
+    local lowerMethod = string.lower(method)
+
+    if self == LocalPlayer and lowerMethod == "kick" then
+        return nil
+    end
+
+    if self == targetRemote and lowerMethod == "fireserver" then
+        local args = {...}
+        for _, arg in ipairs(args) do
+            if type(arg) == "table" then
+                local tValue = rawget(arg, "T")
+                if type(tValue) == "number" then
+                    return nil
+                end
+            end
+        end
+    end
+
+    return originalNamecall(self, ...)
+end)
+
+originalNamecall = hookmetamethod(game, "__namecall", combinedSafeHook)
+
+local originalDirectKick
+originalDirectKick = hookfunction(LocalPlayer.Kick, newcclosure(function(self, ...)
+    if self == LocalPlayer then
+        return nil
+    end
+    return originalDirectKick(self, ...)
+end))
