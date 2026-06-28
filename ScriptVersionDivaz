@@ -1,0 +1,9 @@
+local p = game:GetService("Players").LocalPlayer
+local g = game:GetService("CoreGui")
+
+local t = g.RobloxGui.SettingsClippingShield.SettingsShield.VersionContainer.ClientVersionLabel.Text
+local v = t:match("%((.-)%)")
+
+if v ~= "9cee03" then
+	p:Kick("Script Outdated")
+end
