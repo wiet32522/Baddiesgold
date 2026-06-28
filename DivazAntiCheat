@@ -1,43 +1,21 @@
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local Players = game:GetService("Players")
+local originalKick = hookfunction(game.Players.LocalPlayer.Kick, newcclosure(function() return end))
 
-local targetRemote = ReplicatedStorage:WaitForChild("Event")
-local LocalPlayer = Players.LocalPlayer
-getgenv().AntiKickExecuted = true
-
-local originalNamecall
-local combinedSafeHook = newcclosure(function(self, ...)
-    local ok, method = pcall(getnamecallmethod)
-    if not ok or not method then 
-        return originalNamecall(self, ...) 
-    end
-    local lowerMethod = string.lower(method)
-
-    if self == LocalPlayer and lowerMethod == "kick" then
-        return nil
-    end
-
-    if self == targetRemote and lowerMethod == "fireserver" then
-        local args = {...}
-        for _, arg in ipairs(args) do
-            if type(arg) == "table" then
-                local tValue = rawget(arg, "T")
-                if type(tValue) == "number" then
-                    return nil
-                end
-            end
+for _, v in getgc(true) do
+    if type(v) == "function" then
+        local fnInfo = getinfo(v)
+        if fnInfo.name == "Detected" or (fnInfo.linedefined == 45 and fnInfo.numparams == 1) then
+            hookfunction(v, newcclosure(function() return end))
+            break
         end
     end
+end
 
-    return originalNamecall(self, ...)
-end)
-
-originalNamecall = hookmetamethod(game, "__namecall", combinedSafeHook)
-
-local originalDirectKick
-originalDirectKick = hookfunction(LocalPlayer.Kick, newcclosure(function(self, ...)
-    if self == LocalPlayer then
-        return nil
+local oldTaskDelay = hookfunction(task.delay, newcclosure(function(time, callback)
+    if time == 2 then
+        local trace = debug.traceback(callback)
+        if trace:find("Part") and trace:find("while true do") then
+            return nil
+        end
     end
-    return originalDirectKick(self, ...)
+    return oldTaskDelay(time, callback)
 end))
